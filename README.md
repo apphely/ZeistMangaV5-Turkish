@@ -1,2 +1,1 @@
-# Theme
- Blogger Theme
+# ZeistMangaV5 Türkçe
