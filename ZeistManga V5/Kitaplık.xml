@@ -16,7 +16,7 @@
   div.tt{text-align: center;margin: 8px 0;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
   div.tt h2{display: none;}
 </style>
-<div class='notice'>Limit menyimpan daftar anime hanya 100 judul. Daftar anime disimpan di browser yang sedang kalian gunakan.Apabila anda membuka halaman ini dengan browser yang berbeda,maka daftar kalian yang sudah kalian simpan sebelumnya tidak akan tampil.</div>
+<div class='notice'>Novel kaydetme sınırı sadece 100 noveldir. Novel kitaplığınız şu anda kullanmakta olduğunuz tarayıcıya kaydedilir, bu sayfayı farklı bir tarayıcı ile açarsanız daha önce kaydettiğiniz liste görünmez. Eğer site çerezlerini temizlerseniz kitaplığa kaydettiğiniz noveller silinir. LÜTFEN BUNA DİKKAT EDİN!</div>
 
 <div class='showBookmark'></div>
 
