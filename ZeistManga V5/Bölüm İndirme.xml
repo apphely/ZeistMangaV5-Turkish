@@ -1,0 +1,5 @@
+<script>
+  setTimeout(function() {
+ document.getElementById("dl").href = "İndirme_Linki";
+    }, 3000);
+</script>
