@@ -3,7 +3,7 @@
 <html b:css='false' b:defaultwidgetversion='2' b:js='true' b:layoutsVersion='3' b:responsive='true' b:templateUrl='indie.xml' b:templateVersion='1.3.0' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
   <head>
     <link href='https://fonts.googleapis.com/css?family=Fira Sans' rel='stylesheet'/>
-    <!-- Meta Umum -->
+    <!-- Genel Meta -->
     <b:include data='blog' name='google-analytics'/>
     <meta content='width=device-width,initial-scale=1' name='viewport'/>
     <link expr:href='data:view.url.canonical' rel='canonical'/>
@@ -14,21 +14,21 @@
     <meta content='blogger' name='generator'/>
     <meta expr:charset='data:blog.encoding'/>
     <meta content='unsafe-url' name='referrer'/>
-    <!-- Meta Kata Kunci -->
-    <meta expr:content='&quot;bahasa indonesia, manga, manhua, manhwa, komik, online, baca, &quot; + data:blog.pageName' name='keywords'/>
+    <!-- Meta Anahtar Kelimeler -->
+    <meta expr:content='&quot;Türkiye, Türkçe, manga, manhua, manhwa, çizgi roman, çevrimiçi, oku, &quot; + data:blog.pageName' name='keywords'/>
     <meta expr:content='data:blog.title' property='article:tag'/>
     <!-- Meta Deskripsi -->
-    <meta expr:content='&quot;Baca Komik &quot; + data:blog.pageName + &quot; Bahasa Indonesia&quot;' property='og:description'/>
-    <meta expr:content='&quot;Baca Komik &quot; + data:blog.pageName + &quot; Bahasa Indonesia&quot;' name='description'/>
+    <meta expr:content='&quot;Manga Oku &quot; + data:blog.pageName + &quot; Türkçe&quot;' property='og:description'/>
+    <meta expr:content='&quot;Manga Oku &quot; + data:blog.pageName + &quot; Türkçe&quot;' name='description'/>
     <!-- Meta Judul -->
     <b:if cond='data:view.isHomepage'>
-      <title><data:view.title.escaped/> - Baca Komik Online Bahasa Indonesia</title>
+      <title><data:view.title.escaped/> - Türkçe Mangaları Çevrimiçi Okuyun</title>
       <meta expr:content='data:view.title' property='og:title'/>
       <meta expr:content='data:view.title' property='og:image:alt'/>
       <meta expr:content='data:view.title' name='twitter:title'/>
       <meta expr:content='data:view.title' name='twitter:image:alt'/>
       <b:elseif cond='data:view.isPost'/>
-      <title><data:blog.pageName/> - Baca Komik Online Bahasa Indonesia</title>
+      <title><data:blog.pageName/> - Türkçe Mangaları Çevrimiçi Okuyun</title>
       <meta expr:content='data:blog.pageName + &quot; - &quot; + data:blog.title' property='og:title'/>
       <meta expr:content='data:blog.pageName + &quot; - &quot; + data:blog.title' property='og:image:alt'/>
       <meta expr:content='data:blog.pageName + &quot; - &quot; + data:blog.title' name='twitter:title'/>
@@ -40,17 +40,17 @@
       <meta expr:content='data:blog.pageName + &quot; - &quot; + data:blog.title' name='twitter:title'/>
       <meta expr:content='data:blog.pageName + &quot; - &quot; + data:blog.title' name='twitter:image:alt'/>
       <b:elseif cond='data:view.isMultipleItems and !data:view.isHomepage'/>
-      <title>Rekomendasi Komik <data:blog.pageName/> Terbaik</title>
+      <title><data:blog.pageName/> En İyi Türkçe Mangalar</title>
       <meta expr:content='data:blog.pageName + &quot; - &quot; + data:blog.title' property='og:title'/>
       <meta expr:content='data:blog.pageName + &quot; - &quot; + data:blog.title' property='og:image:alt'/>
       <meta expr:content='data:blog.pageName + &quot; - &quot; + data:blog.title' name='twitter:title'/>
       <meta expr:content='data:blog.pageName + &quot; - &quot; + data:blog.title' name='twitter:image:alt'/>
       <b:elseif cond='data:view.isError'/>
-      <title>Page Not Found</title>
-      <meta expr:content='&quot;Page Not Found - &quot; + data:blog.title' property='og:title'/>
-      <meta expr:content='&quot;Page Not Found - &quot; + data:blog.title' property='og:image:alt'/>
-      <meta expr:content='&quot;Page Not Found - &quot; + data:blog.title' name='twitter:title'/>
-      <meta expr:content='&quot;Page Not Found - &quot; + data:blog.title' name='twitter:image:alt'/>
+      <title>Sayfa Bulunamadı</title>
+      <meta expr:content='&quot;Sayfa Bulunamadı - &quot; + data:blog.title' property='og:title'/>
+      <meta expr:content='&quot;Sayfa Bulunamadı - &quot; + data:blog.title' property='og:image:alt'/>
+      <meta expr:content='&quot;Sayfa Bulunamadı - &quot; + data:blog.title' name='twitter:title'/>
+      <meta expr:content='&quot;Sayfa Bulunamadı - &quot; + data:blog.title' name='twitter:image:alt'/>
       <b:else/>
       <title><data:view.title/></title>
       <meta expr:content='data:view.title' property='og:title'/>
@@ -75,42 +75,43 @@
     <b:skin><![CDATA[ 
 
 /*
-<Variable name="keycolor" description="Main Color" type="color" default="#ff0000" hideEditor="true"  value="#006b3c"/>
+<Variable name="keycolor" description="Ana Renk" type="color" default="#ff0000" hideEditor="true"  value="#006b3c"/>
 <Group description="Body">
-  <Variable name="body.background.color" description="Background color" type="color" default="#fff"  value="#ffffff"/>
+  <Variable name="body.background.color" description="Arkaplan Rengi" type="color" default="#fff"  value="#ffffff"/>
 </Group>
-<Variable name="secclr" description="Secondary Color" type="color" default="#7b0000"  value="#006b3c"/>
+<Variable name="secclr" description="İkinci Renk" type="color" default="#7b0000"  value="#006b3c"/>
 <Variable name="border.radius" description="Border Radius" type="length"
             min="2px" max="50px" default="2px"  value="3px"/>
-<Variable name="b.w" description="Blog Width" type="length"
+<Variable name="b.w" description="Blog Genişliği" type="length"
             min="1000px" max="1300px" default="1180px"  value="1200px"/>
-<Variable name="s.w" description="Sidebar Width" type="length"
+<Variable name="s.w" description="Sidebar Genişliği" type="length"
             min="300px" max="500px" default="315px"  value="339px"/>
-<Group description="Status Color">
-<Variable name="com" description="Completed Color" type="color" default="#228b22"  value="#240d36"/>
-<Variable name="ong" description="Ongoing Color" type="color" default="#ffa500"  value="#00b4e3"/>
-<Variable name="soo" description="Coming Soon Color" type="color" default="#2f4f4f"  value="#000000"/>
-<Variable name="drp" description="Dropped Color" type="color" default="#ff0000"  value="#00e37f"/>
+<Group description="Durum Renkleri">
+<Variable name="com" description="Tamamlandı Rengi" type="color" default="#228b22"  value="#240d36"/>
+<Variable name="ong" description="Devam Ediyor Rengi" type="color" default="#ffa500"  value="#00b4e3"/>
+<Variable name="soo" description="Çok Yakında Rengi" type="color" default="#2f4f4f"  value="#000000"/>
+<Variable name="drp" description="Terk Edildi Rengi" type="color" default="#ff0000"  value="#00e37f"/>
 </Group>
-<Group description="New Comment Required - Dont edit">
+<Group description="Yeni Yorum Gerekli - Düzenleme Yapmayın">
 <Variable name="body.background" description="Background" color="#505050" type="background" default="$(color) none repeat scroll center center"  value="$(color) none repeat scroll center center"/>
-<Variable name="body.text.font" description="Font komentar Blogger" type="font" default="$(fontBody)" value="400 14px &#39;Roboto&#39;, sans-serif"/>
-<Variable name="body.text.color" description="Color" type="color" default="#505050"  value="#000000"/>
-<Variable name="body.link.color" description="Link color" type="color" default="#161617"  value="#000000"/>
-<Variable name="posts.title.color" description="Post title color" type="color" default="#161617"  value="#000000"/>
-<Variable name="posts.text.color" description="Post text color" type="color" default="#505050"  value="#000000"/>
-<Variable name="posts.icons.color" description="Post info color" type="color" default="#505050" value="#000000"/>
-<Variable name="posts.background.color" description="Post background color" type="color" default="#f7f7fc"  value="#faf7f2"/>
+<Variable name="body.text.font" description="Blogger yorum fontu" type="font" default="$(fontBody)" value="400 14px &#39;Roboto&#39;, sans-serif"/>
+<Variable name="body.text.color" description="Renk" type="color" default="#505050"  value="#000000"/>
+<Variable name="body.link.color" description="Link rengi" type="color" default="#161617"  value="#000000"/>
+<Variable name="posts.title.color" description="Yayın başlık rengi" type="color" default="#161617"  value="#000000"/>
+<Variable name="posts.text.color" description="Yayın yazı rengi" type="color" default="#505050"  value="#000000"/>
+<Variable name="posts.icons.color" description="Yayın Bilgi rengi" type="color" default="#505050" value="#000000"/>
+<Variable name="posts.background.color" description="Yayın arkaplan rengi" type="color" default="#f7f7fc"  value="#faf7f2"/>
 <Variable name="tabs.font" description="Font" type="font" default="400 14px &#39;Roboto&#39;, sans-serif" value="400 14px &#39;Roboto&#39;, sans-serif"/>
-<Variable name="tabs.overflow.background.color" description="Popup background color" type="color" default="#ffffff"  value="#ffffff"/>
-<Variable name="labels.background.color" description="Labels background color" type="color" default="#fff" value="#ffffff"/>
+<Variable name="tabs.overflow.background.color" description="Popup arkaplan rengi" type="color" default="#ffffff"  value="#ffffff"/>
+<Variable name="labels.background.color" description="Etiketler arkaplan rengi" type="color" default="#fff" value="#ffffff"/>
 </Group>
 */
 /*!************************************************
-* Name		: ZeistManga
-* Version	: 5.4
-* Revisi	: r1
+* Ad		: Zeist Manga Türkçe
+* Sürüm	: 5.4
+* Mod	: r1
 * Website	: emissionhex.blogspot.com
+* Türkçe Demo : https://zmv5-turkish.blogspot.com
 **************************************************/
 :root {
   --primary-color: $(keycolor);
@@ -1068,7 +1069,7 @@ body#layout header div.section .widget {flex: 1;}
       <b:defaultmarkup type='Common'>
         <b:includable id='relatedPost' var='post'>
           <div class='bc-fff r2 s1 a3 oh'>
-            <h2 class='c-theme m-0 bb-1pxsf y9x19p fs-15 flex aic jcsb'><span class='flex aic'><svg aria-hidden='true' height='1em' preserveAspectRatio='xMidYMid meet' role='img' viewBox='0 0 24 24' width='1em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g fill='none'><path d='M10 2H2v8h3v12h2V10h3v2h2v2h2v8h8v-8h-8v-2h-2v-2h-2V2zM4 8V4h4v4H4zm12 12v-4h4v4h-4z' fill='currentColor'/></g></svg>Rekomendasi</span><div class='flex aic wh-18-svg gg-10'>
+            <h2 class='c-theme m-0 bb-1pxsf y9x19p fs-15 flex aic jcsb'><span class='flex aic'><svg aria-hidden='true' height='1em' preserveAspectRatio='xMidYMid meet' role='img' viewBox='0 0 24 24' width='1em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g fill='none'><path d='M10 2H2v8h3v12h2V10h3v2h2v2h2v8h8v-8h-8v-2h-2v-2h-2V2zM4 8V4h4v4H4zm12 12v-4h4v4h-4z' fill='currentColor'/></g></svg>Önerilenler</span><div class='flex aic wh-18-svg gg-10'>
                                 <div id='prev'><svg aria-hidden='true' height='1em' preserveAspectRatio='xMidYMid meet' role='img' viewBox='0 0 24 24' width='1em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><path d='M4.431 12.822l13 9A1 1 0 0 0 19 21V3a1 1 0 0 0-1.569-.823l-13 9a1.003 1.003 0 0 0 0 1.645z' fill='currentColor'/></svg></div>
                                 <div id='next'><svg aria-hidden='true' height='1em' preserveAspectRatio='xMidYMid meet' role='img' viewBox='0 0 24 24' width='1em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><path d='M5.536 21.886a1.004 1.004 0 0 0 1.033-.064l13-9a1 1 0 0 0 0-1.644l-13-9A1 1 0 0 0 5 3v18a1 1 0 0 0 .536.886z' fill='currentColor'/></svg>
                                 </div>
@@ -1087,7 +1088,7 @@ body#layout header div.section .widget {flex: 1;}
               noImage: &quot;data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=&quot;,
               containerId: &quot;related-posts&quot;,
               newTabLink: false,
-              moreText: &quot;Read more&quot;,
+              moreText: &quot;Daha fazla&quot;,
               widgetStyle: 2,
               callBack:function(){}
               }
@@ -1096,7 +1097,7 @@ body#layout header div.section .widget {flex: 1;}
 var randomRelatedIndex, showRelatedPost;
 (function(n, m, k) {
   var d = {
-    widgetTitle: "<h3 class='heading'>Related Posts</h3>",
+    widgetTitle: "<h3 class='heading'>Önerilen Yayın</h3>",
     widgetStyle: 1,
     homePage: "http://www.jagodesain.com",
     numPosts: 7,
@@ -1106,7 +1107,7 @@ var randomRelatedIndex, showRelatedPost;
     noImage: "data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
     containerId: "related-posts",
     newTabLink: false,
-    moreText: "Read more",
+    moreText: "Daha fazla",
     callBack: function() {}
   };
   for (var f in relatedPostConfig) {
@@ -1186,12 +1187,12 @@ var randomRelatedIndex, showRelatedPost;
 var noPage,currentPage,currentPageNo,postLabel,
 perPage=20,
 numPages=3,
-firstText="First",
-lastText="Last",
-prevText="Previous",
-nextText="Next",
+firstText="İlk",
+lastText="Son",
+prevText="Önceki",
+nextText="Sonraki",
 
-urlactivepage=location.href,home_page="/";function looppagecurrentg(e){var a="";pageNumber=parseInt(numPages/2),pageNumber==numPages-pageNumber&&(numPages=2*pageNumber+1),pageStart=currentPageNo-pageNumber,pageStart<1&&(pageStart=1),lastPageNo=parseInt(e/perPage)+1,lastPageNo-1==e/perPage&&(lastPageNo-=1),pageEnd=pageStart+numPages-1,pageEnd>lastPageNo&&(pageEnd=lastPageNo),a+="<span class='showpageOf'>Page "+currentPageNo+" of "+lastPageNo+"</span>";var t=parseInt(currentPageNo)-1;currentPageNo>1&&(a+="page"==currentPage?'<span class="showpage firstpage"><a href="'+home_page+'">'+firstText+"</a></span>":'<span class="displaypageNum firstpage"><a href="/search/label/'+postLabel+"?&max-results="+perPage+'">'+firstText+"</a></span>"),currentPageNo>2&&(a+=3==currentPageNo?"page"==currentPage?'<span class="showpage"><a href="'+home_page+'">'+prevText+"</a></span>":'<span class="displaypageNum"><a href="/search/label/'+postLabel+"?&max-results="+perPage+'">'+prevText+"</a></span>":"page"==currentPage?'<span class="displaypageNum"><a href="#" onclick="redirectpage('+t+');return false">'+prevText+"</a></span>":'<span class="displaypageNum"><a href="#" onclick="redirectlabel('+t+');return false">'+prevText+"</a></span>"),pageStart>1&&(a+="page"==currentPage?'<span class="displaypageNum"><a href="'+home_page+'">1</a></span>':'<span class="displaypageNum"><a href="/search/label/'+postLabel+"?&max-results="+perPage+'">1</a></span>'),pageStart>2&&(a+=" ... ");for(var s=pageStart;s<=pageEnd;s++)a+=currentPageNo==s?'<span class="pagecurrent">'+s+"</span>":1==s?"page"==currentPage?'<span class="displaypageNum"><a href="'+home_page+'">1</a></span>':'<span class="displaypageNum"><a href="/search/label/'+postLabel+"?&max-results="+perPage+'">1</a></span>':"page"==currentPage?'<span class="displaypageNum"><a href="#" onclick="redirectpage('+s+');return false">'+s+"</a></span>":'<span class="displaypageNum"><a href="#" onclick="redirectlabel('+s+');return false">'+s+"</a></span>";pageEnd<lastPageNo-1&&(a+="..."),pageEnd<lastPageNo&&(a+="page"==currentPage?'<span class="displaypageNum"><a href="#" onclick="redirectpage('+lastPageNo+');return false">'+lastPageNo+"</a></span>":'<span class="displaypageNum"><a href="#" onclick="redirectlabel('+lastPageNo+');return false">'+lastPageNo+"</a></span>");var r=parseInt(currentPageNo)+1;currentPageNo<lastPageNo-1&&(a+="page"==currentPage?'<span class="displaypageNum"><a href="#" onclick="redirectpage('+r+');return false">'+nextText+"</a></span>":'<span class="displaypageNum"><a href="#" onclick="redirectlabel('+r+');return false">'+nextText+"</a></span>"),currentPageNo<lastPageNo&&(a+="page"==currentPage?'<span class="displaypageNum lastpage"><a href="#" onclick="redirectpage('+lastPageNo+');return false">'+lastText+"</a></span>":'<span class="displaypageNum lastpage"><a href="#" onclick="redirectlabel('+lastPageNo+');return false">'+lastText+"</a></span>");for(var p=document.getElementsByName("pageArea"),n=document.getElementById("blog-pager"),l=0;l<p.length;l++)p[l].innerHTML=a;p&&p.length>0&&(a=""),n&&(n.innerHTML=a)}function totalcountdata(e){var a=e.feed;looppagecurrentg(parseInt(a.openSearch$totalResults.$t,10))}function pagecurrentg(){var e=urlactivepage;-1!=e.indexOf("/search/label/")&&(postLabel=-1!=e.indexOf("?updated-max")?e.substring(e.indexOf("/search/label/")+14,e.indexOf("?updated-max")):e.substring(e.indexOf("/search/label/")+14,e.indexOf("?&max"))),-1==e.indexOf("?q=")&&-1==e.indexOf(".html")&&(-1==e.indexOf("/search/label/")?(currentPage="page",currentPageNo=-1!=urlactivepage.indexOf("#PageNo=")?urlactivepage.substring(urlactivepage.indexOf("#PageNo=")+8,urlactivepage.length):1,document.write('<script src="'+home_page+'feeds/posts/summary?max-results=1&alt=json-in-script&callback=totalcountdata"><\/script>')):(currentPage="label",-1==e.indexOf("&max-results=")&&(perPage=20),currentPageNo=-1!=urlactivepage.indexOf("#PageNo=")?urlactivepage.substring(urlactivepage.indexOf("#PageNo=")+8,urlactivepage.length):1,document.write('<script src="'+home_page+"feeds/posts/summary/-/"+postLabel+'?alt=json-in-script&callback=totalcountdata&max-results=1" ><\/script>')))}function redirectpage(e){jsonstart=(e-1)*perPage,noPage=e;var a=document.getElementsByTagName("head")[0],t=document.createElement("script");t.type="text/javascript",t.setAttribute("src",home_page+"feeds/posts/summary?start-index="+jsonstart+"&max-results=1&alt=json-in-script&callback=finddatepost"),a.appendChild(t)}function redirectlabel(e){jsonstart=(e-1)*perPage,noPage=e;var a=document.getElementsByTagName("head")[0],t=document.createElement("script");t.type="text/javascript",t.setAttribute("src",home_page+"feeds/posts/summary/-/"+postLabel+"?start-index="+jsonstart+"&max-results=1&alt=json-in-script&callback=finddatepost"),a.appendChild(t)}function finddatepost(e){post=e.feed.entry[0];var a=post.published.$t.substring(0,19)+post.published.$t.substring(23,29),t=encodeURIComponent(a);if("page"==currentPage)var s="/search?updated-max="+t+"&max-results="+perPage+"#PageNo="+noPage;else s="/search/label/"+postLabel+"?updated-max="+t+"&max-results="+perPage+"#PageNo="+noPage;location.href=s}void 0===firstText&&(firstText="First"),void 0===lastText&&(lastText="Last"),pagecurrentg();
+urlactivepage=location.href,home_page="/";function looppagecurrentg(e){var a="";pageNumber=parseInt(numPages/2),pageNumber==numPages-pageNumber&&(numPages=2*pageNumber+1),pageStart=currentPageNo-pageNumber,pageStart<1&&(pageStart=1),lastPageNo=parseInt(e/perPage)+1,lastPageNo-1==e/perPage&&(lastPageNo-=1),pageEnd=pageStart+numPages-1,pageEnd>lastPageNo&&(pageEnd=lastPageNo),a+="<span class='showpageOf'>Sayfa "+currentPageNo+" of "+lastPageNo+"</span>";var t=parseInt(currentPageNo)-1;currentPageNo>1&&(a+="page"==currentPage?'<span class="showpage firstpage"><a href="'+home_page+'">'+firstText+"</a></span>":'<span class="displaypageNum firstpage"><a href="/search/label/'+postLabel+"?&max-results="+perPage+'">'+firstText+"</a></span>"),currentPageNo>2&&(a+=3==currentPageNo?"page"==currentPage?'<span class="showpage"><a href="'+home_page+'">'+prevText+"</a></span>":'<span class="displaypageNum"><a href="/search/label/'+postLabel+"?&max-results="+perPage+'">'+prevText+"</a></span>":"page"==currentPage?'<span class="displaypageNum"><a href="#" onclick="redirectpage('+t+');return false">'+prevText+"</a></span>":'<span class="displaypageNum"><a href="#" onclick="redirectlabel('+t+');return false">'+prevText+"</a></span>"),pageStart>1&&(a+="page"==currentPage?'<span class="displaypageNum"><a href="'+home_page+'">1</a></span>':'<span class="displaypageNum"><a href="/search/label/'+postLabel+"?&max-results="+perPage+'">1</a></span>'),pageStart>2&&(a+=" ... ");for(var s=pageStart;s<=pageEnd;s++)a+=currentPageNo==s?'<span class="pagecurrent">'+s+"</span>":1==s?"page"==currentPage?'<span class="displaypageNum"><a href="'+home_page+'">1</a></span>':'<span class="displaypageNum"><a href="/search/label/'+postLabel+"?&max-results="+perPage+'">1</a></span>':"page"==currentPage?'<span class="displaypageNum"><a href="#" onclick="redirectpage('+s+');return false">'+s+"</a></span>":'<span class="displaypageNum"><a href="#" onclick="redirectlabel('+s+');return false">'+s+"</a></span>";pageEnd<lastPageNo-1&&(a+="..."),pageEnd<lastPageNo&&(a+="page"==currentPage?'<span class="displaypageNum"><a href="#" onclick="redirectpage('+lastPageNo+');return false">'+lastPageNo+"</a></span>":'<span class="displaypageNum"><a href="#" onclick="redirectlabel('+lastPageNo+');return false">'+lastPageNo+"</a></span>");var r=parseInt(currentPageNo)+1;currentPageNo<lastPageNo-1&&(a+="page"==currentPage?'<span class="displaypageNum"><a href="#" onclick="redirectpage('+r+');return false">'+nextText+"</a></span>":'<span class="displaypageNum"><a href="#" onclick="redirectlabel('+r+');return false">'+nextText+"</a></span>"),currentPageNo<lastPageNo&&(a+="page"==currentPage?'<span class="displaypageNum lastpage"><a href="#" onclick="redirectpage('+lastPageNo+');return false">'+lastText+"</a></span>":'<span class="displaypageNum lastpage"><a href="#" onclick="redirectlabel('+lastPageNo+');return false">'+lastText+"</a></span>");for(var p=document.getElementsByName("pageArea"),n=document.getElementById("blog-pager"),l=0;l<p.length;l++)p[l].innerHTML=a;p&&p.length>0&&(a=""),n&&(n.innerHTML=a)}function totalcountdata(e){var a=e.feed;looppagecurrentg(parseInt(a.openSearch$totalResults.$t,10))}function pagecurrentg(){var e=urlactivepage;-1!=e.indexOf("/search/label/")&&(postLabel=-1!=e.indexOf("?updated-max")?e.substring(e.indexOf("/search/label/")+14,e.indexOf("?updated-max")):e.substring(e.indexOf("/search/label/")+14,e.indexOf("?&max"))),-1==e.indexOf("?q=")&&-1==e.indexOf(".html")&&(-1==e.indexOf("/search/label/")?(currentPage="page",currentPageNo=-1!=urlactivepage.indexOf("#PageNo=")?urlactivepage.substring(urlactivepage.indexOf("#PageNo=")+8,urlactivepage.length):1,document.write('<script src="'+home_page+'feeds/posts/summary?max-results=1&alt=json-in-script&callback=totalcountdata"><\/script>')):(currentPage="label",-1==e.indexOf("&max-results=")&&(perPage=20),currentPageNo=-1!=urlactivepage.indexOf("#PageNo=")?urlactivepage.substring(urlactivepage.indexOf("#PageNo=")+8,urlactivepage.length):1,document.write('<script src="'+home_page+"feeds/posts/summary/-/"+postLabel+'?alt=json-in-script&callback=totalcountdata&max-results=1" ><\/script>')))}function redirectpage(e){jsonstart=(e-1)*perPage,noPage=e;var a=document.getElementsByTagName("head")[0],t=document.createElement("script");t.type="text/javascript",t.setAttribute("src",home_page+"feeds/posts/summary?start-index="+jsonstart+"&max-results=1&alt=json-in-script&callback=finddatepost"),a.appendChild(t)}function redirectlabel(e){jsonstart=(e-1)*perPage,noPage=e;var a=document.getElementsByTagName("head")[0],t=document.createElement("script");t.type="text/javascript",t.setAttribute("src",home_page+"feeds/posts/summary/-/"+postLabel+"?start-index="+jsonstart+"&max-results=1&alt=json-in-script&callback=finddatepost"),a.appendChild(t)}function finddatepost(e){post=e.feed.entry[0];var a=post.published.$t.substring(0,19)+post.published.$t.substring(23,29),t=encodeURIComponent(a);if("page"==currentPage)var s="/search?updated-max="+t+"&max-results="+perPage+"#PageNo="+noPage;else s="/search/label/"+postLabel+"?updated-max="+t+"&max-results="+perPage+"#PageNo="+noPage;location.href=s}void 0===firstText&&(firstText="First"),void 0===lastText&&(lastText="Last"),pagecurrentg();
  /*]]>*/</script>
         </b:includable>
         <b:includable id='Category'>
@@ -1218,21 +1219,21 @@ urlactivepage=location.href,home_page="/";function looppagecurrentg(e){var a="";
         </b:includable>
         <b:includable id='cfs'>
           <b:if cond='data:post.labels any (l =&gt; l.name == &quot;Hot&quot;)'>
-            <span class='hotx flex aic jcc' title='Hot'><span class='iconify' data-icon='ph:flame-duotone' data-inline='false'/></span>
+            <span class='hotx flex aic jcc' title='Sıcak'><span class='iconify' data-icon='ph:flame-duotone' data-inline='false'/></span>
           </b:if>
-          <b:if cond='data:post.labels any (l =&gt; l.name == &quot;Color&quot;)'>
-            <span class='colored'><span class='iconify mr-3' data-icon='ic:twotone-color-lens' data-inline='false'/> Color</span>
+          <b:if cond='data:post.labels any (l =&gt; l.name == &quot;Renkli&quot;)'>
+            <span class='colored'><span class='iconify mr-3' data-icon='ic:twotone-color-lens' data-inline='false'/> Renkli</span>
             <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;Webtoon&quot;)'/>
             <span class='colored'><span class='iconify mr-3' data-icon='simple-icons:webtoon' data-inline='false'/> Webtoon</span>
           </b:if>
-          <b:if cond='data:post.labels any (l =&gt; l.name == &quot;Completed&quot;)'>
-            <span class='absolute com ttu fs-11'>Completed</span>
-            <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;Dropped&quot;)'/>
-            <span class='absolute drp ttu fs-11'>Dropped</span>
-            <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;Ongoing&quot;)'/>
-            <span class='absolute ong ttu fs-11'>Ongoing</span>
-            <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;Coming Soon&quot;)'/>
-            <span class='absolute soo ttu fs-11'>Coming Soon</span>
+          <b:if cond='data:post.labels any (l =&gt; l.name == &quot;Tamamlandı&quot;)'>
+            <span class='absolute com ttu fs-11'>Tamamlandı</span>
+            <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;Terk Edildi&quot;)'/>
+            <span class='absolute drp ttu fs-11'>Terk Edildi</span>
+            <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;Devam Ediyor&quot;)'/>
+            <span class='absolute ong ttu fs-11'>Devam Ediyor</span>
+            <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;Çok Yakında&quot;)'/>
+            <span class='absolute soo ttu fs-11'>Çok Yakında</span>
           </b:if>
         </b:includable>
         <b:includable id='ScoreMultiItem'>
@@ -1369,7 +1370,7 @@ urlactivepage=location.href,home_page="/";function looppagecurrentg(e){var a="";
     <b:if cond='data:view.isMultipleItems'>
       <script type='text/javascript'>
         //<![CDATA[
-function rcentbytag(e){document.write('<div class="chap-by-tag full">');for(var t=0;t<numposts;t++){var n=e.feed.entry[t];var r=n.title.$t;var i;if(t==e.feed.entry.length)break;for(var o=0;o<n.link.length;o++){if(n.link[o].rel=="replies"&&n.link[o].type=="text/html"){var u=n.link[o].title;var f=n.link[o].href}if(n.link[o].rel=="alternate"){i=n.link[o].href;break}}var l;try{l=n.media$thumbnail.url}catch(h){s=n.content.$t;a=s.indexOf("<img");b=s.indexOf('src="',a);c=s.indexOf('"',b+5);d=s.substr(b+5,c-b-5);if(a!=-1&&b!=-1&&c!=-1&&d!=""){l=d}else l="http://2.bp.blogspot.com/-giova1ZCh-A/Uzq6L8QTJNI/AAAAAAAAAJc/USXictTq_xs/s70-c/KM+Icon.png"}var p=n.published.$t;var v=p.substring(0,4);var m=p.substring(5,7);var g=p.substring(8,10);var y=new Array;y[1]="Januari";y[2]="Februari";y[3]="Maret";y[4]="April";y[5]="Mei";y[6]="Juni";y[7]="Juli";y[8]="Agustus";y[9]="September";y[10]="Oktober";y[11]="November";y[12]="Desember";document.write('<div class="flex aic jcsb y6x0p">');if(showpostthumbnails==true)document.write('<a href="'+i+'"  title="'+r+'"><img class="rct-thumb" alt="'+r+'" src="'+l+'"/></a>');document.write('<strong><a href="'+i+'" title="'+r+'" rel="nofollow">'+r+'</a></strong>');var x="";var T=0;if(showpostdate==true){x='<time class="showdates">'+x+g+" "+y[parseInt(m,10)]+" </time>";T=1}document.write(x);document.write("</div>");if(t!=numposts-1)document.write("")}document.write("</div>")}
+function rcentbytag(e){document.write('<div class="chap-by-tag full">');for(var t=0;t<numposts;t++){var n=e.feed.entry[t];var r=n.title.$t;var i;if(t==e.feed.entry.length)break;for(var o=0;o<n.link.length;o++){if(n.link[o].rel=="replies"&&n.link[o].type=="text/html"){var u=n.link[o].title;var f=n.link[o].href}if(n.link[o].rel=="alternate"){i=n.link[o].href;break}}var l;try{l=n.media$thumbnail.url}catch(h){s=n.content.$t;a=s.indexOf("<img");b=s.indexOf('src="',a);c=s.indexOf('"',b+5);d=s.substr(b+5,c-b-5);if(a!=-1&&b!=-1&&c!=-1&&d!=""){l=d}else l="http://2.bp.blogspot.com/-giova1ZCh-A/Uzq6L8QTJNI/AAAAAAAAAJc/USXictTq_xs/s70-c/KM+Icon.png"}var p=n.published.$t;var v=p.substring(0,4);var m=p.substring(5,7);var g=p.substring(8,10);var y=new Array;y[1]="Ocak";y[2]="Şubat";y[3]="Mart";y[4]="Nisan";y[5]="Mayıs";y[6]="Haziran";y[7]="Temmuz";y[8]="Ağustos";y[9]="Eylül";y[10]="Ekim";y[11]="Kasım";y[12]="Arlaık";document.write('<div class="flex aic jcsb y6x0p">');if(showpostthumbnails==true)document.write('<a href="'+i+'"  title="'+r+'"><img class="rct-thumb" alt="'+r+'" src="'+l+'"/></a>');document.write('<strong><a href="'+i+'" title="'+r+'" rel="nofollow">'+r+'</a></strong>');var x="";var T=0;if(showpostdate==true){x='<time class="showdates">'+x+g+" "+y[parseInt(m,10)]+" </time>";T=1}document.write(x);document.write("</div>");if(t!=numposts-1)document.write("")}document.write("</div>")}
 //]]> </script>
 
     </b:if>
@@ -1484,29 +1485,29 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a
 //]]>
       </script>  
       <script type='text/javascript'>/*<![CDATA[*/
-  const nPL={arr:new Array,compile:function(){const t=this.arr;let e='<div class="inner_nPL"><a id="dl" href="#" class="dlx r"><i class="fas fa-cloud-download-alt mr-7"></i>Download</a>',n='<div><select id="nPL_select" onchange="this.options[this.selectedIndex].value&&window.open(this.options[this.selectedIndex].value,\'_self\')" name="nPL_list"><option value="" selected>Select Chapter</option>';for(let s=0;s<t.length;s++){s!=t.length-0&&(n+=`<option value="${t[s].link}">${t[s].title}</option>`);const l=window.location.pathname;t[s].link.includes(l)&&(t[s+1]&&t[s+1]!=t.length-0&&(console.log(t[s+1]),s+1!=t.length-0&&(e+=`<a href="${t[s+1].link}" title="${t[s+1].title}"><i class="fas fa-angle-left mr-7"></i><span>Prev</span></a>`)),t[t.length-0]&&(e+=`<a href="${t[t.length-0].link}" title="${t[t.length-0].title}"><span>Home</span></a>`),t[s-1]&&(console.log(t[s-1]),e+=`<a href="${t[s-1].link}" title="${t[s-1].title}"><span class="mr-7">Next</span><i class="fas fa-angle-right"></i></a>`))}n+=`</select></div>${e}</div>`,jQuery("#nPL").html(n)},create:function(t){const e=this;t.ajax({type:"get",url:`/feeds/posts/summary/-/${e.settings.cat}?alt=json-in-script&start-index=${e.settings.start}&max-results=${e.settings.max}`,dataType:"jsonp",success:function(t){"entry"in t.feed?(t.feed.entry.forEach(t=>{e.arr.push({title:t.title.$t,link:t.link.find(t=>"alternate"==t.rel).href})}),t.feed.length>=e.settings.max?(e.settings.start+=e.settings.max,e.run(e.settings.cat)):e.compile()):e.arr.length>0&&e.compile()},error:function(t){console.log(t)}})},run:function(t){"function"==typeof jQuery&&document.getElementById("nPL")?(this.settings.cat=t,this.create(jQuery)):console.log("Error not function")},settings:{start:1,max:150}};
+  const nPL={arr:new Array,compile:function(){const t=this.arr;let e='<div class="inner_nPL"><a id="dl" href="#" class="dlx r"><i class="fas fa-cloud-download-alt mr-7"></i>İndir</a>',n='<div><select id="nPL_select" onchange="this.options[this.selectedIndex].value&&window.open(this.options[this.selectedIndex].value,\'_self\')" name="nPL_list"><option value="" selected>Bölüm Seç</option>';for(let s=0;s<t.length;s++){s!=t.length-0&&(n+=`<option value="${t[s].link}">${t[s].title}</option>`);const l=window.location.pathname;t[s].link.includes(l)&&(t[s+1]&&t[s+1]!=t.length-0&&(console.log(t[s+1]),s+1!=t.length-0&&(e+=`<a href="${t[s+1].link}" title="${t[s+1].title}"><i class="fas fa-angle-left mr-7"></i><span>Önceki</span></a>`)),t[t.length-0]&&(e+=`<a href="${t[t.length-0].link}" title="${t[t.length-0].title}"><span>Ana Sayfa</span></a>`),t[s-1]&&(console.log(t[s-1]),e+=`<a href="${t[s-1].link}" title="${t[s-1].title}"><span class="mr-7">Sonraki</span><i class="fas fa-angle-right"></i></a>`))}n+=`</select></div>${e}</div>`,jQuery("#nPL").html(n)},create:function(t){const e=this;t.ajax({type:"get",url:`/feeds/posts/summary/-/${e.settings.cat}?alt=json-in-script&start-index=${e.settings.start}&max-results=${e.settings.max}`,dataType:"jsonp",success:function(t){"entry"in t.feed?(t.feed.entry.forEach(t=>{e.arr.push({title:t.title.$t,link:t.link.find(t=>"alternate"==t.rel).href})}),t.feed.length>=e.settings.max?(e.settings.start+=e.settings.max,e.run(e.settings.cat)):e.compile()):e.arr.length>0&&e.compile()},error:function(t){console.log(t)}})},run:function(t){"function"==typeof jQuery&&document.getElementById("nPL")?(this.settings.cat=t,this.create(jQuery)):console.log("Error not function")},settings:{start:1,max:150}};
 /*]]>*/</script>
       <script type='text/javascript'>/*<![CDATA[*/
-  const nPL2={arr:new Array,compile:function(){const t=this.arr;let e='<div class="inner_nPL">',n='<div><select id="nPL_select" onchange="this.options[this.selectedIndex].value&&window.open(this.options[this.selectedIndex].value,\'_self\')" name="nPL_list"><option value="" selected>Select Chapter</option>';for(let s=0;s<t.length;s++){s!=t.length-0&&(n+=`<option value="${t[s].link}">${t[s].title}</option>`);const l=window.location.pathname;t[s].link.includes(l)&&(t[s+1]&&t[s+1]!=t.length-0&&(console.log(t[s+1]),s+1!=t.length-0&&(e+=`<a href="${t[s+1].link}" title="${t[s+1].title}"><i class="fas fa-angle-left mr-7"></i><span>Prev</span></a>`)),t[t.length-0]&&(e+=`<a href="${t[t.length-0].link}" title="${t[t.length-0].title}"><span>Home</span></a>`),t[s-1]&&(console.log(t[s-1]),e+=`<a href="${t[s-1].link}" title="${t[s-1].title}"><span class="mr-7">Next</span><i class="fas fa-angle-right"></i></a>`))}n+=`</select></div>${e}</div>`,jQuery("#nPL2").html(n)},create:function(t){const e=this;t.ajax({type:"get",url:`/feeds/posts/summary/-/${e.settings.cat}?alt=json-in-script&start-index=${e.settings.start}&max-results=${e.settings.max}`,dataType:"jsonp",success:function(t){"entry"in t.feed?(t.feed.entry.forEach(t=>{e.arr.push({title:t.title.$t,link:t.link.find(t=>"alternate"==t.rel).href})}),t.feed.length>=e.settings.max?(e.settings.start+=e.settings.max,e.run(e.settings.cat)):e.compile()):e.arr.length>0&&e.compile()},error:function(t){console.log(t)}})},run:function(t){"function"==typeof jQuery&&document.getElementById("nPL2")?(this.settings.cat=t,this.create(jQuery)):console.log("Error not function")},settings:{start:1,max:150}};
+  const nPL2={arr:new Array,compile:function(){const t=this.arr;let e='<div class="inner_nPL">',n='<div><select id="nPL_select" onchange="this.options[this.selectedIndex].value&&window.open(this.options[this.selectedIndex].value,\'_self\')" name="nPL_list"><option value="" selected>Bölüm Seç</option>';for(let s=0;s<t.length;s++){s!=t.length-0&&(n+=`<option value="${t[s].link}">${t[s].title}</option>`);const l=window.location.pathname;t[s].link.includes(l)&&(t[s+1]&&t[s+1]!=t.length-0&&(console.log(t[s+1]),s+1!=t.length-0&&(e+=`<a href="${t[s+1].link}" title="${t[s+1].title}"><i class="fas fa-angle-left mr-7"></i><span>Önceki</span></a>`)),t[t.length-0]&&(e+=`<a href="${t[t.length-0].link}" title="${t[t.length-0].title}"><span>Ana Sayfa</span></a>`),t[s-1]&&(console.log(t[s-1]),e+=`<a href="${t[s-1].link}" title="${t[s-1].title}"><span class="mr-7">Sonraki</span><i class="fas fa-angle-right"></i></a>`))}n+=`</select></div>${e}</div>`,jQuery("#nPL2").html(n)},create:function(t){const e=this;t.ajax({type:"get",url:`/feeds/posts/summary/-/${e.settings.cat}?alt=json-in-script&start-index=${e.settings.start}&max-results=${e.settings.max}`,dataType:"jsonp",success:function(t){"entry"in t.feed?(t.feed.entry.forEach(t=>{e.arr.push({title:t.title.$t,link:t.link.find(t=>"alternate"==t.rel).href})}),t.feed.length>=e.settings.max?(e.settings.start+=e.settings.max,e.run(e.settings.cat)):e.compile()):e.arr.length>0&&e.compile()},error:function(t){console.log(t)}})},run:function(t){"function"==typeof jQuery&&document.getElementById("nPL2")?(this.settings.cat=t,this.create(jQuery)):console.log("Error not function")},settings:{start:1,max:150}};
 /*]]>*/</script>
     </b:if>
     <b:if cond='data:view.isHomepage'>
       <script>
 //<![CDATA[
 //Start function
-function timeAgo(o){var t=(new Date).getTime()-o.getTime(),e=Math.floor(t/1e3),r=Math.floor(e/60),a=Math.floor(r/60),g=Math.floor(a/24),h=Math.floor(g/30),n=Math.floor(h/12);return 0===t?"Just now":e<60?e+" seconds Ago":r<60?r+" min Ago":a<24?a+" hours Ago":g<30?g+" days Ago":h<12?h+" months":n+" years Ago"}
+function timeAgo(o){var t=(new Date).getTime()-o.getTime(),e=Math.floor(t/1e3),r=Math.floor(e/60),a=Math.floor(r/60),g=Math.floor(a/24),h=Math.floor(g/30),n=Math.floor(h/12);return 0===t?"Şimdi":e<60?e+" saniye":r<60?r+" dakika":a<24?a+" saat":g<30?g+" gün":h<12?h+" ay":n+" yıl"}
 //End function
 
 //]]>
 </script>
       <script async='async'>
   //<![CDATA[
-  var timeString=function(t){if(/([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/.test(t)){var e=t,i=e.substring(0,4),n=e.substring(5,7),r=e.substring(8,10),o=new Array;return o[1]="Jan",o[2]="Feb",o[3]="Mar",o[4]="Apr",o[5]="May",o[6]="Jun",o[7]="Jul",o[8]="Aug",o[9]="Sep",o[10]="Oct",o[11]="Nov",o[12]="Dec",r+" "+o[parseInt(n,10)]+" "+i}return!1},imageString=function(t){var e=t.indexOf("<img"),i=t.indexOf('src="',e),n=t.indexOf('"',i+5),r=t.substr(i+5,n-i-5);return-1!=e&&-1!=i&&-1!=n&&""!=r?r:"https://1.bp.blogspot.com/-BYDJ1dpFEhE/X9QnAUfeORI/AAAAAAAAHxw/OjfaqiPHjhAmCgJts39XIg7o4KR-8YtdACNcBGAsYHQ/w300-h225-p-k-no-nu/dagruel-no-image.png"},mangaPost={mainItemArr:new Array,subItemArr:new Array,compile:function(t){var e=t.feed.entry;if(!e)return!1;var i=document.getElementById("myManga");if(!i)return!1;if(i.dataset.created="Dagruel",e.forEach(function({category:t,content:e,link:i,title:n,published:r,media$thumbnail:o}){var a=n.$t,s=t.map(function(t){return t.term}),u=i.find(function(t){if("alternate"===t.rel)return t}).href,c="function"==typeof timeAgo?timeAgo(new Date(r.$t)):timeString(r.$t),l=e.$t&&e.$t.length>0?e.$t:"Nothing",m=o?o.url.replace("s72","w175-h235"):imageString(l);s=s.filter(function(t){if("Project"!==t)return t}),mangaPost.mainItem.filter(function(t){s.join(", ").includes(t)&&mangaPost.mainItemArr.push({title:a,link:u,image:m,category:s})}),mangaPost.subItem.filter(function(t){s.join(", ").includes(t)&&mangaPost.subItemArr.push({titleSub:a,linkSub:u,publishedSub:c,categorySub:s})})}),mangaPost.mainItemArr.length>0){var n="";mangaPost.mainItemArr.forEach(function({title:t,link:e,image:i,category:r}){var o="";
+  var timeString=function(t){if(/([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/.test(t)){var e=t,i=e.substring(0,4),n=e.substring(5,7),r=e.substring(8,10),o=new Array;return o[1]="Ock",o[2]="Şub",o[3]="Mar",o[4]="Nis",o[5]="May",o[6]="Haz",o[7]="Tem",o[8]="Ağs",o[9]="Eyl",o[10]="Ekm",o[11]="Kas",o[12]="Arl",r+" "+o[parseInt(n,10)]+" "+i}return!1},imageString=function(t){var e=t.indexOf("<img"),i=t.indexOf('src="',e),n=t.indexOf('"',i+5),r=t.substr(i+5,n-i-5);return-1!=e&&-1!=i&&-1!=n&&""!=r?r:"https://1.bp.blogspot.com/-BYDJ1dpFEhE/X9QnAUfeORI/AAAAAAAAHxw/OjfaqiPHjhAmCgJts39XIg7o4KR-8YtdACNcBGAsYHQ/w300-h225-p-k-no-nu/dagruel-no-image.png"},mangaPost={mainItemArr:new Array,subItemArr:new Array,compile:function(t){var e=t.feed.entry;if(!e)return!1;var i=document.getElementById("myManga");if(!i)return!1;if(i.dataset.created="Dagruel",e.forEach(function({category:t,content:e,link:i,title:n,published:r,media$thumbnail:o}){var a=n.$t,s=t.map(function(t){return t.term}),u=i.find(function(t){if("alternate"===t.rel)return t}).href,c="function"==typeof timeAgo?timeAgo(new Date(r.$t)):timeString(r.$t),l=e.$t&&e.$t.length>0?e.$t:"Nothing",m=o?o.url.replace("s72","w175-h235"):imageString(l);s=s.filter(function(t){if("Project"!==t)return t}),mangaPost.mainItem.filter(function(t){s.join(", ").includes(t)&&mangaPost.mainItemArr.push({title:a,link:u,image:m,category:s})}),mangaPost.subItem.filter(function(t){s.join(", ").includes(t)&&mangaPost.subItemArr.push({titleSub:a,linkSub:u,publishedSub:c,categorySub:s})})}),mangaPost.mainItemArr.length>0){var n="";mangaPost.mainItemArr.forEach(function({title:t,link:e,image:i,category:r}){var o="";
 var lang = "";
-var label = r.find(i => "Hot, New".includes(i));
-if ("Hot" == label) {
+var label = r.find(i => "Sıcak, Yeni".includes(i));
+if ("Sıcak" == label) {
   lang = "<span class='hot absolute r-5 t-3'></span>";
-} else if ("New" == label) {
+} else if ("Yeni" == label) {
   lang = "<span class='new absolute r-5 t-3'></span>";
 } else lang = "";
 var typ = "";
@@ -1519,17 +1520,17 @@ if ("Manga" == label2) {
   typ = "<span class='absolute po manhwa'>Manhwa</span>";
 } else typ = "";
 console.log(`${label} & ${lang}`);
-mangaPost.subItemArr.length>0&&mangaPost.subItemArr.forEach(function({titleSub:t,linkSub:e,publishedSub:i,categorySub:n}){var a=t;mangaPost.settingTitle.forEach(function({name:e,news:i}){a.includes(e)&&(a=i+" "+t.split(e)[1].replace(/[^0-9\.-]+/g,""))}),n.filter(function(n){r.join(", ").includes(n)&&(o+='<li class="char"><div class="chpName"><a href="'+e+'" title="'+t+'">'+a+'<span class="new-tag">new</span></a></div><time class="chpDate">'+i+"</time></li>")})}),n+='<div class="bookItem bb-1pxsf"><a href="'+e+'" title="'+t+'"><div class="snippet-thumbnail"><img loading="lazy" src="' + i + '"/>'+lang+typ+'</div></a><div class="data"><h2><a href="'+e+'" title="'+t+'">'+t+'</a></h2><ul class="subItem">'+o+"</ul></div></div>"}),i.innerHTML=n}},run:function(t,e){var i=document.createElement("script");i.src="/feeds/posts/default/-/"+t+"?orderby=published&alt=json-in-script&max-results="+e+"&callback=mangaPost.compile",document.body.appendChild(i)}};
+mangaPost.subItemArr.length>0&&mangaPost.subItemArr.forEach(function({titleSub:t,linkSub:e,publishedSub:i,categorySub:n}){var a=t;mangaPost.settingTitle.forEach(function({name:e,news:i}){a.includes(e)&&(a=i+" "+t.split(e)[1].replace(/[^0-9\.-]+/g,""))}),n.filter(function(n){r.join(", ").includes(n)&&(o+='<li class="char"><div class="chpName"><a href="'+e+'" title="'+t+'">'+a+'<span class="new-tag">yeni</span></a></div><time class="chpDate">'+i+"</time></li>")})}),n+='<div class="bookItem bb-1pxsf"><a href="'+e+'" title="'+t+'"><div class="snippet-thumbnail"><img loading="lazy" src="' + i + '"/>'+lang+typ+'</div></a><div class="data"><h2><a href="'+e+'" title="'+t+'">'+t+'</a></h2><ul class="subItem">'+o+"</ul></div></div>"}),i.innerHTML=n}},run:function(t,e){var i=document.createElement("script");i.src="/feeds/posts/default/-/"+t+"?orderby=published&alt=json-in-script&max-results="+e+"&callback=mangaPost.compile",document.body.appendChild(i)}};
 
   //Setting Script
   mangaPost.mainItem = ['Manga','Manhwa','Manhua'];
   mangaPost.subItem = ['Chapter'];
   mangaPost.settingTitle = [{
-    name: 'Chapter',
-    news: 'Ch'
+    name: 'Bölüm',
+    news: 'Blm'
   }, {
-    name: 'Episode',
-    news: 'Ep'
+    name: 'Cilt',
+    news: 'C'
   }];
   //]]>
 </script>
@@ -1542,7 +1543,7 @@ mangaPost.subItemArr.length>0&&mangaPost.subItemArr.forEach(function({titleSub:t
         n = e.substring(5, 7),
         r = e.substring(8, 10),
         o = new Array;
-      return o[1] = "Jan", o[2] = "Feb", o[3] = "Mar", o[4] = "Apr", o[5] = "May", o[6] = "Jun", o[7] = "Jul", o[8] = "Aug", o[9] = "Sep", o[10] = "Oct", o[11] = "Nov", o[12] = "Dec", r + " " + o[parseInt(n, 10)] + " " + i
+      return o[1] = "Ock", o[2] = "Şub", o[3] = "Mar", o[4] = "Nis", o[5] = "May", o[6] = "Haz", o[7] = "Tem", o[8] = "Ağs", o[9] = "Eyl", o[10] = "Ekm", o[11] = "Kas", o[12] = "Arl", r + " " + o[parseInt(n, 10)] + " " + i
     }
     return !1
   },
@@ -1606,10 +1607,10 @@ mangaPost.subItemArr.length>0&&mangaPost.subItemArr.forEach(function({titleSub:t
         }) {
           var o = "";
 var lang = "";
-var label = r.find(i => "Hot, New".includes(i));
-if ("Hot" == label) {
+var label = r.find(i => "Sıcak, Yeni".includes(i));
+if ("Sıcak" == label) {
   lang = "<span class='hot absolute r-5 t-3'></span>";
-} else if ("New" == label) {
+} else if ("Yeni" == label) {
   lang = "<span class='new absolute r-5 t-3'></span>";
 } else lang = "";
 var typ = "";
@@ -1635,7 +1636,7 @@ console.log(`${label} & ${lang}`);
             }) {
               a.includes(e) && (a = i + " " + t.split(e)[1].replace(/[^0-9\.-]+/g, ""))
             }), n.filter(function(n) {
-              r.join(", ").includes(n) && (o += '<li class="char"><div class="chpName"><a href="' + e + '" title="' + t + '">' + a + '<span class="new-tag">new</span></a></div><time class="chpDate">' + i + "</time></li>")
+              r.join(", ").includes(n) && (o += '<li class="char"><div class="chpName"><a href="' + e + '" title="' + t + '">' + a + '<span class="new-tag">yeni</span></a></div><time class="chpDate">' + i + "</time></li>")
             })
           }), n += '<div class="bookItem bb-1pxsf"><a href="' + e + '" title="' + t + '"><div class="snippet-thumbnail"><img loading="lazy" src="' + i + '"/>'+lang+typ+'</div></a><div class="data"><h2><a href="' + e + '" title="' + t + '">' + t + '</a></h2><ul class="subItem">' + o + "</ul></div></div>"
         }), i.innerHTML = n
@@ -1650,17 +1651,17 @@ console.log(`${label} & ${lang}`);
   update.mainItem = ['Update'];
   update.subItem = ['Chapter'];
   update.settingTitle = [{
-    name: 'Chapter',
-    news: 'Ch'
+    name: 'Bölüm',
+    news: 'Blm'
   }, {
-    name: 'Episode',
-    news: 'Ep'
+    name: 'Cilt',
+    news: 'C'
   }];
   //]]>
 </script>
       <script type='text/javascript'>/*<![CDATA[*/
 const mTP={shuffleArray:t=>{var e,i,n=t.length;if(0===n)return!1;for(;--n;)e=Math.floor(Math.random()*(n+1)),i=t[n],t[n]=t[e],t[e]=i;return t},run:(t,e,i=10,n=5)=>{if(0==t("#mTP_Slider").length)return console.log("Tag mTP_Slider tidak ada");mTP.maxCat=n,mTP.max=i,window.matchMedia("(max-width: 600px)").matches&&(mTP.maxCat=3),window.matchMedia("(max-width: 480px)").matches&&(mTP.maxCat=2);const a=0==e?"":`/-/${e}`;t.ajax({url:`/feeds/posts/default${a}?alt=json-in-script&max-results=150`,type:"get",dataType:"jsonp",success:function(e){mTP.compile(t,e)},error:function(t){console.log(t)}})},compile:(t,e)=>{if("entry"in e.feed){const n=mTP.shuffleArray(e.feed.entry);mTP.filter=mTP.shuffleArray(e.feed.category.map(t=>t.term).filter(t=>{if(mTP.Select.includes(t))return t})).slice(0,mTP.maxCat),mTP.obj={},t.each(mTP.filter,function(e,i){n.filter(e=>{const n=e.category.map(t=>t.term);if(n.includes(i)){const a=mTP.obj[i];a?a.length<mTP.max&&a.push({title:e.title.$t,cat:n,link:e.link.find(t=>"alternate"==t.rel).href,image:"media$thumbnail"in e?e.media$thumbnail.url.match(/\/s[0-9]{2}-(w[0-9]+-)?c/)?e.media$thumbnail.url.replace(/\/s[0-9]{2}-(w[0-9]+-)?c/,`/${mTP.iSize}-p-k-no-nu`):e.media$thumbnail.url.replace(/\=s[0-9]{2}-(w[0-9]+-)?c/,`=${mTP.iSize}-p-k-no-nu`):"content"in e?t(e.content.$t).find("img").attr("src"):mTP.noImage}):mTP.obj[i]=[{title:e.title.$t,cat:n,link:e.link.find(t=>"alternate"==t.rel).href,image:"media$thumbnail"in e?e.media$thumbnail.url.match(/\/s[0-9]{2}-(w[0-9]+-)?c/)?e.media$thumbnail.url.replace(/\/s[0-9]{2}-(w[0-9]+-)?c/,`/${mTP.iSize}-p-k-no-nu`):e.media$thumbnail.url.replace(/\=s[0-9]{2}-(w[0-9]+-)?c/,`=${mTP.iSize}-p-k-no-nu`):"content"in e?t(e.content.$t).find("img").attr("src"):mTP.noImage}]}})});const a=t('<div class="series-gen"><div class="head"><div class="r-title"></div><ul class="nav-tabs tabs tab r2"></ul></div><div class="listupd"></div></div>'),l=Object.keys(mTP.obj).sort().reduce((t,e)=>(t[e]=mTP.obj[e],t),{});for(var i in l){const e=i.replace(/\W/g,"");a.find(".nav-tabs").append(`<li><span data-id="series-${e}">${i}</span></li>`),a.find(".listupd").append(`<div id="series-${e}" class="customAF scroll"><div class="inner scrolling"></div>${mTP.btnPrev}${mTP.btnNext}</div>`),t.each(mTP.obj[i],function(){a.find(`#series-${e} .inner`).append(`<article class="customAgata">\n          <a href="${this.link}" title="${this.title}">\n            <div class="images">\n              <figure>\n                <img src="${this.image}" alt="${this.title}">\n              </figure>\n            </div>\n            <h2 class="entry-title">${this.title}</h2>\n          </a>\n        </article>`)})}t("#mTP_Slider").html(a),t(".nav-tabs li").click(function(){const e=t(this).find("span").attr("data-id");t(".customAF.scroll, .nav-tabs li").each(function(){t(this).attr("id")==e||t(this).find("span").attr("data-id")==e?t(this).addClass("active"):t(this).removeClass("active")})}),t(".nav-tabs li").first().click()}},sN:t=>{let e=t.parentElement.querySelector(".inner.scrolling"),i=e.clientWidth;e.scrollLeft+=i},sB:t=>{let e=t.parentElement.querySelector(".inner.scrolling"),i=e.clientWidth;e.scrollLeft-=i},btnNext:'<button onclick="mTP.sN(this)" class="scrollButton right"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M15.713 12l-6.01-6.01l-1.415 1.414l4.6 4.6l-4.6 4.593l1.414 1.414L15.713 12z" fill="currentColor"/></g></svg></button>',btnPrev:'<button onclick="mTP.sB(this)" class="scrollButton left"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M8.288 12l6.01 6.01l1.414-1.414l-4.6-4.6l4.6-4.6l-1.414-1.406L8.288 12z" fill="currentColor"/></g></svg></button>',iSize:"w207-h300",noImage:"https://1.bp.blogspot.com/-BYDJ1dpFEhE/X9QnAUfeORI/AAAAAAAAHxw/OjfaqiPHjhAmCgJts39XIg7o4KR-8YtdACNcBGAsYHQ/w300-h225-p-k-no-nu/dagruel-no-image.png"};
-mTP.Select = ["Action", "Adventure", "Comedy", "Drama", "Ecchi", "Fantasy", "Game", "Harem", "Historical", "Isekai", "Horror", "Josei", "Magic", "Mecha", "Military", "Music", "Mystery", "Parody", "Police", "Psychological", "Romance", "Samurai", "School", "School Life", "Sci-Fi", "Seinen", "Shoujo", "Shoujo Ai", "Shounen", "Slice of Life", "Space", "Sports", "Super Power", "Supernatural", "Thriller", "Vampire", "Yuri"];
+mTP.Select = ["Aksiyon", "Askeri", "Bilim Kurgu", "Drama", "Doğaüstü", "Ecchi", "Fantastik", "Gerilim", "Gizem", "Harem", "Hayattan Kesitler", "Isekai", "Josei", "Komedi", "Korku", "Meka", "Müzik", "Okul", "Okul Hayatı", "Oyun", "Parodi", "Polisiye", "Psikolojik", "Romantizm", "Samuray", "Seinen", "Shoujo", "Shoujo Ai", "Shounen", "Spor", "Süper Güç", "Tarihi", "Uzay", "Vampir", "Yuri"];
 /*]]>*/</script>
     </b:if>
     <script type='text/javascript'>/*<![CDATA[*/
