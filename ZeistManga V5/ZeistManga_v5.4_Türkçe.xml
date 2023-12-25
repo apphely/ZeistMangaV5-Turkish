@@ -1530,7 +1530,7 @@ mangaPost.subItemArr.length>0&&mangaPost.subItemArr.forEach(function({titleSub:t
     news: 'Blm'
   }, {
     name: 'Cilt',
-    news: 'C'
+    news: 'C-'
   }];
   //]]>
 </script>
@@ -1655,7 +1655,7 @@ console.log(`${label} & ${lang}`);
     news: 'Blm'
   }, {
     name: 'Cilt',
-    news: 'C'
+    news: 'C-'
   }];
   //]]>
 </script>
@@ -1665,7 +1665,7 @@ mTP.Select = ["Aksiyon", "Askeri", "Bilim Kurgu", "Drama", "Doğaüstü", "Ecchi
 /*]]>*/</script>
     </b:if>
     <script type='text/javascript'>/*<![CDATA[*/
-  const clwd={arr:new Array,compile:function(){const t=this,e=this.arr.length;t.settings.title.some(e=>t.arr[0].title.includes(e.in))||t.arr.push(t.arr.shift());let n="<ul>",s='<div class="lastend">';jQuery.each(t.arr,function(i,a){let l=a.title;if(jQuery.each(t.settings.title,function(t,e){l.includes(e.in)&&(l=e.out+" "+l.split(e.in)[1].replace(/[^0-9\.-]+/g,""))}),i==e-2&&(s+=`<div class="inepcx" data-id="1"><a href="${a.link}"><span>Chapter Awal</span><span class="epcur epcurfirst">${l}</span></a></div>`),0==i&&(s+=`<div class="inepcx" data-id="2"><a href="${a.link}"> <span>Chapter Baru</span> <span class="epcur epcurlast">${l}</span></a></div>`),i!=e-1){let t=0==a.dLink?"":`<div class="dt"> <a href="${a.dLink}" rel="nofollow" class="dload" target="_blank"><i class="fas fa-cloud-download-alt"></i></a></div>`;n+=`<li><div class="chbox"><div class="eph-num"><a href="${a.link}"><span class="chapternum">${l}</span> <span class="chapterdate">${a.published}</span></a></div>${t}</div></li>`}}),s+="</div>",n+="</ul>",document.getElementById("clwd").innerHTML=`${s+n}`},get:function(t){const e=this;t.ajax({url:`/feeds/posts/default/-/${this.settings.cat}?alt=json-in-script&start-index=${this.settings.start}&max-results=${this.settings.max}`,type:"get",dataType:"jsonp",success:function(n){"entry"in n.feed?(n.feed.entry.forEach(n=>{e.arr.push({title:n.title.$t,link:n.link.find(t=>"alternate"==t.rel).href,dLink:"content"in n&&(0!=t(n.content.$t).find("#downBTN").length&&t(n.content.$t).find("#downBTN").attr("href")),published:"function"==typeof timeAgo?timeAgo(new Date(n.updated.$t)):e.timeStirng(n.updated.$t)})}),n.feed.entry.length>=e.settings.max?(e.settings.start+=e.settings.max,e.run(e.settings.cat)):e.compile()):0!=e.arr.length&&e.compile()},error:function(t){console.log(t)}})},run:function(t){this.settings.cat=t,"function"==typeof jQuery&&document.getElementById("clwd")?this.get(jQuery):console.log("Output Nothing")},settings:{max:150,start:1,title:[{in:"Episode",out:"Ep."},{in:"Chapter",out:"Ch."},{in:"Volume",out:"Vol."}],judul:"Chapter List"},timeStirng:function(t){if(/([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/.test(t)){var e=t,n=e.substring(0,4),s=e.substring(5,7),i=e.substring(8,10),a=new Array;return a[1]="Jan",a[2]="Feb",a[3]="Mar",a[4]="Apr",a[5]="May",a[6]="Jun",a[7]="Jul",a[8]="Aug",a[9]="Sep",a[10]="Oct",a[11]="Nov",a[12]="Dec",i+" "+a[parseInt(s,10)]+" "+n}return!1}};
+  const clwd={arr:new Array,compile:function(){const t=this,e=this.arr.length;t.settings.title.some(e=>t.arr[0].title.includes(e.in))||t.arr.push(t.arr.shift());let n="<ul>",s='<div class="lastend">';jQuery.each(t.arr,function(i,a){let l=a.title;if(jQuery.each(t.settings.title,function(t,e){l.includes(e.in)&&(l=e.out+" "+l.split(e.in)[1].replace(/[^0-9\.-]+/g,""))}),i==e-2&&(s+=`<div class="inepcx" data-id="1"><a href="${a.link}"><span>İlk Bölüm</span><span class="epcur epcurfirst">${l}</span></a></div>`),0==i&&(s+=`<div class="inepcx" data-id="2"><a href="${a.link}"> <span>Son Bölüm</span> <span class="epcur epcurlast">${l}</span></a></div>`),i!=e-1){let t=0==a.dLink?"":`<div class="dt"> <a href="${a.dLink}" rel="nofollow" class="dload" target="_blank"><i class="fas fa-cloud-download-alt"></i></a></div>`;n+=`<li><div class="chbox"><div class="eph-num"><a href="${a.link}"><span class="chapternum">${l}</span> <span class="chapterdate">${a.published}</span></a></div>${t}</div></li>`}}),s+="</div>",n+="</ul>",document.getElementById("clwd").innerHTML=`${s+n}`},get:function(t){const e=this;t.ajax({url:`/feeds/posts/default/-/${this.settings.cat}?alt=json-in-script&start-index=${this.settings.start}&max-results=${this.settings.max}`,type:"get",dataType:"jsonp",success:function(n){"entry"in n.feed?(n.feed.entry.forEach(n=>{e.arr.push({title:n.title.$t,link:n.link.find(t=>"alternate"==t.rel).href,dLink:"content"in n&&(0!=t(n.content.$t).find("#downBTN").length&&t(n.content.$t).find("#downBTN").attr("href")),published:"function"==typeof timeAgo?timeAgo(new Date(n.updated.$t)):e.timeStirng(n.updated.$t)})}),n.feed.entry.length>=e.settings.max?(e.settings.start+=e.settings.max,e.run(e.settings.cat)):e.compile()):0!=e.arr.length&&e.compile()},error:function(t){console.log(t)}})},run:function(t){this.settings.cat=t,"function"==typeof jQuery&&document.getElementById("clwd")?this.get(jQuery):console.log("Output Nothing")},settings:{max:150,start:1,title:[{in:"Cilt",out:"C-"},{in:"Bölüm",out:"Blm"}],judul:"Bölüm Listesi"},timeStirng:function(t){if(/([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/.test(t)){var e=t,n=e.substring(0,4),s=e.substring(5,7),i=e.substring(8,10),a=new Array;return a[1]="Ock",a[2]="Şub",a[3]="Mar",a[4]="Nis",a[5]="May",a[6]="Haz",a[7]="Tem",a[8]="Ağs",a[9]="Eyl",a[10]="Ekm",a[11]="Kas",a[12]="Arl",i+" "+a[parseInt(s,10)]+" "+n}return!1}};
 /*]]>*/</script>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'/>
     <script src='//code.iconify.design/1/1.0.6/iconify.min.js'/>
@@ -1706,15 +1706,15 @@ $(widget).remove();
     <b:class cond='data:view.isPage' name='p'/>
     <script>/*<![CDATA[*/ (localStorage.getItem('mode')) === 'darkmode' ? document.querySelector('#modeSwitch').classList.add('dark-mode') : document.querySelector('#modeSwitch').classList.remove('dark-mode') /*]]>*/</script>
 
-    <b:with value='[&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,&quot;D&quot;,&quot;E&quot;,&quot;F&quot;,&quot;G&quot;,&quot;H&quot;,&quot;I&quot;,&quot;J&quot;,&quot;K&quot;,&quot;L&quot;,&quot;M&quot;,&quot;N&quot;,&quot;O&quot;,&quot;P&quot;,&quot;Q&quot;,&quot;R&quot;,&quot;S&quot;,&quot;T&quot;,&quot;U&quot;,&quot;V&quot;,&quot;W&quot;,&quot;X&quot;,&quot;Y&quot;,&quot;Z&quot;,&quot;0-9&quot;]' var='Alphabet'>
-      <b:with value='[&quot;Action&quot;,&quot;Adventure&quot;,&quot;Comedy&quot;,&quot;Crime&quot;,&quot;Drama&quot;,&quot;Fantasy&quot;,&quot;Historical&quot;,&quot;Horror&quot;,&quot;Isekai&quot;,&quot;Magical Girls&quot;,&quot;Mecha&quot;,&quot;Medical&quot;,&quot;Mystery&quot;,&quot;Philosophical&quot;,&quot;Psychological&quot;,&quot;Romance&quot;,&quot;Sci-Fi&quot;,&quot;Shoujo Ai&quot;,&quot;Shounen Ai&quot;,&quot;Slice of Life&quot;,&quot;Sports&quot;,&quot;Superhero&quot;,&quot;Thriller&quot;,&quot;Tragedy&quot;,&quot;Wuxia&quot;,&quot;Yaoi&quot;,&quot;Yuri&quot;,&quot;Tsundere&quot;,&quot;Yandere&quot;]' var='Genre'>
-        <b:with value='[&quot;Adaptation&quot;,&quot;Cooking&quot;,&quot;Harem&quot;,&quot;Loli&quot;,&quot;Mafia&quot;,&quot;Magic&quot;,&quot;Military&quot;,&quot;Music&quot;,&quot;Reincarnation&quot;,&quot;Reverse Harem&quot;,&quot;Samurai&quot;,&quot;School Life&quot;,&quot;Supernatural&quot;,&quot;Survival&quot;,&quot;Time Travel&quot;,&quot;Vampire&quot;,&quot;Video Games&quot;,&quot;Demon&quot;,&quot;Monsters&quot;,&quot;Martial Arts&quot;,&quot;Virtual Reality&quot;,&quot;Demons&quot;,&quot;Monster Girls&quot;,&quot;Monsters&quot;,&quot;Police&quot;]' var='Genre2'>
-          <b:with value='[&quot;Shounen&quot;,&quot;Shoujo&quot;,&quot;Seinen&quot;,&quot;Josei&quot;,&quot;Mature&quot;]' var='Demographic'>
-            <b:with value='[&quot;Ecchi&quot;,&quot;Gore&quot;,&quot;Sexual Violence&quot;,&quot;Smut&quot;,&quot;Series&quot;,&quot;Project&quot;]' var='Content'>
-              <b:with value='[&quot;Chapter&quot;,&quot;Novel&quot;,&quot;Ongoing&quot;,&quot;Hot&quot;,&quot;New&quot;,&quot;Color&quot;]' var='Other'>
-                <b:with value='[&quot;Light Novel (JP)&quot;,&quot;Web Novel (CN)&quot;,&quot;Web Novel (JP)&quot;,&quot;Web Novel (KR)&quot;,&quot;Manga&quot;,&quot;Manhua&quot;,&quot;Manhwa&quot;,&quot;Doujinshi&quot;,&quot;Long Strip&quot;,&quot;Full Color&quot;,&quot;One Shot&quot;,&quot;Web Comic&quot;,&quot;Official Colored&quot;,&quot;Jepang&quot;,&quot;Korea&quot;,&quot;Cina&quot;,&quot;Indonesia&quot;,&quot;Webtoon&quot;,&quot;Webtoons&quot;]' var='Format'>
-                  <b:with value='[&quot;Ongoing&quot;,&quot;Completed&quot;,&quot;Cancelled&quot;,&quot;Hiatus&quot;,&quot;Dropped&quot;,&quot;Coming Soon&quot;]' var='Status'>
-                    <b:with value='[&quot;Score 0.5&quot;,&quot;Score 1.0&quot;,&quot;Score 1.5&quot;,&quot;Score 2.0&quot;,&quot;Score 2.5&quot;,&quot;Score 3.0&quot;,&quot;Score 3.5&quot;,&quot;Score 4.0&quot;,&quot;Score 4.5&quot;,&quot;Score 5.0&quot;,&quot;Score 5.5&quot;,&quot;Score 6.0&quot;,&quot;Score 6.5&quot;,&quot;Score 7.0&quot;,&quot;Score 7.5&quot;,&quot;Score 8.0&quot;,&quot;Score 8.5&quot;,&quot;Score 9.0&quot;,&quot;Score 9.5&quot;,&quot;Score 10.0&quot;]' var='Score'>
+    <b:with value='[&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,&quot;D&quot;,&quot;E&quot;,&quot;F&quot;,&quot;G&quot;,&quot;H&quot;,&quot;I&quot;,&quot;J&quot;,&quot;K&quot;,&quot;L&quot;,&quot;M&quot;,&quot;N&quot;,&quot;O&quot;,&quot;P&quot;,&quot;Q&quot;,&quot;R&quot;,&quot;S&quot;,&quot;T&quot;,&quot;U&quot;,&quot;V&quot;,&quot;W&quot;,&quot;X&quot;,&quot;Y&quot;,&quot;Z&quot;,&quot;0-9&quot;,&quot;Ç&quot;,&quot;İ&quot;,&quot;Ö&quot;,&quot;Ş&quot;,&quot;Ü&quot;]' var='Alphabet'>
+      <b:with value='[&quot;Aksiyon&quot;,&quot;Macrea&quot;,&quot;Komedi&quot;,&quot;Suç&quot;,&quot;Drama&quot;,&quot;Fantastik&quot;,&quot;Tarihi&quot;,&quot;korku&quot;,&quot;Isekai&quot;,&quot;Büyülü Kızlar&quot;,&quot;Meka&quot;,&quot;Tıbbi&quot;,&quot;Gizem&quot;,&quot;Felsefi&quot;,&quot;Psikolojik&quot;,&quot;Romantizm&quot;,&quot;Bilim Kurgu&quot;,&quot;Shoujo Ai&quot;,&quot;Shounen Ai&quot;,&quot;Hayattan Kesitler&quot;,&quot;Spor&quot;,&quot;Süper Kahraman&quot;,&quot;Gerilim&quot;,&quot;Trajedi&quot;,&quot;Wuxia&quot;,&quot;Yaoi&quot;,&quot;Yuri&quot;,&quot;Tsundere&quot;,&quot;Yandere&quot;]' var='Genre'>
+        <b:with value='[&quot;Adaptasyon&quot;,&quot;Pişirme&quot;,&quot;Harem&quot;,&quot;Loli&quot;,&quot;Mafya&quot;,&quot;Büyü&quot;,&quot;Askeri&quot;,&quot;Müzik&quot;,&quot;Reenkarnasyon&quot;,&quot;Ters Harem&quot;,&quot;Samuray&quot;,&quot;Okul Hayatı&quot;,&quot;Doğaüstü&quot;,&quot;Hayatta Kalma&quot;,&quot;Zaman Yolculuğu&quot;,&quot;Vampir&quot;,&quot;Video Oyunları&quot;,&quot;Şeytan&quot;,&quot;Canavarlar&quot;,&quot;Dövüş Sanatları&quot;,&quot;Sanal Gerçeklik&quot;,&quot;İblisler&quot;,&quot;Canavar Kızlar&quot;,&quot;Polisiye&quot;]' var='Genre2'>
+          <b:with value='[&quot;Shounen&quot;,&quot;Shoujo&quot;,&quot;Seinen&quot;,&quot;Josei&quot;,&quot;Olgun&quot;]' var='Demographic'>
+            <b:with value='[&quot;Ecchi&quot;,&quot;Kan&quot;,&quot;Cinsel İstismar&quot;,&quot;Müstehcen&quot;,&quot;Series&quot;,&quot;Project&quot;]' var='Content'>
+              <b:with value='[&quot;Chapter&quot;,&quot;Novel&quot;,&quot;Devam Ediyor&quot;,&quot;Sıcak&quot;,&quot;Yeni&quot;,&quot;Renkli&quot;]' var='Other'>
+                <b:with value='[&quot;Light Novel (JP)&quot;,&quot;Web Novel (CN)&quot;,&quot;Web Novel (JP)&quot;,&quot;Web Novel (KR)&quot;,&quot;Manga&quot;,&quot;Manhua&quot;,&quot;Manhwa&quot;,&quot;Doujinshi&quot;,&quot;Uzun Cümleler&quot;,&quot;Tamamı Renkli&quot;,&quot;One Shot&quot;,&quot;Çizgi Roman&quot;,&quot;Japonya&quot;,&quot;Kore&quot;,&quot;Çin&quot;,&quot;Türkiye&quot;,&quot;Webtoon&quot;]' var='Format'>
+                  <b:with value='[&quot;Devam Ediyor&quot;,&quot;Tamamlandı&quot;,&quot;İptal Edildi&quot;,&quot;Beklemede&quot;,&quot;Terk Edildi&quot;,&quot;Çok Yakında&quot;]' var='Status'>
+                    <b:with value='[&quot;0.5 Puan&quot;,&quot;1.0 Puan&quot;,&quot;1.5 Puan&quot;,&quot;2.0 Puan&quot;,&quot;2.5 Puan&quot;,&quot;3.0 Puan&quot;,&quot;3.5 Puan&quot;,&quot;4.0 Puan&quot;,&quot;4.5 Puan&quot;,&quot;5.0 Puan&quot;,&quot;5.5 Puan&quot;,&quot;6.0 Puan&quot;,&quot;6.5 Puan&quot;,&quot;7.0 Puan&quot;,&quot;7.5 Puan&quot;,&quot;8.0 Puan&quot;,&quot;8.5 Puan&quot;,&quot;9.0 Puan&quot;,&quot;9.5 Puan&quot;,&quot;10.0 Puan&quot;]' var='Score'>
 
                       <header class='bg-main'>
                         <b:section class='max-w mra mla grid gtc-header aic gg-30' growth='vertical' id='header' maxwidgets='3' showaddelement='true'>
@@ -1776,7 +1776,7 @@ $(widget).remove();
                           <b:widget id='PageList1' locked='true' title='Sayfalar' type='PageList' version='2' visible='true'>
                             <b:widget-settings>
                               <b:widget-setting name='pageListJson'>{}</b:widget-setting>
-                              <b:widget-setting name='homeTitle'>Home</b:widget-setting>
+                              <b:widget-setting name='homeTitle'>Ana Sayfa</b:widget-setting>
                             </b:widget-settings>
                             <b:includable id='main'>
 
@@ -1823,13 +1823,13 @@ $(widget).remove();
                                   <b:include name='pageLink'/>
                                 </b:loop>                       
                                 <li class='dropdown mx-5'>
-                                <label class='block px-5 lh-37 c-fff fs-14' data='Other' for='dropmenu'>Other<svg aria-hidden='true' class='h-14' height='1em' preserveAspectRatio='xMidYMid meet' role='img' viewBox='0 0 16 16' width='1em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g fill='currentColor'><path d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></g></svg></label>
+                                <label class='block px-5 lh-37 c-fff fs-14' data='Other' for='dropmenu'>Diğer<svg aria-hidden='true' class='h-14' height='1em' preserveAspectRatio='xMidYMid meet' role='img' viewBox='0 0 16 16' width='1em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g fill='currentColor'><path d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></g></svg></label>
                                 <input class='dropMenu hidden' id='dropmenu' name='dropDown' type='checkbox'/>
                                 <ul class='pl-0 lsn bg-171 c-999-a p-y7x15-a block-a'>
                                   <li><a expr:href='data:blog.homepageUrl + &quot;search/label/Manga?&amp;max-results=20&quot;'>Manga</a></li>
                                   <li><a expr:href='data:blog.homepageUrl + &quot;search/label/Manhwa?&amp;max-results=20&quot;'>Manhwa</a></li>
                                   <li><a expr:href='data:blog.homepageUrl + &quot;search/label/Manhua?&amp;max-results=20&quot;'>Manhua</a></li>
-                                  <li><a expr:href='data:blog.homepageUrl + &quot;search/label/Western?&amp;max-results=20&quot;'>Western</a></li>
+                                  <li><a expr:href='data:blog.homepageUrl + &quot;search/label/Batı?&amp;max-results=20&quot;'>Batı</a></li>
                                 </ul>
                               </li>
                               </ul>
@@ -1845,7 +1845,7 @@ $(widget).remove();
                               <div class='flex aic' role='search'>
                                 <b:include name='darkMode'/>
                                 <b:include name='searchForm'/>
-                                <a class='menu-item svg14 flex aic' href='https://zeistmanga-bt.blogspot.com/p/bookmark.html'><svg aria-hidden='true' height='1em' preserveAspectRatio='xMidYMid meet' role='img' viewBox='0 0 24 24' width='1em' xmlns='http://www.w3.org/2000/svg'><path d='M5.5 3A1.5 1.5 0 0 1 7 4.5v15A1.5 1.5 0 0 1 5.5 21h-2A1.5 1.5 0 0 1 2 19.5v-15A1.5 1.5 0 0 1 3.5 3h2Zm6 0A1.5 1.5 0 0 1 13 4.5v15a1.5 1.5 0 0 1-1.5 1.5h-2A1.5 1.5 0 0 1 8 19.5v-15A1.5 1.5 0 0 1 9.5 3h2Zm7.281 3.124l3.214 12.519a1.5 1.5 0 0 1-1.08 1.826l-1.876.48a1.5 1.5 0 0 1-1.826-1.08L13.999 7.354a1.5 1.5 0 0 1 1.08-1.826l1.876-.483a1.502 1.502 0 0 1 1.826 1.08Z' fill='currentColor'/></svg><span class='sm:dn'>Bookmark</span></a>
+                                <a class='menu-item svg14 flex aic' href='/p/kitaplik.html'><svg aria-hidden='true' height='1em' preserveAspectRatio='xMidYMid meet' role='img' viewBox='0 0 24 24' width='1em' xmlns='http://www.w3.org/2000/svg'><path d='M5.5 3A1.5 1.5 0 0 1 7 4.5v15A1.5 1.5 0 0 1 5.5 21h-2A1.5 1.5 0 0 1 2 19.5v-15A1.5 1.5 0 0 1 3.5 3h2Zm6 0A1.5 1.5 0 0 1 13 4.5v15a1.5 1.5 0 0 1-1.5 1.5h-2A1.5 1.5 0 0 1 8 19.5v-15A1.5 1.5 0 0 1 9.5 3h2Zm7.281 3.124l3.214 12.519a1.5 1.5 0 0 1-1.08 1.826l-1.876.48a1.5 1.5 0 0 1-1.826-1.08L13.999 7.354a1.5 1.5 0 0 1 1.08-1.826l1.876-.483a1.502 1.502 0 0 1 1.826 1.08Z' fill='currentColor'/></svg><span class='sm:dn'>Kitaplık</span></a>
                                 <div class='search'>
                                 <button class='right bn bt c-fff p-13' onclick='fungsiSearch()'><svg style='width:24px;height:24px' viewBox='0 0 24 24'>
                                   <path d='M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z' fill='currentColor'/>
@@ -1883,8 +1883,8 @@ $(widget).remove();
                         <b:widget id='Text4' locked='false' title='Duyuru' type='Text' version='2' visible='true'>
                           <b:widget-settings>
                             <b:widget-setting name='content'>İndir &lt;span class=&quot;p-5 bg-171 r2&quot;&gt;&lt;a class=&quot;c-fff&quot; href=&quot;
-https://cararegistrasi.com/zeistmanga
-&quot;&gt;ZeistManga&lt;/a&gt; v4&lt;/span&gt;</b:widget-setting>
+https://emissionhex.blogspot.com/2022/06/zeistmanga-v5.html
+&quot;&gt;ZeistManga&lt;/a&gt; v5.4&lt;/span&gt;</b:widget-setting>
                           </b:widget-settings>
                           <b:includable id='main'>
   <b:include name='widget-title'/>
@@ -2403,7 +2403,7 @@ https://cararegistrasi.com/zeistmanga
   <h3 class='title flex aic jcsb'>
     <span class='flex aic g5'><svg aria-hidden='true' height='1em' preserveAspectRatio='xMidYMid meet' role='img' viewBox='0 0 2048 1408' width='1.46em' xmlns='http://www.w3.org/2000/svg'><path d='M1024 384H640v384h384V384zm128 640v128H512v-128h640zm0-768v640H512V256h640zm640 768v128h-512v-128h512zm0-256v128h-512V768h512zm0-256v128h-512V512h512zm0-256v128h-512V256h512zM256 1216V256H128v960q0 26 19 45t45 19t45-19t19-45zm1664 0V128H384v1088q0 33-11 64h1483q26 0 45-19t19-45zM2048 0v1216q0 80-56 136t-136 56H192q-80 0-136-56T0 1216V128h256V0h1792z' fill='currentColor'/></svg>
     <data:title/></span>
-    <a class='bg-main ttu p-3y6x fs-9 r2 c-fff' href='/search/label/Update'>View All</a>
+    <a class='bg-main ttu p-3y6x fs-9 r2 c-fff' href='/search/label/Update'>Hepsi</a>
 </h3>
   <div class='widget-content'>
     <data:content/>
@@ -2420,7 +2420,7 @@ https://cararegistrasi.com/zeistmanga
   <h3 class='title flex jcsb aic'>
     <span class='flex aic g5'><svg aria-hidden='true' height='1em' preserveAspectRatio='xMidYMid meet' role='img' viewBox='0 0 24 24' width='1em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g fill='none'><path d='M12.552 8a1 1 0 1 0 0 2h4a1 1 0 1 0 0-2h-4z' fill='currentColor' fill-opacity='.5'/><path d='M12.552 17a1 1 0 1 0 0 2h4a1 1 0 1 0 0-2h-4z' fill='currentColor' fill-opacity='.5'/><path d='M12.552 5a1 1 0 1 0 0 2h8a1 1 0 1 0 0-2h-8z' fill='currentColor' fill-opacity='.8'/><path d='M12.552 14a1 1 0 1 0 0 2h8a1 1 0 1 0 0-2h-8z' fill='currentColor' fill-opacity='.8'/><path d='M3.448 4.002a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1h-5z' fill='currentColor'/><path d='M3.448 12.998a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1h-5z' fill='currentColor'/></g></svg>
       <data:title/></span>
-    <a class='bg-main ttu p-3y6x fs-9 r2 c-fff' href='#'>View All</a>
+    <a class='bg-main ttu p-3y6x fs-9 r2 c-fff' href='#'>Hepsi</a>
 </h3>
   <div class='widget-content'>
     <data:content/>
@@ -2510,7 +2510,7 @@ https://cararegistrasi.com/zeistmanga
                             </b:includable>
                             <b:includable id='Disqus' var='post'>
                              <div class='bc-fff r2 s1 a4'> 
-<h2 class='c-theme m-0 bb-1pxsf y9x19p fs-15 flex aic'><svg aria-hidden='true' height='1em' preserveAspectRatio='xMidYMid meet' role='img' viewBox='0 0 48 48' width='1em' xmlns='http://www.w3.org/2000/svg'><mask id='svgIDa'><g fill='none' stroke='#fff' stroke-linecap='round' stroke-width='4'><path d='M33 38H22v-8h14v-8h8v16h-5l-3 3l-3-3Z' stroke-linejoin='round'/><path d='M4 6h32v24H17l-4 4l-4-4H4V6Z' fill='#555' stroke-linejoin='round'/><path d='M12 22h6m-6-8h12'/></g></mask><path d='M0 0h48v48H0z' fill='currentColor' mask='url(#svgIDa)'/></svg>Komentar</h2>
+<h2 class='c-theme m-0 bb-1pxsf y9x19p fs-15 flex aic'><svg aria-hidden='true' height='1em' preserveAspectRatio='xMidYMid meet' role='img' viewBox='0 0 48 48' width='1em' xmlns='http://www.w3.org/2000/svg'><mask id='svgIDa'><g fill='none' stroke='#fff' stroke-linecap='round' stroke-width='4'><path d='M33 38H22v-8h14v-8h8v16h-5l-3 3l-3-3Z' stroke-linejoin='round'/><path d='M4 6h32v24H17l-4 4l-4-4H4V6Z' fill='#555' stroke-linejoin='round'/><path d='M12 22h6m-6-8h12'/></g></mask><path d='M0 0h48v48H0z' fill='currentColor' mask='url(#svgIDa)'/></svg>Yorum</h2>
           <script>
           let disqus_config = () =&gt; {
           this.page.url = &#39;<data:post.url.canonical/>&#39;;
@@ -2527,7 +2527,7 @@ https://cararegistrasi.com/zeistmanga
         </script>
         <div id='disqus_thread'>
           <div class='flex jcc'>
-            <div id='buttonDisqs' onclick='disqusLaz(this)' role='button'>Show Comments</div>
+            <div id='buttonDisqs' onclick='disqusLaz(this)' role='button'>Yorumları Göster</div>
           </div>
         </div>
 
@@ -2635,7 +2635,7 @@ https://cararegistrasi.com/zeistmanga
                             <b:includable id='chapterTags'>
                             <div class='chaptertags mb-15 bc-22 r2 fs-13'>
 <b:with value='[&quot;Chapter&quot;,&quot;Project&quot;]' var='chf'>
-                              <p class='p-y10x15'>Tags: baca manga <b:loop index='i' values='data:post.labels' var='label'><b:if cond='data:label.name not in data:chf'><data:label.name/></b:if></b:loop> <data:post.title/> bahasa Indonesia, komik <b:loop index='i' values='data:post.labels' var='label'><b:if cond='data:label.name not in data:chf'><data:label.name/></b:if></b:loop> <data:post.title/> bahasa komik Indonesia, baca <data:post.title/> online, <data:post.title/> baru komiku, <b:loop index='i' values='data:post.labels' var='label'><b:if cond='data:label.name not in data:chf'><data:label.name/></b:if></b:loop> <data:post.title/> chapter, high quality sub indo, <b:loop index='i' values='data:post.labels' var='label'><b:if cond='data:label.name not in data:chf'><data:label.name/></b:if></b:loop> manga scan terbaru, manhwa web, <time expr:datetime='data:post.date.iso8601' expr:title='data:post.date.iso8601'><data:post.date/></time>, <span><data:post.author.name/></span></p>
+                              <p class='p-y10x15'>Etiketler: Türkçe <b:loop index='i' values='data:post.labels' var='label'><b:if cond='data:label.name not in data:chf'><data:label.name/></b:if></b:loop> <data:post.title/> manga oku, manga <b:loop index='i' values='data:post.labels' var='label'><b:if cond='data:label.name not in data:chf'><data:label.name/></b:if></b:loop> <data:post.title/> Türkçe manga oku, baca <data:post.title/> çevrimiçi, <data:post.title/> yeni mangalar, <b:loop index='i' values='data:post.labels' var='label'><b:if cond='data:label.name not in data:chf'><data:label.name/></b:if></b:loop> <data:post.title/> bölüm, yüksek kalite Türkçe mangalar, <b:loop index='i' values='data:post.labels' var='label'><b:if cond='data:label.name not in data:chf'><data:label.name/></b:if></b:loop> en güncel mangalar, manhwa web, <time expr:datetime='data:post.date.iso8601' expr:title='data:post.date.iso8601'><data:post.date/></time>, <span><data:post.author.name/></span></p>
                               </b:with>
 </div>
                             </b:includable>
@@ -2849,7 +2849,7 @@ https://cararegistrasi.com/zeistmanga
                                 <h3 class='m-0 c-theme'>
                                   <b:if cond='data:view.isHomepage'><data:messages.latestPosts/></b:if>
                                   <b:if cond='data:view.search.query'><data:messages.search/>: <b><data:view.search.query/></b></b:if>
-                                  <b:if cond='data:view.search.label'>Daftar Chapter Manga <b><data:blog.pageName/></b></b:if>
+                                  <b:if cond='data:view.search.label'>Manga Bölüm Listesi <b><data:blog.pageName/></b></b:if>
                                   <b:if cond='data:view.isArchive'><data:messages.blogArchive/>: <b><data:blog.pageName/></b></b:if>
                                   <b:if cond='data:view.search and !data:view.search.label and !data:view.search.query and !data:view.isArchive'><data:messages.posts/></b:if>
                                 </h3>
@@ -2859,24 +2859,24 @@ https://cararegistrasi.com/zeistmanga
                               <div class='flex aic jcsb bb-1pxsf y9x19p yb10m'>
                                   <h3 class='m-0 c-theme'><b:if cond='data:view.isHomepage'><data:messages.latestPosts/></b:if>
                                     <b:if cond='data:view.search.query'><data:messages.search/>: <b><data:view.search.query/></b></b:if>
-                                    <b:if cond='data:view.search.label'>Rekomendasi Komik <b><data:blog.pageName/></b> Terbaik</b:if>
-                                    <b:if cond='data:view.isArchive'>Arsip Komik Tanggal: <b><data:blog.pageName/></b></b:if>
+                                    <b:if cond='data:view.search.label'>Önerilen Manga <b><data:blog.pageName/></b></b:if>
+                                    <b:if cond='data:view.isArchive'>Çizgi Roman Arşiv Tarihi: <b><data:blog.pageName/></b></b:if>
                                     <b:if cond='data:view.search and !data:view.search.label and !data:view.search.query and !data:view.isArchive'><data:messages.posts/></b:if></h3>
                                   <svg class='feather feather-filter' fill='none' height='24' id='toggle' stroke='var(--primary-color)' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><polygon points='22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3'/></svg>
                                 </div>
                                 <div class='p-20 bc-e8' id='content'>
                                   <dl>
-                                    <dt class='pb-15 fs-15 fw-600'>Status</dt>
+                                    <dt class='pb-15 fs-15 fw-600'>Durum</dt>
                                     <div class='flex fs-13 fdc'>
-                                      <dd class='md-ml-0'><a expr:href='data:blog.homepageUrl + &quot;search/label/Ongoing?&amp;max-results=20&quot;'>Ongoing</a></dd>
-                                      <dd><a expr:href='data:blog.homepageUrl + &quot;search/label/Completed?&amp;max-results=20&quot;'>Completed</a></dd>
-                                      <dd><a expr:href='data:blog.homepageUrl + &quot;search/label/Cancelled?&amp;max-results=20&quot;'>Cancelled</a></dd>
-                                      <dd><a expr:href='data:blog.homepageUrl + &quot;search/label/Hiatus?&amp;max-results=20&quot;'>Hiatus</a></dd>
-                                      <dd><a expr:href='data:blog.homepageUrl + &quot;search/label/Dropped?&amp;max-results=20&quot;'>Dropped</a></dd>
+                                      <dd class='md-ml-0'><a expr:href='data:blog.homepageUrl + &quot;search/label/Devam Ediyor?&amp;max-results=20&quot;'>Devam Ediyor</a></dd>
+                                      <dd><a expr:href='data:blog.homepageUrl + &quot;search/label/Tamamlandı?&amp;max-results=20&quot;'>Tamamlandı</a></dd>
+                                      <dd><a expr:href='data:blog.homepageUrl + &quot;search/label/İptal Edildi?&amp;max-results=20&quot;'>İpttal Edildi</a></dd>
+                                      <dd><a expr:href='data:blog.homepageUrl + &quot;search/label/Beklemede?&amp;max-results=20&quot;'>Beklemede</a></dd>
+                                      <dd><a expr:href='data:blog.homepageUrl + &quot;search/label/Terk Edildi?&amp;max-results=20&quot;'>Terk Edildi</a></dd>
                                     </div>
                                   </dl>
                                   <dl>
-                                    <dt class='pb-15 fs-15 fw-600'>Format</dt>
+                                    <dt class='pb-15 fs-15 fw-600'>Tür</dt>
                                     <div class='flex fs-13 fdc'>
                                       <dd class='md-ml-0'><a expr:href='data:blog.homepageUrl + &quot;search/label/Manga?&amp;max-results=20&quot;'>Manga</a></dd>
                                       <dd><a expr:href='data:blog.homepageUrl + &quot;search/label/Manhua?&amp;max-results=20&quot;'>Manhua</a></dd>
@@ -2937,10 +2937,10 @@ https://cararegistrasi.com/zeistmanga
                                 <div>
                                   <a class='clamp toe oh block fs-15 lh-20 mb-6 ck' expr:href='data:post.url'>
 
-                                    <b:if cond='data:post.labels any (l =&gt; l.name == &quot;Hot&quot;)'>
+                                    <b:if cond='data:post.labels any (l =&gt; l.name == &quot;Sıcak&quot;)'>
                                       <span class='hot'/>
                                     </b:if>
-                                    <b:if cond='data:post.labels any (l =&gt; l.name == &quot;New&quot;)'>
+                                    <b:if cond='data:post.labels any (l =&gt; l.name == &quot;Yeni&quot;)'>
                                       <span class='new'/>
                                     </b:if>
                                     <data:post.title/></a>
@@ -3077,8 +3077,8 @@ https://cararegistrasi.com/zeistmanga
                             <b:includable id='page'>
                               <div class='bc-fff max-w mb-15 mla mra r2 s1 mt-24 full'>
                                 <h1 class='c-theme m-0 bb-1pxsf y9x19p fs-20 flex jcsb'><data:post.title/>
-                                  <b:if cond='data:view.url == data:blog.homepageUrl path &quot;/p/bookmark.html&quot;'>
-                                <div class='clearAll flex aic'>Clear All</div>
+                                  <b:if cond='data:view.url == data:blog.homepageUrl path &quot;/p/kitaplik.html&quot;'>
+                                <div class='clearAll flex aic'>Hepsini Temizle</div>
                                 </b:if>
                                 </h1>
                                 <div class='bc-fff s1 r2 p-13'>
@@ -3106,7 +3106,7 @@ https://cararegistrasi.com/zeistmanga
                               <div class='grid gtc-235fr max-w mra mla mtn150 relative gg-15'> 
                                 <div class='a1'>
                                   <b:include name='figure'/>
-                                  <div class='hartomy-bookmark-btn bg-main bookmark' data-quantity='1' expr:data-borkimage='resizeImage(data:post.featuredImage, 400, &quot;16:9&quot;)' expr:data-id='data:post.id' expr:data-link='data:post.url' expr:data-title='data:post.title'>Bookmark <svg aria-hidden='true' height='1em' preserveAspectRatio='xMidYMid meet' role='img' viewBox='0 0 16 16' width='1em' xmlns='http://www.w3.org/2000/svg'><path d='M1 3.25C1 2.56 1.56 2 2.249 2h.5c.69 0 1.248.56 1.248 1.25v9.495c0 .69-.559 1.25-1.248 1.25h-.5A1.25 1.25 0 0 1 1 12.744V3.249ZM2.249 3a.25.25 0 0 0-.25.25v9.495c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25V3.249a.25.25 0 0 0-.25-.25h-.5Zm2.748.25c0-.69.559-1.25 1.249-1.25h.5c.689 0 1.248.56 1.248 1.25v9.495c0 .69-.56 1.25-1.249 1.25h-.5a1.25 1.25 0 0 1-1.248-1.25V3.249ZM6.246 3a.25.25 0 0 0-.25.25v9.495c0 .138.112.25.25.25h.5a.25.25 0 0 0 .249-.25V3.249a.25.25 0 0 0-.25-.25h-.5Zm5.726 1.777a1.249 1.249 0 0 0-1.57-.713l-.583.204a1.25 1.25 0 0 0-.746 1.645l2.937 7.304c.249.62.94.933 1.571.713l.582-.204a1.25 1.25 0 0 0 .746-1.646l-2.937-7.303Zm-1.24.23a.25.25 0 0 1 .313.143l2.937 7.303a.25.25 0 0 1-.149.33l-.582.203a.25.25 0 0 1-.314-.142L10 5.54a.25.25 0 0 1 .149-.329l.582-.204Z' fill='currentColor'/></svg></div>
+                                  <div class='hartomy-bookmark-btn bg-main bookmark' data-quantity='1' expr:data-borkimage='resizeImage(data:post.featuredImage, 400, &quot;16:9&quot;)' expr:data-id='data:post.id' expr:data-link='data:post.url' expr:data-title='data:post.title'>Kitaplık <svg aria-hidden='true' height='1em' preserveAspectRatio='xMidYMid meet' role='img' viewBox='0 0 16 16' width='1em' xmlns='http://www.w3.org/2000/svg'><path d='M1 3.25C1 2.56 1.56 2 2.249 2h.5c.69 0 1.248.56 1.248 1.25v9.495c0 .69-.559 1.25-1.248 1.25h-.5A1.25 1.25 0 0 1 1 12.744V3.249ZM2.249 3a.25.25 0 0 0-.25.25v9.495c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25V3.249a.25.25 0 0 0-.25-.25h-.5Zm2.748.25c0-.69.559-1.25 1.249-1.25h.5c.689 0 1.248.56 1.248 1.25v9.495c0 .69-.56 1.25-1.249 1.25h-.5a1.25 1.25 0 0 1-1.248-1.25V3.249ZM6.246 3a.25.25 0 0 0-.25.25v9.495c0 .138.112.25.25.25h.5a.25.25 0 0 0 .249-.25V3.249a.25.25 0 0 0-.25-.25h-.5Zm5.726 1.777a1.249 1.249 0 0 0-1.57-.713l-.583.204a1.25 1.25 0 0 0-.746 1.645l2.937 7.304c.249.62.94.933 1.571.713l.582-.204a1.25 1.25 0 0 0 .746-1.646l-2.937-7.303Zm-1.24.23a.25.25 0 0 1 .313.143l2.937 7.303a.25.25 0 0 1-.149.33l-.582.203a.25.25 0 0 1-.314-.142L10 5.54a.25.25 0 0 1 .149-.329l.582-.204Z' fill='currentColor'/></svg></div>
 
                                   <b:include name='ScoreMultiItem'/>
                                   <b:if cond='data:post.numberOfComments gt &quot;0&quot;'>
@@ -3117,7 +3117,7 @@ https://cararegistrasi.com/zeistmanga
                                     </div>
                                   </b:if>
                                   <aside class='s1 bc-fff r2 fs-14 lh-1d7 oh'>
-                                    <div class='y6x11p'>Status <span class='dt'>
+                                    <div class='y6x11p'>Durum <span class='dt'>
                                       <b:loop index='i' values='data:post.labels' var='label'>
                                         <b:if cond='data:label.name in data:Status'>
                                           <a expr:data='data:label.name' expr:href='data:label.url' rel='tag'>
@@ -3126,7 +3126,7 @@ https://cararegistrasi.com/zeistmanga
                                         </b:if>
                                       </b:loop>
                                       </span></div>
-                                    <div class='y6x11p'>Type <span class='dt'>
+                                    <div class='y6x11p'>Tür <span class='dt'>
                                       <b:loop index='i' values='data:post.labels' var='label'>
                                         <b:if cond='data:label.name in data:Format'>
                                           <a expr:data='data:label.name' expr:href='data:label.url' rel='tag'>
@@ -3136,9 +3136,9 @@ https://cararegistrasi.com/zeistmanga
                                       </b:loop>
                                       </span></div>
                                     <div id='extra-target'/>
-                                    <div class='y6x11p'>Posted By <span class='dt'><data:post.author.name/></span></div>
-                                    <div class='y6x11p'>Post <time class='dt' expr:datetime='data:post.date.iso8601' expr:title='data:post.date.iso8601'><data:post.date/></time></div>
-                                    <div class='y6x11p'>Update <time class='dt timeago' expr:datetime='data:post.lastUpdated.iso8601' expr:title='data:post.lastUpdated.iso8601'><data:post.lastUpdated.jsonEscaped/></time></div>
+                                    <div class='y6x11p'>Paylaşan <span class='dt'><data:post.author.name/></span></div>
+                                    <div class='y6x11p'>Tarih <time class='dt' expr:datetime='data:post.date.iso8601' expr:title='data:post.date.iso8601'><data:post.date/></time></div>
+                                    <div class='y6x11p'>Güncelleme <time class='dt timeago' expr:datetime='data:post.lastUpdated.iso8601' expr:title='data:post.lastUpdated.iso8601'><data:post.lastUpdated.jsonEscaped/></time></div>
                                   </aside>
                                   <div id='character-target'/>
                                 </div>
@@ -3152,9 +3152,9 @@ https://cararegistrasi.com/zeistmanga
                                       <b:include name='postLabels'/>
                                     </div>
                                     <article>
-                                      <h2 class='fs-15'>Baca <data:post.title/></h2>
+                                      <h2 class='fs-15'><data:post.title/> Manga oku</h2>
                                       <div id='syn-target'/>
-                                      <p class='fs-14'>Baca Komik <strong><data:post.title/></strong> bahasa Indonesia lengkap dan baru di <strong><data:blog.title/></strong>. Kami menyediakan Komik, Manhua, Manhwa, dan Novel yang dapat kalian baca online gratis. </p>   
+                                      <p class='fs-14'>Güncel ve yeni Türkçe Mangaları <strong><data:post.title/></strong> <strong><data:blog.title/></strong> adresinden okuyun. Ücretsiz olarak çevrimiçi okuyabileceğiniz Çizgi Romanlar, Manhua, Manhwa ve Romanlar sunuyoruz.</p>
                                     </article>
 
                                   </div>                               
@@ -3190,19 +3190,19 @@ https://cararegistrasi.com/zeistmanga
                             </b:includable>
                             <b:includable id='postBody' var='post'>
 
-                              <b:if cond='data:post.labels any ( l =&gt; l.name in [&quot;Ecchi&quot;, &quot;Gore&quot;, &quot;Sexual Violence&quot;, &quot;Smut&quot;] )'>
+                              <b:if cond='data:post.labels any ( l =&gt; l.name in [&quot;Ecchi&quot;, &quot;Kan&quot;, &quot;Cinsel İstismar&quot;, &quot;Müstehcen&quot;] )'>
                                 <div class='alr grid aic p-15'><svg class='scale-2' viewBox='0 0 24 24'>
                                   <path d='M12 2C11.5 2 11 2.19 10.59 2.59L2.59 10.59C1.8 11.37 1.8 12.63 2.59 13.41L10.59 21.41C11.37 22.2 12.63 22.2 13.41 21.41L21.41 13.41C22.2 12.63 22.2 11.37 21.41 10.59L13.41 2.59C13 2.19 12.5 2 12 2M11 7H13V13H11V7M11 15H13V17H11V15Z' fill='currentColor'/>
-                                  </svg> <p class='m-0'>Warning, the series titled &quot;<strong><data:post.title/></strong>&quot; may contain violence, blood or sexual content that is not appropriate for minors.</p></div>
+                                  </svg> <p class='m-0'>Uyarı, &quot;<strong><data:post.title/></strong>&quot; başlıklı çizgi roman küçükler için uygun olmayan şiddet, kan veya cinsel içerik içerebilir.</p></div>
                               </b:if>
                               
-                              <b:if cond='data:post.labels any ( l =&gt; l.name in [&quot;Warning&quot;] )'>
-                                <div class='alr grid aic p-15' style='background-color: purple;'><svg aria-hidden='true' class='scale-2' height='1em' preserveAspectRatio='xMidYMid meet' role='img' viewBox='0 0 24 24' width='1em' xmlns='http://www.w3.org/2000/svg'><path d='M21.993 7.95a.96.96 0 0 0-.029-.214c-.007-.025-.021-.049-.03-.074c-.021-.057-.04-.113-.07-.165c-.016-.027-.038-.049-.057-.075c-.032-.045-.063-.091-.102-.13c-.023-.022-.053-.04-.078-.061c-.039-.032-.075-.067-.12-.094c-.004-.003-.009-.003-.014-.006l-.008-.006l-8.979-4.99a1.002 1.002 0 0 0-.97-.001l-9.021 4.99c-.003.003-.006.007-.011.01l-.01.004c-.035.02-.061.049-.094.073c-.036.027-.074.051-.106.082c-.03.031-.053.067-.079.102c-.027.035-.057.066-.079.104c-.026.043-.04.092-.059.139c-.014.033-.032.064-.041.1a.975.975 0 0 0-.029.21c-.001.017-.007.032-.007.05V16c0 .363.197.698.515.874l8.978 4.987l.001.001l.002.001l.02.011c.043.024.09.037.135.054c.032.013.063.03.097.039a1.013 1.013 0 0 0 .506 0c.033-.009.064-.026.097-.039c.045-.017.092-.029.135-.054l.02-.011l.002-.001l.001-.001l8.978-4.987c.316-.176.513-.511.513-.874V7.998c0-.017-.006-.031-.007-.048zm-10.021 3.922L5.058 8.005L7.82 6.477l6.834 3.905l-2.682 1.49zm.048-7.719L18.941 8l-2.244 1.247l-6.83-3.903l2.153-1.191zM13 19.301l.002-5.679L16 11.944V15l2-1v-3.175l2-1.119v5.705l-7 3.89z' fill='currentColor'/></svg> <p class='m-0'>Your waning message</p></div>
+                              <b:if cond='data:post.labels any ( l =&gt; l.name in [&quot;Uyarı&quot;] )'>
+                                <div class='alr grid aic p-15' style='background-color: purple;'><svg aria-hidden='true' class='scale-2' height='1em' preserveAspectRatio='xMidYMid meet' role='img' viewBox='0 0 24 24' width='1em' xmlns='http://www.w3.org/2000/svg'><path d='M21.993 7.95a.96.96 0 0 0-.029-.214c-.007-.025-.021-.049-.03-.074c-.021-.057-.04-.113-.07-.165c-.016-.027-.038-.049-.057-.075c-.032-.045-.063-.091-.102-.13c-.023-.022-.053-.04-.078-.061c-.039-.032-.075-.067-.12-.094c-.004-.003-.009-.003-.014-.006l-.008-.006l-8.979-4.99a1.002 1.002 0 0 0-.97-.001l-9.021 4.99c-.003.003-.006.007-.011.01l-.01.004c-.035.02-.061.049-.094.073c-.036.027-.074.051-.106.082c-.03.031-.053.067-.079.102c-.027.035-.057.066-.079.104c-.026.043-.04.092-.059.139c-.014.033-.032.064-.041.1a.975.975 0 0 0-.029.21c-.001.017-.007.032-.007.05V16c0 .363.197.698.515.874l8.978 4.987l.001.001l.002.001l.02.011c.043.024.09.037.135.054c.032.013.063.03.097.039a1.013 1.013 0 0 0 .506 0c.033-.009.064-.026.097-.039c.045-.017.092-.029.135-.054l.02-.011l.002-.001l.001-.001l8.978-4.987c.316-.176.513-.511.513-.874V7.998c0-.017-.006-.031-.007-.048zm-10.021 3.922L5.058 8.005L7.82 6.477l6.834 3.905l-2.682 1.49zm.048-7.719L18.941 8l-2.244 1.247l-6.83-3.903l2.153-1.191zM13 19.301l.002-5.679L16 11.944V15l2-1v-3.175l2-1.119v5.705l-7 3.89z' fill='currentColor'/></svg> <p class='m-0'>Uyarı Mesajı(Tema Kodundan Kendi Mesajınızı Yazınız.)</p></div>
                               </b:if>
                               
 
                               <div class='bc-fff r2 mb-15 s1 post oh'>
-                                <h2 class='c-theme m-0 bb-1pxsf y9x19p fs-15 flex aic'><svg aria-hidden='true' height='1em' preserveAspectRatio='xMidYMid meet' role='img' viewBox='0 0 24 24' width='1em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><path d='M3 6h8v13H3z' fill='currentColor' opacity='.3'/><path d='M21 4H3c-1.1 0-2 .9-2 2v13c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM11 19H3V6h8v13zm10 0h-8V6h8v13zm-7-9.5h6V11h-6zm0 2.5h6v1.5h-6zm0 2.5h6V16h-6z' fill='currentColor'/></svg>Read <data:post.title/></h2>
+                                <h2 class='c-theme m-0 bb-1pxsf y9x19p fs-15 flex aic'><svg aria-hidden='true' height='1em' preserveAspectRatio='xMidYMid meet' role='img' viewBox='0 0 24 24' width='1em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><path d='M3 6h8v13H3z' fill='currentColor' opacity='.3'/><path d='M21 4H3c-1.1 0-2 .9-2 2v13c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM11 19H3V6h8v13zm10 0h-8V6h8v13zm-7-9.5h6V11h-6zm0 2.5h6v1.5h-6zm0 2.5h6V16h-6z' fill='currentColor'/></svg><data:post.title/> Oku</h2>
                                 <div class='bc-fff s1 r2 p-13'>
                                   <b:class cond='data:view.isPage' name='page-view'/>
                                   <data:post.body/>
@@ -3230,7 +3230,7 @@ https://cararegistrasi.com/zeistmanga
                                     </b:with>
                              - <data:post.title/>
                                   </h1>
-                                <div class='tac'>All chapters are in <b:with value='[&quot;Chapter&quot;,&quot;Project&quot;]' var='chf'>
+                                <div class='tac'>Tüm Bölümler <b:with value='[&quot;Chapter&quot;,&quot;Project&quot;]' var='chf'>
                                       <b:loop index='i' values='data:post.labels' var='label'>
                                         <b:if cond='data:label.name not in data:chf'>
                                           <a class='c-theme fw-600' expr:data='data:label.name' expr:href='data:label.url' rel='tag'>
@@ -3270,21 +3270,21 @@ https://cararegistrasi.com/zeistmanga
                                 </div>
                                 <b:with value='[&quot;Chapter&quot;,&quot;Project&quot;]' var='chf'>
                                   <p class='tac fs-14'>
-                                    Baca manga <b>
+                                    Manga oku <b>
                                     <b:loop index='i' values='data:post.labels' var='label'>
                                       <b:if cond='data:label.name not in data:chf'>
                                         <data:label.name/>
                                       </b:if>
                                     </b:loop>
-                                    <data:post.title/></b> bahasa Indonesia terbaru di <b><data:blog.title/></b>. Manga <b>
+                                    <data:post.title/></b><b><data:blog.title/></b> adresindeki güncel Türkçe Manga <b>
                                     <b:loop index='i' values='data:post.labels' var='label'>
                                       <b:if cond='data:label.name not in data:chf'>
                                         <data:label.name/>
                                       </b:if>
                                     </b:loop>
-                                    </b> bahasa Indonesia selalu update di <b><data:blog.title/></b>. Jangan lupa membaca update manga lainnya ya. Daftar koleksi manga <b><data:blog.title/></b> ada di menu Daftar Manga. </p></b:with>
+                                    </b> Türkçe mangalar her zaman <b><data:blog.title/></b> adresinde bulunur. Diğer çizgi romanlarımızı okumayı unutmayın. <b><data:blog.title/></b>'nin manga koleksiyonunun listesi Manga Listesi menüsündedir.</p></b:with>
                                 
-<h4 class='tac mla mra bg-main' style='color:white;padding:6px;border-radius:5px;max-width: 950px;'>Lapor Gambar Rusak / Tidak Sesuai / Tidak Terload Lapor [<a href='#' target='_blank'><span style='color: blue;'><strong>DISINI</strong></span></a>]</h4>
+<h4 class='tac mla mra bg-main' style='color:white;padding:6px;border-radius:5px;max-width: 950px;'>Bozuk / Uygunsuz / Yüklenmemiş Görüntü Raporu [<a href='#' target='_blank'><span style='color: blue;'><strong>BİLDİR</strong></span></a>]</h4>
                                 
                                 <b:include name='chapNextPrev'/>
                                 <div class='check-box'>
@@ -3464,7 +3464,7 @@ https://cararegistrasi.com/zeistmanga
                                   <div class='share-icon r4 twitterThis'>
                                     <a aria-label='Share button' class='flex aic c-fff white:hover' expr:href='&quot;https://twitter.com/share?url=&quot; + data:blog.url.canonical' rel='nofollow noreferrer' role='button' target='_blank'>
                                       <svg aria-hidden='true' height='1em' preserveAspectRatio='xMidYMid meet' role='img' viewBox='0 0 24 24' width='1em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g fill='none'><path d='M23.643 4.937c-.835.37-1.732.62-2.675.733a4.67 4.67 0 0 0 2.048-2.578a9.3 9.3 0 0 1-2.958 1.13a4.66 4.66 0 0 0-7.938 4.25a13.229 13.229 0 0 1-9.602-4.868c-.4.69-.63 1.49-.63 2.342A4.66 4.66 0 0 0 3.96 9.824a4.647 4.647 0 0 1-2.11-.583v.06a4.66 4.66 0 0 0 3.737 4.568a4.692 4.692 0 0 1-2.104.08a4.661 4.661 0 0 0 4.352 3.234a9.348 9.348 0 0 1-5.786 1.995a9.5 9.5 0 0 1-1.112-.065a13.175 13.175 0 0 0 7.14 2.093c8.57 0 13.255-7.098 13.255-13.254c0-.2-.005-.402-.014-.602a9.47 9.47 0 0 0 2.323-2.41l.002-.003z' fill='currentColor'/></g></svg>
-                                      <span>Twitter</span>
+                                      <span>Twitter/X</span>
                                     </a>
                                   </div>
                                   <!-- Bagikan ke Whatsapp -->
@@ -3519,140 +3519,140 @@ https://cararegistrasi.com/zeistmanga
                               </a>
                             </b:includable>
                             <b:includable id='score'>
-                              <b:if cond='data:post.labels any (l =&gt; l.name == &quot;Score 0.5&quot;)'>
+                              <b:if cond='data:post.labels any (l =&gt; l.name == &quot;0.5 Puan&quot;)'>
                                 <aside class='p-10 bc-f5 grid pic oh'>
                                   <div>
                                     <b:include name='0-5'/>
                                   </div>
                                   <div>0.5</div>
                                 </aside>
-                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;Score 1.0&quot;)'/>
+                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;1.0 Puan&quot;)'/>
                                 <aside class='p-10 bc-f5 grid pic oh'>
                                   <div>
                                     <b:include name='0-5'/>
                                   </div>
                                   <div>1.0</div>
                                 </aside>
-                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;Score 1.5&quot;)'/>
+                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;1.5 Puan&quot;)'/>
                                 <aside class='p-10 bc-f5 grid pic oh'>
                                   <div>
                                     <b:include name='1-0'/>
                                   </div>
                                   <div>1.5</div>
                                 </aside>
-                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;Score 2.0&quot;)'/>
+                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;2.0 Puan&quot;)'/>
                                 <aside class='p-10 bc-f5 grid pic oh'>
                                   <div>
                                     <b:include name='1-0'/>
                                   </div>
                                   <div>2.0</div>
                                 </aside>
-                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;Score 2.5&quot;)'/>
+                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;2.5 Puan&quot;)'/>
                                 <aside class='p-10 bc-f5 grid pic oh'>
                                   <div>
                                     <b:include name='1-0'/>
                                   </div>
                                   <div>2.5</div>
                                 </aside>
-                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;Score 3.0&quot;)'/>
+                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;3.0 Puan&quot;)'/>
                                 <aside class='p-10 bc-f5 grid pic oh'>
                                   <div>
                                     <b:include name='1-5'/>
                                   </div>
                                   <div>3.0</div>
                                 </aside>
-                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;Score 3.5&quot;)'/>
+                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;3.5 Puan&quot;)'/>
                                 <aside class='p-10 bc-f5 grid pic oh'>
                                   <div>
                                     <b:include name='1-5'/>
                                   </div>
                                   <div>3.5</div>
                                 </aside>
-                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;Score 4.0&quot;)'/>
+                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;4.0 Puan&quot;)'/>
                                 <aside class='p-10 bc-f5 grid pic oh'>
                                   <div>
                                     <b:include name='2-0'/>
                                   </div>
                                   <div>4.0</div>
                                 </aside>
-                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;Score 4.5&quot;)'/>
+                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;4.5 Puan&quot;)'/>
                                 <aside class='p-10 bc-f5 grid pic oh'>
                                   <div>
                                     <b:include name='2-0'/>
                                   </div>
                                   <div>4.5</div>
                                 </aside>
-                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;Score 5.0&quot;)'/>
+                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;5.0&quot;)'/>
                                 <aside class='p-10 bc-f5 grid pic oh'>
                                   <div>
                                     <b:include name='2-5'/>
                                   </div>
                                   <div>5.0</div>
                                 </aside>
-                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;Score 5.5&quot;)'/>
+                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;5.5 Puan&quot;)'/>
                                 <aside class='p-10 bc-f5 grid pic oh'>
                                   <div>
                                     <b:include name='2-5'/>
                                   </div>
                                   <div>5.5</div>
                                 </aside>
-                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;Score 6.0&quot;)'/>
+                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;6.0 Puan&quot;)'/>
                                 <aside class='p-10 bc-f5 grid pic oh'>
                                   <div>
                                     <b:include name='2-5'/>
                                   </div>
                                   <div>6.0</div>
                                 </aside>
-                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;Score 6.5&quot;)'/>
+                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;6.5 Puan&quot;)'/>
                                 <aside class='p-10 bc-f5 grid pic oh'>
                                   <div>
                                     <b:include name='3-0'/>
                                   </div>
                                   <div>6.5</div>
                                 </aside>
-                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;Score 7.0&quot;)'/>
+                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;7.0 Puan&quot;)'/>
                                 <aside class='p-10 bc-f5 grid pic oh'>
                                   <div>
                                     <b:include name='3-0'/>
                                   </div>
                                   <div>7.0</div>
                                 </aside>
-                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;Score 7.5&quot;)'/>
+                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;7.5 Puan&quot;)'/>
                                 <aside class='p-10 bc-f5 grid pic oh'>
                                   <div>
                                     <b:include name='3-5'/>
                                   </div>
                                   <div>7.5</div>
                                 </aside>
-                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;Score 8.0&quot;)'/>
+                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;8.0 Puan&quot;)'/>
                                 <aside class='p-10 bc-f5 grid pic oh'>
                                   <div>
                                     <b:include name='3-5'/>
                                   </div>
                                   <div>8.0</div>
                                 </aside>
-                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;Score 8.5&quot;)'/>
+                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;8.5 Puan&quot;)'/>
                                 <aside class='p-10 bc-f5 grid pic oh'>
                                   <div>
                                     <b:include name='4-0'/>
                                   </div>
                                   <div>8.5</div>
                                 </aside>
-                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;Score 9.0&quot;)'/>
+                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;9.0 Puan&quot;)'/>
                                 <aside class='p-10 bc-f5 grid pic oh'>
                                   <div>
                                     <b:include name='4-5'/>
                                   </div>
                                   <div>9.0</div>
                                 </aside>
-                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;Score 9.5&quot;)'/>
+                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;9.5 Puan&quot;)'/>
                                 <aside class='p-10 bc-f5 grid pic oh'>
                                   <div>
                                     <b:include name='5-0'/>
                                   </div>
                                   <div>9.5</div>
                                 </aside>
-                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;Score 10.0&quot;)'/>
+                                <b:elseif cond='data:post.labels any (l =&gt; l.name == &quot;10.0 Puan&quot;)'/>
                                 <aside class='p-10 bc-f5 grid pic oh'>
                                   <div>
                                     <b:include name='5-0'/>
@@ -3764,9 +3764,9 @@ if(autlist==true){function autolist(e){for(var t=0;t<e.feed.entry.length;t++){fo
 	</div>
 	<b:if cond='data:cb.d and data:commentL2.size != &quot;2&quot;'>
                     <div class='comment-actions secondary-text'>
-                      <a class='comment-reply reply-to' expr:data-comment-id='data:commentLevel1.id' expr:data-reply-to='data:commentLevel1.id' href='javascript:;' target='_self'>Balas</a>
+                      <a class='comment-reply reply-to' expr:data-comment-id='data:commentLevel1.id' expr:data-reply-to='data:commentLevel1.id' href='javascript:;' target='_self'>Yanıtla</a>
                       <span expr:class='&quot;item-control &quot; + data:cb.level.adminClass'>
-                        <a expr:href='data:cb.level.deleteUrl' expr:title='data:messages.deleteComment' rel='noopener external nofollow' target='_self'>Hapus</a>
+                        <a expr:href='data:cb.level.deleteUrl' expr:title='data:messages.deleteComment' rel='noopener external nofollow' target='_self'>Sil</a>
                       </span>
                     </div>
                   </b:if>
@@ -3793,7 +3793,7 @@ if(autlist==true){function autolist(e){for(var t=0;t<e.feed.entry.length;t++){fo
                                     <div class='comment-thread inline-thread' expr:id='&quot;c&quot; + data:commentLevel1.id + &quot;-rt&quot;'>
                                       <label class='thread-toggle thread-expanded' expr:for='&quot;off-&quot; + data:commentLevel1.id'>
                                         <svg class='thread-arrow line' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><polyline points='6 9 12 15 18 9'/></svg>
-                                        <span class='thread-count'>Balasan</span>
+                                        <span class='thread-count'>Yanıtlar</span>
                                       </label>
                                     
                                       <ul class='thread-chrome thread-expanded'>
@@ -3809,7 +3809,7 @@ if(autlist==true){function autolist(e){for(var t=0;t<e.feed.entry.length;t++){fo
                                     </div>
                                     <b:if cond='data:post.allowNewComments'>
                                       <div class='comment-reply'>
-                                        <a class='reply-to' expr:data-reply-to='data:commentLevel1.id' href='javascript:;' target='_self'><svg class='line' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><polyline points='15 14 20 9 15 4'/><path d='M4 20v-7a4 4 0 0 1 4-4h12'/></svg>Balas</a>
+                                        <a class='reply-to' expr:data-reply-to='data:commentLevel1.id' href='javascript:;' target='_self'><svg class='line' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><polyline points='15 14 20 9 15 4'/><path d='M4 20v-7a4 4 0 0 1 4-4h12'/></svg>Yanıtla</a>
                                       </div>
                                     </b:if>
                                   </div>
@@ -3818,7 +3818,7 @@ if(autlist==true){function autolist(e){for(var t=0;t<e.feed.entry.length;t++){fo
                               
                               <b:if cond='data:commentL2.size != &quot;2&quot; and data:post.allowNewComments'>
                                 <div class='comment-actions secondary-text'>
-                                  <a class='comment-reply reply-to' expr:data-comment-id='data:commentLevel1.id' expr:data-reply-to='data:commentLevel1.id' href='javascript:;' target='_self'><svg class='line' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><polyline points='15 14 20 9 15 4'/><path d='M4 20v-7a4 4 0 0 1 4-4h12'/></svg>Balas</a>
+                                  <a class='comment-reply reply-to' expr:data-comment-id='data:commentLevel1.id' expr:data-reply-to='data:commentLevel1.id' href='javascript:;' target='_self'><svg class='line' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><polyline points='15 14 20 9 15 4'/><path d='M4 20v-7a4 4 0 0 1 4-4h12'/></svg>Yanıtla</a>
                                 </div>
                               </b:if>
                             </li>
@@ -3829,7 +3829,7 @@ if(autlist==true){function autolist(e){for(var t=0;t<e.feed.entry.length;t++){fo
                       <b:if cond='data:post.allowNewComments'>
                         <div class='comment-add'>
                           <script>var comment = true;</script>
-                          <div aria-label='Berkomentar' class='hidden' id='addcomment' role='button'><data:messages.postAComment/></div>
+                          <div aria-label='Yorum Yap' class='hidden' id='addcomment' role='button'><data:messages.postAComment/></div>
                         </div>
                       </b:if>
                       <b:else/>
@@ -3875,24 +3875,24 @@ if(autlist==true){function autolist(e){for(var t=0;t<e.feed.entry.length;t++){fo
                                 <div class='flex aic jcsb bb-1pxsf y9x19p yb10m'>
                                   <h3 class='m-0 c-theme'><b:if cond='data:view.isHomepage'><data:messages.latestPosts/></b:if>
                                     <b:if cond='data:view.search.query'><data:messages.search/>: <b><data:view.search.query/></b></b:if>
-                                    <b:if cond='data:view.search.label'>Rekomendasi Komik <b><data:blog.pageName/></b> Terbaik</b:if>
-                                    <b:if cond='data:view.isArchive'>Arsip Komik Tanggal: <b><data:blog.pageName/></b></b:if>
+                                    <b:if cond='data:view.search.label'>Önerilen Manga <b><data:blog.pageName/></b></b:if>
+                                    <b:if cond='data:view.isArchive'>Çizgi Roman Arşivi: <b><data:blog.pageName/></b></b:if>
                                     <b:if cond='data:view.search and !data:view.search.label and !data:view.search.query and !data:view.isArchive'><data:messages.posts/></b:if></h3>
                                   <svg class='feather feather-filter' fill='none' height='24' id='toggle' stroke='var(--primary-color)' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><polygon points='22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3'/></svg>
                                 </div>
                                 <div class='p-20 bc-e8' id='content'>
                                   <dl>
-                                    <dt class='pb-15 fs-15 fw-600'>Status</dt>
+                                    <dt class='pb-15 fs-15 fw-600'>Durum</dt>
                                     <div class='flex fs-13 fdc'>
-                                      <dd class='md-ml-0'><a expr:href='data:blog.homepageUrl + &quot;search/label/Ongoing?&amp;max-results=20&quot;'>Ongoing</a></dd>
-                                      <dd><a expr:href='data:blog.homepageUrl + &quot;search/label/Completed?&amp;max-results=20&quot;'>Completed</a></dd>
-                                      <dd><a expr:href='data:blog.homepageUrl + &quot;search/label/Cancelled?&amp;max-results=20&quot;'>Cancelled</a></dd>
-                                      <dd><a expr:href='data:blog.homepageUrl + &quot;search/label/Hiatus?&amp;max-results=20&quot;'>Hiatus</a></dd>
-                                      <dd><a expr:href='data:blog.homepageUrl + &quot;search/label/Dropped?&amp;max-results=20&quot;'>Dropped</a></dd>
+                                      <dd class='md-ml-0'><a expr:href='data:blog.homepageUrl + &quot;search/label/Devam Ediyor?&amp;max-results=20&quot;'>Devam Ediyoe</a></dd>
+                                      <dd><a expr:href='data:blog.homepageUrl + &quot;search/label/Tamamlandı?&amp;max-results=20&quot;'>Tamamlandı</a></dd>
+                                      <dd><a expr:href='data:blog.homepageUrl + &quot;search/label/İptal Edildi?&amp;max-results=20&quot;'>İptal Edildi</a></dd>
+                                      <dd><a expr:href='data:blog.homepageUrl + &quot;search/label/Beklemede?&amp;max-results=20&quot;'>Beklemede</a></dd>
+                                      <dd><a expr:href='data:blog.homepageUrl + &quot;search/label/Terk Edildi?&amp;max-results=20&quot;'>Terk Edildi</a></dd>
                                     </div>
                                   </dl>
                                   <dl>
-                                    <dt class='pb-15 fs-15 fw-600'>Format</dt>
+                                    <dt class='pb-15 fs-15 fw-600'>Tür</dt>
                                     <div class='flex fs-13 fdc'>
                                       <dd class='md-ml-0'><a expr:href='data:blog.homepageUrl + &quot;search/label/Manga?&amp;max-results=20&quot;'>Manga</a></dd>
                                       <dd><a expr:href='data:blog.homepageUrl + &quot;search/label/Manhua?&amp;max-results=20&quot;'>Manhua</a></dd>
@@ -3930,7 +3930,7 @@ if(autlist==true){function autolist(e){for(var t=0;t<e.feed.entry.length;t++){fo
   </div>
 </b:includable>
                           </b:widget>
-                          <b:widget cond='data:view.isHomepage' id='HTML1' locked='false' title='KAtegorik Mangalar' type='HTML' version='2' visible='true'>
+                          <b:widget cond='data:view.isHomepage' id='HTML1' locked='false' title='Kategorik Mangalar' type='HTML' version='2' visible='true'>
                             <b:widget-settings>
                               <b:widget-setting name='content'>&lt;section id=&quot;mTP_Slider&quot; class=&quot;top&quot;&gt;
 &lt;script&gt;mTP.run(jQuery, false, 5, 5)&lt;/script&gt;
@@ -3942,7 +3942,7 @@ if(autlist==true){function autolist(e){for(var t=0;t<e.feed.entry.length;t++){fo
                               <h3 class='title flex jcsb aic'>
     <span class='flex aic g5'><svg aria-hidden='true' height='1em' preserveAspectRatio='xMidYMid meet' role='img' viewBox='0 0 20 20' width='1em' xmlns='http://www.w3.org/2000/svg'><path d='M18 6.01L14 9V7h-4l-5 8H2v-2h2l5-8h5V3zM2 5h3l1.15 2.17l-1.12 1.8L4 7H2V5zm16 9.01L14 17v-2H9l-1.15-2.17l1.12-1.8L10 13h4v-2z' fill='currentColor'/></svg>
       <data:title/></span>
-    <span class='bg-main ttu p-3y6x fs-9 r2 c-fff cp' onclick='mTP.run(jQuery, &apos;Series&apos;, 5, 5)'>Reload</span>
+    <span class='bg-main ttu p-3y6x fs-9 r2 c-fff cp' onclick='mTP.run(jQuery, &apos;Series&apos;, 5, 5)'>YENİLE</span>
 </h3>
   <div class='widget-content'>
     <data:content/>
@@ -3983,7 +3983,7 @@ if(autlist==true){function autolist(e){for(var t=0;t<e.feed.entry.length;t++){fo
     document.getElementById(&#39;main&#39;).innerHTML = elements;
   }
 
-  var rp_blogUrl = &quot;https://emissionhex.blogspot.com/&quot;;
+  var rp_blogUrl = &quot;#&quot;;
   var rp_totalItem = 3;
   var rp_showThumbnail = 1;
   var rp_showInfo = 1;
@@ -4035,7 +4035,7 @@ if(autlist==true){function autolist(e){for(var t=0;t<e.feed.entry.length;t++){fo
         year = date.substring(0, 4),
         digit = date.substring(5, 7),
         day = date.substring(8, 10),
-        month = [&quot;&quot;, &quot;January&quot;, &quot;Februari&quot;, &quot;Maret&quot;, &quot;April&quot;, &quot;Mei&quot;, &quot;Juni&quot;, &quot;Juli&quot;, &quot;Agustus&quot;, &quot;September&quot;, &quot;Oktober&quot;, &quot;November&quot;, &quot;Desember&quot;];
+        month = [&quot;&quot;, &quot;Ocak&quot;, &quot;Şubat&quot;, &quot;Mart&quot;, &quot;Nisan&quot;, &quot;Mayıs&quot;, &quot;Haziran&quot;, &quot;Temmuz&quot;, &quot;Ağustos&quot;, &quot;Eylül&quot;, &quot;Ekim&quot;, &quot;Kasım&quot;, &quot;Aralık&quot;];
         item_date = month[parseInt(digit)] + &quot; &quot;+ day + &quot;, &quot; + year;
 
         item_label = &quot;&quot;;
@@ -4073,7 +4073,7 @@ if(autlist==true){function autolist(e){for(var t=0;t<e.feed.entry.length;t++){fo
     }
     var js = document.createElement(&quot;script&quot;);
     var blogUrl = rp_blogUrl.replace(/\/$/, &quot;&quot;);
-    js.src = blogUrl + &quot;/feeds/posts/default/-/Tema?orderby=published&amp;alt=json-in-script&amp;max-results=&quot; + rp_totalItem + &quot;&amp;callback=&quot; + callback;
+    js.src = blogUrl + &quot;/feeds/posts/default/-/Blog?orderby=published&amp;alt=json-in-script&amp;max-results=&quot; + rp_totalItem + &quot;&amp;callback=&quot; + callback;
     document.getElementsByTagName(&quot;head&quot;)[0].appendChild(js);
   })();
 &lt;/script&gt;</b:widget-setting>
@@ -5820,8 +5820,8 @@ Genre
       <b:section id='footer' maxwidgets='3' showaddelement='true'>
         <b:widget id='PageList2' locked='true' title='Sayfalar' type='PageList' version='2' visible='true'>
           <b:widget-settings>
-            <b:widget-setting name='pageListJson'><![CDATA[{"link0":{"href":"https://zeistmanga-bt.blogspot.com/search/label/A-Z","position":0,"title":"A-Z"}}]]></b:widget-setting>
-            <b:widget-setting name='homeTitle'>Home</b:widget-setting>
+            <b:widget-setting name='pageListJson'><![CDATA[{"link0":{"href":"/search/label/A-Z","position":0,"title":"A-Z"}}]]></b:widget-setting>
+            <b:widget-setting name='homeTitle'>Ana Sayfa</b:widget-setting>
           </b:widget-settings>
           <b:includable id='main'>
             <b:include name='content'/>
