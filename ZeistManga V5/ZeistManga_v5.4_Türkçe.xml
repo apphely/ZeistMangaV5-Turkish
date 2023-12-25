@@ -1718,7 +1718,7 @@ $(widget).remove();
 
                       <header class='bg-main'>
                         <b:section class='max-w mra mla grid gtc-header aic gg-30' growth='vertical' id='header' maxwidgets='3' showaddelement='true'>
-                          <b:widget id='Header1' locked='true' title='ZeistManga (Header)' type='Header' version='2' visible='true'>
+                          <b:widget id='Header1' locked='true' title='ZMv5 Türkçe (Header)' type='Header' version='2' visible='true'>
                             <b:widget-settings>
                               <b:widget-setting name='displayUrl'/>
                               <b:widget-setting name='displayHeight'>0</b:widget-setting>
@@ -1773,10 +1773,10 @@ $(widget).remove();
                               </div>
                             </b:includable>
                           </b:widget>
-                          <b:widget id='PageList1' locked='true' title='Pages' type='PageList' version='2' visible='true'>
+                          <b:widget id='PageList1' locked='true' title='Sayfalar' type='PageList' version='2' visible='true'>
                             <b:widget-settings>
-                              <b:widget-setting name='pageListJson'><![CDATA[{"6520915027654195770":{"href":"https://zeistmanga-bt.blogspot.com/p/manga-list.html","position":0,"title":"Manga List"},"4081167486351598216":{"href":"https://zeistmanga-bt.blogspot.com/p/privacy-policy.html","position":1,"title":"Komik"}}]]></b:widget-setting>
-                              <b:widget-setting name='homeTitle'>Beranda</b:widget-setting>
+                              <b:widget-setting name='pageListJson'>{}</b:widget-setting>
+                              <b:widget-setting name='homeTitle'>Home</b:widget-setting>
                             </b:widget-settings>
                             <b:includable id='main'>
 
@@ -1835,7 +1835,7 @@ $(widget).remove();
                               </ul>
                             </b:includable>
                           </b:widget>
-                          <b:widget id='BlogSearch1' locked='true' title='Cari Blog Ini' type='BlogSearch' version='2' visible='true'>
+                          <b:widget id='BlogSearch1' locked='true' title='Manga ARA' type='BlogSearch' version='2' visible='true'>
                             <b:includable id='main'>
 
                               <b:include name='content'/>
@@ -1880,9 +1880,9 @@ $(widget).remove();
                         </b:section>
                       </header>
                       <b:section growth='vertical' id='notification' maxwidgets='1' showaddelement='true'>
-                        <b:widget id='Text4' locked='false' title='Global Notification' type='Text' version='2' visible='false'>
+                        <b:widget id='Text4' locked='false' title='Duyuru' type='Text' version='2' visible='true'>
                           <b:widget-settings>
-                            <b:widget-setting name='content'>Download &lt;span class=&quot;p-5 bg-171 r2&quot;&gt;&lt;a class=&quot;c-fff&quot; href=&quot;
+                            <b:widget-setting name='content'>İndir &lt;span class=&quot;p-5 bg-171 r2&quot;&gt;&lt;a class=&quot;c-fff&quot; href=&quot;
 https://cararegistrasi.com/zeistmanga
 &quot;&gt;ZeistManga&lt;/a&gt; v4&lt;/span&gt;</b:widget-setting>
                           </b:widget-settings>
@@ -2026,14 +2026,7 @@ https://cararegistrasi.com/zeistmanga
                             </div>
                           </b:includable>
                         </b:widget>
-                        <b:widget id='Label3' locked='true' title='Popular Genre' type='Label' version='2' visible='false'>
-                          <b:widget-settings>
-                            <b:widget-setting name='sorting'>FREQUENCY</b:widget-setting>
-                            <b:widget-setting name='display'>CLOUD</b:widget-setting>
-                            <b:widget-setting name='selectedLabelsList'>Action,Adaptation,Adventure,Comedy,Completed,Crime,Demon,Drama,Ecchi,Fantasy,Full Color,Gore,Harem,Historical,Horror,Isekai,Josei,Light Novel (JP),Mafia,Magic,Manga,Manhua,Manhwa,Martial Arts,Mature,Mecha,Military,Monsters,Mystery,Official Colored,Reincarnation,Romance,School Life,Sci-Fi,Seinen,Shounen,Slice of Life,Sports,Supernatural,Survival,Thriller,Tragedy,Video Games,Virtual Reality</b:widget-setting>
-                            <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
-                            <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
-                          </b:widget-settings>
+                        <b:widget id='Label3' locked='true' title='Popüler Kategoriler' type='Label' version='2' visible='true'>
                           <b:includable id='main' var='this'>
 
                             <b:include name='content'/>
@@ -2091,7 +2084,7 @@ https://cararegistrasi.com/zeistmanga
                         </b:widget>
                       </b:section>
                       <b:section class='max-w mla mra mb-15' cond='data:view.isHomepage' id='slide' maxwidgets='1' showaddelement='true'>
-                        <b:widget cond='data:view.isHomepage' id='HTML6' locked='true' title='Ads' type='HTML' version='2' visible='false'>
+                        <b:widget cond='data:view.isHomepage' id='HTML6' locked='true' title='Reklam Alanı' type='HTML' version='2' visible='true'>
                           <b:widget-settings>
                             <b:widget-setting name='content'><![CDATA[<img src="https://1.bp.blogspot.com/-FmfAILeAUs4/YQJE9dL6VhI/AAAAAAAAHXA/qm9QN_rJxwsG84UY9LYcD4Y58XTvQcwNQCLcBGAsYHQ/s720/ads.png"/>]]></b:widget-setting>
                           </b:widget-settings>
@@ -2102,7 +2095,7 @@ https://cararegistrasi.com/zeistmanga
   </div>
 </b:includable>
                         </b:widget>
-                        <b:widget id='PopularPosts2' locked='true' title='Hot Manga' type='PopularPosts' version='2' visible='true'>
+                        <b:widget id='PopularPosts2' locked='true' title='Sıcak Mangalar' type='PopularPosts' version='2' visible='true'>
                           <b:widget-settings>
                             <b:widget-setting name='numItemsToShow'>10</b:widget-setting>
                             <b:widget-setting name='showThumbnails'>true</b:widget-setting>
@@ -2400,7 +2393,7 @@ https://cararegistrasi.com/zeistmanga
                         <b:class cond='data:view.isMultipleItems and !data:view.isLabelSearch' name='gtc-main'/>
                         <b:tag class='grid gg-20 gtr-mc min' cond='data:view.isMultipleItems' name='section'>
                         <b:section class='grid gg-15' cond='data:view.isHomepage' id='feed' showaddelement='true'>
-                          <b:widget id='HTML9' locked='false' title='Project Update' type='HTML' version='2' visible='true'>
+                          <b:widget id='HTML9' locked='false' title='Güncellenen Mangalar' type='HTML' version='2' visible='true'>
                             <b:widget-settings>
                               <b:widget-setting name='content'>&lt;div id=&quot;Update&quot; class=&quot;myGridv2&quot;&gt;
   &lt;script&gt;update.run(&#39;Project&#39;, 150)&lt;/script&gt;
@@ -2417,7 +2410,7 @@ https://cararegistrasi.com/zeistmanga
   </div>
 </b:includable>
                           </b:widget>
-                          <b:widget id='HTML13' locked='false' title='Latest Release' type='HTML' version='2' visible='true'>
+                          <b:widget id='HTML13' locked='false' title='Son Eklenenler' type='HTML' version='2' visible='true'>
                             <b:widget-settings>
                               <b:widget-setting name='content'>&lt;div id=&quot;myManga&quot; class=&quot;myGrid&quot;&gt;
   &lt;script&gt;mangaPost.run(&#39;Project&#39;, 150)&lt;/script&gt;
@@ -2436,30 +2429,30 @@ https://cararegistrasi.com/zeistmanga
                           </b:widget>
                         </b:section>
                         <b:section class='grid gg-20 mb-15' id='main' showaddelement='true'>
-                          <b:widget cond='!data:view.isHomepage' id='Blog1' locked='true' title='Postingan Blog' type='Blog' version='2' visible='true'>
+                          <b:widget cond='!data:view.isHomepage' id='Blog1' locked='true' title='Blog Posts' type='Blog' version='2' visible='true'>
                             <b:widget-settings>
                               <b:widget-setting name='showDateHeader'>false</b:widget-setting>
-                              <b:widget-setting name='commentLabel'>Komentar</b:widget-setting>
-                              <b:widget-setting name='style.textcolor'>#00b4e3</b:widget-setting>
+                              <b:widget-setting name='commentLabel'>Yorum</b:widget-setting>
+                              <b:widget-setting name='style.textcolor'>#ffffff</b:widget-setting>
                               <b:widget-setting name='showShareButtons'>true</b:widget-setting>
-                              <b:widget-setting name='authorLabel'>Oleh</b:widget-setting>
+                              <b:widget-setting name='authorLabel'>Paylaşan:</b:widget-setting>
                               <b:widget-setting name='showCommentLink'>true</b:widget-setting>
-                              <b:widget-setting name='style.urlcolor'>#00e37f</b:widget-setting>
+                              <b:widget-setting name='style.urlcolor'>#ffffff</b:widget-setting>
                               <b:widget-setting name='showAuthor'>true</b:widget-setting>
                               <b:widget-setting name='style.linkcolor'>#ffffff</b:widget-setting>
                               <b:widget-setting name='style.unittype'>TextAndImage</b:widget-setting>
-                              <b:widget-setting name='style.bgcolor'>#000000</b:widget-setting>
-                              <b:widget-setting name='timestampLabel'>Pada</b:widget-setting>
+                              <b:widget-setting name='style.bgcolor'>#ffffff</b:widget-setting>
+                              <b:widget-setting name='timestampLabel'>Tarih</b:widget-setting>
                               <b:widget-setting name='reactionsLabel'/>
                               <b:widget-setting name='showAuthorProfile'>false</b:widget-setting>
                               <b:widget-setting name='style.layout'>1x1</b:widget-setting>
                               <b:widget-setting name='showLabels'>true</b:widget-setting>
                               <b:widget-setting name='showLocation'>false</b:widget-setting>
-                              <b:widget-setting name='postLabelsLabel'>Like</b:widget-setting>
+                              <b:widget-setting name='postLabelsLabel'>Kategoriler</b:widget-setting>
                               <b:widget-setting name='showTimestamp'>true</b:widget-setting>
                               <b:widget-setting name='postsPerAd'>1</b:widget-setting>
                               <b:widget-setting name='showBacklinks'>false</b:widget-setting>
-                              <b:widget-setting name='style.bordercolor'>#000000</b:widget-setting>
+                              <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
                               <b:widget-setting name='showInlineAds'>false</b:widget-setting>
                               <b:widget-setting name='showReactions'>false</b:widget-setting>
                             </b:widget-settings>
@@ -3926,7 +3919,7 @@ if(autlist==true){function autolist(e){for(var t=0;t<e.feed.entry.length;t++){fo
                               </article>
                             </b:includable>
                           </b:widget>
-                          <b:widget cond='data:view.isHomepage' id='HTML7' locked='true' title='Ads' type='HTML' version='2' visible='false'>
+                          <b:widget cond='data:view.isHomepage' id='HTML7' locked='true' title='Reklam Alanı' type='HTML' version='2' visible='true'>
                             <b:widget-settings>
                               <b:widget-setting name='content'><![CDATA[<img src="https://1.bp.blogspot.com/-FmfAILeAUs4/YQJE9dL6VhI/AAAAAAAAHXA/qm9QN_rJxwsG84UY9LYcD4Y58XTvQcwNQCLcBGAsYHQ/s720/ads.png"/>]]></b:widget-setting>
                             </b:widget-settings>
@@ -3937,7 +3930,7 @@ if(autlist==true){function autolist(e){for(var t=0;t<e.feed.entry.length;t++){fo
   </div>
 </b:includable>
                           </b:widget>
-                          <b:widget cond='data:view.isHomepage' id='HTML1' locked='false' title='Recomendation' type='HTML' version='2' visible='true'>
+                          <b:widget cond='data:view.isHomepage' id='HTML1' locked='false' title='KAtegorik Mangalar' type='HTML' version='2' visible='true'>
                             <b:widget-settings>
                               <b:widget-setting name='content'>&lt;section id=&quot;mTP_Slider&quot; class=&quot;top&quot;&gt;
 &lt;script&gt;mTP.run(jQuery, false, 5, 5)&lt;/script&gt;
@@ -4099,7 +4092,7 @@ if(autlist==true){function autolist(e){for(var t=0;t<e.feed.entry.length;t++){fo
                         </b:tag>
                         <b:tag cond='data:view.isMultipleItems and !data:view.isLabelSearch' id='sidebar' name='div'>
                         <b:section cond='data:view.isMultipleItems and !data:view.isLabelSearch' id='search' showaddelement='true'>
-                          <b:widget id='BlogSearch2' locked='true' title='Search' type='BlogSearch' version='2' visible='true'>
+                          <b:widget id='BlogSearch2' locked='true' title='Ara' type='BlogSearch' version='2' visible='true'>
                             <b:includable id='main'>
             <h3 class='title flex aic'>
     <svg aria-hidden='true' height='1em' preserveAspectRatio='xMidYMid meet' role='img' viewBox='0 0 16 16' width='1em' xmlns='http://www.w3.org/2000/svg'><path d='M6 12v-1h4v1H6zM4 7h8v1H4V7zm10-4v1H2V3h12z' fill='currentColor'/></svg>
@@ -4399,7 +4392,7 @@ window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.j
 </script>
 </b:if>
                           <b:section cond='data:view.isMultipleItems and !data:view.isLabelSearch' id='popular' showaddelement='true'>
-                            <b:widget id='PopularPosts3' locked='true' title='Minggu' type='PopularPosts' version='2' visible='true'>
+                            <b:widget id='PopularPosts3' locked='true' title='Haftalık' type='PopularPosts' version='2' visible='true'>
                               <b:widget-settings>
                                 <b:widget-setting name='numItemsToShow'>10</b:widget-setting>
                                 <b:widget-setting name='showThumbnails'>true</b:widget-setting>
@@ -4670,7 +4663,7 @@ window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.j
                               </b:with>
                             </b:includable>
                             </b:widget>
-                            <b:widget id='PopularPosts4' locked='true' title='Bulan' type='PopularPosts' version='2' visible='true'>
+                            <b:widget id='PopularPosts4' locked='true' title='Aylık' type='PopularPosts' version='2' visible='true'>
                               <b:widget-settings>
                                 <b:widget-setting name='numItemsToShow'>10</b:widget-setting>
                                 <b:widget-setting name='showThumbnails'>true</b:widget-setting>
@@ -4939,7 +4932,7 @@ window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.j
                               </b:with>
                             </b:includable>
                             </b:widget>
-                            <b:widget id='PopularPosts5' locked='true' title='Tahun' type='PopularPosts' version='2' visible='true'>
+                            <b:widget id='PopularPosts5' locked='true' title='Tüm Zamanlar' type='PopularPosts' version='2' visible='true'>
                               <b:widget-settings>
                                 <b:widget-setting name='numItemsToShow'>10</b:widget-setting>
                                 <b:widget-setting name='showThumbnails'>true</b:widget-setting>
@@ -5211,7 +5204,7 @@ window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.j
                           </b:section>
                             </b:tag>
                           <b:section class='grid gg-20' cond='data:view.isMultipleItems and !data:view.isLabelSearch' id='other' showaddelement='true'>
-                            <b:widget id='HTML2' locked='true' title='Donation' type='HTML' version='2' visible='true'>
+                            <b:widget id='HTML2' locked='true' title='Bağış' type='HTML' version='2' visible='true'>
                               <b:widget-settings>
                                 <b:widget-setting name='content'><![CDATA[<a href="https://trakteer.id/wernayasa" target="_blank" rel="noopener"><div style="padding: 10px;"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhbXzT_YUP8J88nSfO330yDuk14rxXDVKOo_OlgieKyoQpKDK9gtiIrA4YfkL98jNmWB_mAcHL0yLLKHxdXZAGzYDOihrRfClLbx4G-F4hhWZHu7HRxFvxCYCNw1_IvFMhsToh514NppBQzyrCl5uWmJVjB8yhRE5adrYJAdWwW_DtdNMxhoe3iXTUDjA/s800/navbar-logo-lite-beta.png" alt="" /></div></a>]]></b:widget-setting>
                               </b:widget-settings>
@@ -5225,7 +5218,7 @@ window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.j
                               </div>
                             </b:includable>
                             </b:widget>
-                            <b:widget id='HTML18' locked='false' title='Join Discord' type='HTML' version='2' visible='true'>
+                            <b:widget id='HTML18' locked='false' title='Discorda Katıl' type='HTML' version='2' visible='true'>
                               <b:widget-settings>
                                 <b:widget-setting name='content'><![CDATA[<a href="#"><img class="image " src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgNdigejeuvgCwYcm5N7IMSQAVG37kSUwS8l11ksU10s0aNljMWJLXmRgI8leCObl82axiEsCnPocPGR9hZnQsTgXBrd_eAnRh-Al5EQdVFVCz4JrYH2otTmJMdVS80fRhTSDsLjTwGmAJng-jbeXPyuMmArao0PNsSWjRXSGiCG0db0NXlNQmO9y-HDg/s800/discord.png" alt="Discord App" width="800" height="272" /></a>]]></b:widget-setting>
                               </b:widget-settings>
@@ -5239,7 +5232,7 @@ window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.j
   </div>
 </b:includable>
                             </b:widget>
-                            <b:widget cond='data:view.isMultipleItems' id='HTML8' locked='true' title='Ads' type='HTML' version='2' visible='false'>
+                            <b:widget cond='data:view.isMultipleItems' id='HTML8' locked='true' title='Reklam Alanı' type='HTML' version='2' visible='true'>
                               <b:widget-settings>
                                 <b:widget-setting name='content'><![CDATA[<img src="https://1.bp.blogspot.com/-5ac6z8YEE8k/YQJLaybLKgI/AAAAAAAAHXI/NPoZjxVgbFQrUmJ3qMoXaYO19IXCoRZ7ACLcBGAsYHQ/s300/ads-sidebar.png"/>]]></b:widget-setting>
                               </b:widget-settings>
@@ -5250,7 +5243,7 @@ window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.j
   </div>
 </b:includable>
                             </b:widget>
-                            <b:widget cond='data:view.isHomepage' id='PopularPosts1' locked='true' title='Popular Post' type='PopularPosts' version='2' visible='false'>
+                            <b:widget cond='data:view.isHomepage' id='PopularPosts1' locked='true' title='Bu Yılın Popülerleri' type='PopularPosts' version='2' visible='true'>
                               <b:widget-settings>
                                 <b:widget-setting name='numItemsToShow'>10</b:widget-setting>
                                 <b:widget-setting name='showThumbnails'>true</b:widget-setting>
@@ -5535,7 +5528,7 @@ window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.j
                               </b:with>
                             </b:includable>
                             </b:widget>
-                            <b:widget id='HTML10' locked='false' title='Reading History' type='HTML' version='2' visible='true'>
+                            <b:widget id='HTML10' locked='false' title='Okuma Geçmişi' type='HTML' version='2' visible='true'>
                               <b:widget-settings>
                                 <b:widget-setting name='content'><![CDATA[<script>history_('#HTML10','#HTML10 .widget-history')</script>]]></b:widget-setting>
                               </b:widget-settings>
@@ -5549,7 +5542,7 @@ window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.j
   </ul>
 </b:includable>
                             </b:widget>
-                            <b:widget id='HTML4' locked='false' title='Random Manga' type='HTML' version='2' visible='false'>
+                            <b:widget id='HTML4' locked='false' title='Karışık Manga(numposts=6; - Site bozulmaması için kapalı. 6 manga varsa aç. ya da sayı değiş.)' type='HTML' version='2' visible='false'>
                               <b:widget-settings>
                                 <b:widget-setting name='content'>&lt;style&gt;
                                 ul#random-posts {
@@ -5594,12 +5587,12 @@ window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.j
                               </div>
                             </b:includable>
                             </b:widget>
-                            <b:widget id='Label1' locked='true' title='Genre' type='Label' version='2' visible='false'>
+                            <b:widget id='Label1' locked='true' title='Kategoriler' type='Label' version='2' visible='true'>
                               <b:widget-settings>
                                 <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
                                 <b:widget-setting name='display'>CLOUD</b:widget-setting>
-                                <b:widget-setting name='selectedLabelsList'>Action,Adventure,Comedy,Crime,Demon,Drama,Ecchi,Fantasy,Full Color,Harem,Historical,Isekai,Josei,Light Novel (JP),Long Strip,Mafia,Magic,Martial Arts,Mature,Mecha,Military,Monsters,Mystery,Official Colored,Reincarnation,Romance,School Life,Sci-Fi,Seinen,Seirei Gensouki,Shounen,Slice of Life,Sports,Supernatural,Survival,Thriller,Tragedy,Video Games,Virtual Reality,Web Comic,Web Novel (CN),Web Novel (JP),Web Novel (KR)</b:widget-setting>
-                                <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
+                                <b:widget-setting name='selectedLabelsList'/>
+                                <b:widget-setting name='showType'>ALL</b:widget-setting>
                                 <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
                               </b:widget-settings>
                               <b:includable id='main' var='this'>
@@ -5643,7 +5636,7 @@ window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.j
                               </ul>
                             </b:includable>
                             </b:widget>
-                            <b:widget id='BlogArchive1' locked='true' title='Arsip' type='BlogArchive' version='2' visible='false'>
+                            <b:widget id='BlogArchive1' locked='true' title='Arşiv' type='BlogArchive' version='2' visible='true'>
                               <b:widget-settings>
                                 <b:widget-setting name='showStyle'>HIERARCHY</b:widget-setting>
                                 <b:widget-setting name='yearPattern'>yyyy</b:widget-setting>
@@ -5713,87 +5706,87 @@ window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.j
                               </ul>
                             </b:includable>
                             </b:widget>
-                            <b:widget id='LinkList1' locked='false' title='Genre' type='LinkList' version='2' visible='true'>
+                            <b:widget id='LinkList1' locked='false' title='Kategoriler' type='LinkList' version='2' visible='true'>
                               <b:widget-settings>
-                                <b:widget-setting name='text-30'>Shounen</b:widget-setting>
-                                <b:widget-setting name='text-31'>Slice of Life</b:widget-setting>
-                                <b:widget-setting name='text-32'>Sports</b:widget-setting>
-                                <b:widget-setting name='link-38'>search/label/Vampire</b:widget-setting>
-                                <b:widget-setting name='text-26'>School Life</b:widget-setting>
-                                <b:widget-setting name='link-35'>search/label/Tragedy</b:widget-setting>
-                                <b:widget-setting name='text-27'>Sci-Fi</b:widget-setting>
-                                <b:widget-setting name='link-34'>search/label/Thriller</b:widget-setting>
-                                <b:widget-setting name='text-28'>Seinen</b:widget-setting>
-                                <b:widget-setting name='link-37'>search/label/Vampire</b:widget-setting>
-                                <b:widget-setting name='text-29'>Shoujo</b:widget-setting>
-                                <b:widget-setting name='link-36'>search/label/Vampire</b:widget-setting>
-                                <b:widget-setting name='text-22'>Music</b:widget-setting>
-                                <b:widget-setting name='link-31'>search/label/Slice of Life</b:widget-setting>
-                                <b:widget-setting name='text-23'>Mystery</b:widget-setting>
-                                <b:widget-setting name='link-30'>search/label/Shounen</b:widget-setting>
-                                <b:widget-setting name='text-24'>Psychological</b:widget-setting>
-                                <b:widget-setting name='link-33'>search/label/Supernatural</b:widget-setting>
-                                <b:widget-setting name='text-25'>Romance</b:widget-setting>
-                                <b:widget-setting name='link-32'>search/label/Sports</b:widget-setting>
-                                <b:widget-setting name='text-9'>Historical</b:widget-setting>
-                                <b:widget-setting name='text-8'>Harem</b:widget-setting>
-                                <b:widget-setting name='text-20'>Medical</b:widget-setting>
-                                <b:widget-setting name='text-21'>Military</b:widget-setting>
-                                <b:widget-setting name='text-1'>Adventure</b:widget-setting>
-                                <b:widget-setting name='text-0'>Action</b:widget-setting>
-                                <b:widget-setting name='text-3'>Cooking</b:widget-setting>
-                                <b:widget-setting name='text-2'>Comedy</b:widget-setting>
-                                <b:widget-setting name='text-5'>Ecchi</b:widget-setting>
-                                <b:widget-setting name='text-4'>Drama</b:widget-setting>
-                                <b:widget-setting name='text-7'>Game</b:widget-setting>
-                                <b:widget-setting name='text-6'>Fantasy</b:widget-setting>
-                                <b:widget-setting name='text-19'>Mecha</b:widget-setting>
-                                <b:widget-setting name='text-15'>Manhwa</b:widget-setting>
-                                <b:widget-setting name='text-16'>Martial Arts</b:widget-setting>
-                                <b:widget-setting name='text-17'>Mature</b:widget-setting>
-                                <b:widget-setting name='text-18'>Mecha</b:widget-setting>
-                                <b:widget-setting name='text-11'>Isekai</b:widget-setting>
-                                <b:widget-setting name='text-12'>Josei</b:widget-setting>
-                                <b:widget-setting name='text-13'>Magic</b:widget-setting>
-                                <b:widget-setting name='text-14'>Manhua</b:widget-setting>
-                                <b:widget-setting name='text-10'>Horror</b:widget-setting>
-                                <b:widget-setting name='link-17'>/search/label/Mature</b:widget-setting>
-                                <b:widget-setting name='link-16'>/search/label/Martial Arts</b:widget-setting>
-                                <b:widget-setting name='link-19'>/search/label/Mecha</b:widget-setting>
+                                <b:widget-setting name='text-30'>Shoujo</b:widget-setting>
+                                <b:widget-setting name='text-31'>Shounen</b:widget-setting>
+                                <b:widget-setting name='text-32'>Spor</b:widget-setting>
+                                <b:widget-setting name='link-38'>search/label/Vampir</b:widget-setting>
+                                <b:widget-setting name='text-26'>Pişirme</b:widget-setting>
+                                <b:widget-setting name='link-35'>search/label/Trajedi</b:widget-setting>
+                                <b:widget-setting name='text-27'>Psikolojik</b:widget-setting>
+                                <b:widget-setting name='link-34'>/search/label/Tıbbi</b:widget-setting>
+                                <b:widget-setting name='text-28'>Romance</b:widget-setting>
+                                <b:widget-setting name='link-37'>search/label/Vampir</b:widget-setting>
+                                <b:widget-setting name='text-29'>Seinen</b:widget-setting>
+                                <b:widget-setting name='link-36'>search/label/Vampir</b:widget-setting>
+                                <b:widget-setting name='text-22'>Müzik</b:widget-setting>
+                                <b:widget-setting name='link-31'>search/label/Shounen</b:widget-setting>
+                                <b:widget-setting name='text-23'>Okul Hayatı</b:widget-setting>
+                                <b:widget-setting name='link-30'>search/label/Shoujo</b:widget-setting>
+                                <b:widget-setting name='text-24'>Olgun</b:widget-setting>
+                                <b:widget-setting name='link-33'>/search/label/Tarihi</b:widget-setting>
+                                <b:widget-setting name='text-25'>Oyun</b:widget-setting>
+                                <b:widget-setting name='link-32'>search/label/Spor</b:widget-setting>
+                                <b:widget-setting name='text-9'>Gerilim</b:widget-setting>
+                                <b:widget-setting name='text-8'>Fantastik</b:widget-setting>
+                                <b:widget-setting name='text-20'>Meka</b:widget-setting>
+                                <b:widget-setting name='text-21'>Meka</b:widget-setting>
+                                <b:widget-setting name='text-1'>Askeri</b:widget-setting>
+                                <b:widget-setting name='text-0'>Aksiyon</b:widget-setting>
+                                <b:widget-setting name='text-3'>Büyü</b:widget-setting>
+                                <b:widget-setting name='text-2'>Bilim Kurgu</b:widget-setting>
+                                <b:widget-setting name='text-5'>Dövüş Sanatları</b:widget-setting>
+                                <b:widget-setting name='text-4'>Doğaüstü</b:widget-setting>
+                                <b:widget-setting name='text-7'>Ecchi</b:widget-setting>
+                                <b:widget-setting name='text-6'>Drama</b:widget-setting>
+                                <b:widget-setting name='text-19'>Manhwa</b:widget-setting>
+                                <b:widget-setting name='text-15'>Komedi</b:widget-setting>
+                                <b:widget-setting name='text-16'>Korku</b:widget-setting>
+                                <b:widget-setting name='text-17'>Macera</b:widget-setting>
+                                <b:widget-setting name='text-18'>Manhua</b:widget-setting>
+                                <b:widget-setting name='text-11'>Harem</b:widget-setting>
+                                <b:widget-setting name='text-12'>Hayattan Kesitler</b:widget-setting>
+                                <b:widget-setting name='text-13'>Isekai</b:widget-setting>
+                                <b:widget-setting name='text-14'>Josei</b:widget-setting>
+                                <b:widget-setting name='text-10'>Gizem</b:widget-setting>
+                                <b:widget-setting name='link-17'>/search/label/Macera</b:widget-setting>
+                                <b:widget-setting name='link-16'>/search/label/Korku</b:widget-setting>
+                                <b:widget-setting name='link-19'>/search/label/Manhwa</b:widget-setting>
                                 <b:widget-setting name='sorting'>ALPHABETICAL</b:widget-setting>
-                                <b:widget-setting name='link-18'>/search/label/Mecha</b:widget-setting>
-                                <b:widget-setting name='link-1'>/search/label/Adventure</b:widget-setting>
-                                <b:widget-setting name='link-13'>/search/label/Magic</b:widget-setting>
-                                <b:widget-setting name='link-2'>/search/label/Comedy</b:widget-setting>
-                                <b:widget-setting name='link-12'>/search/label/Josei</b:widget-setting>
-                                <b:widget-setting name='link-15'>/search/label/Manhwa</b:widget-setting>
-                                <b:widget-setting name='link-0'>/search/label/Action</b:widget-setting>
-                                <b:widget-setting name='link-14'>/search/label/Manhua</b:widget-setting>
-                                <b:widget-setting name='link-11'>/search/label/Isekai</b:widget-setting>
-                                <b:widget-setting name='link-10'>/search/label/Horror</b:widget-setting>
-                                <b:widget-setting name='link-9'>/search/label/Historical</b:widget-setting>
-                                <b:widget-setting name='link-7'>/search/label/Game</b:widget-setting>
-                                <b:widget-setting name='link-8'>/search/label/Harem</b:widget-setting>
-                                <b:widget-setting name='link-5'>/search/label/Ecchi</b:widget-setting>
-                                <b:widget-setting name='link-6'>/search/label/Fantasy</b:widget-setting>
-                                <b:widget-setting name='link-3'>/search/label/Cooking</b:widget-setting>
-                                <b:widget-setting name='link-4'>/search/label/Drama</b:widget-setting>
-                                <b:widget-setting name='link-28'>search/label/Seinen</b:widget-setting>
-                                <b:widget-setting name='link-27'>search/label/Sci-Fi</b:widget-setting>
-                                <b:widget-setting name='link-29'>search/label/Shoujo</b:widget-setting>
-                                <b:widget-setting name='link-24'>search/label/Psychological</b:widget-setting>
-                                <b:widget-setting name='text-37'>Vampire</b:widget-setting>
-                                <b:widget-setting name='link-23'>/search/label/Mystery</b:widget-setting>
-                                <b:widget-setting name='text-38'>Vampire</b:widget-setting>
-                                <b:widget-setting name='link-26'>search/label/School Life</b:widget-setting>
-                                <b:widget-setting name='link-25'>search/label/Romance</b:widget-setting>
-                                <b:widget-setting name='link-20'>/search/label/Medical</b:widget-setting>
-                                <b:widget-setting name='text-33'>Supernatural</b:widget-setting>
-                                <b:widget-setting name='text-34'>Thriller</b:widget-setting>
-                                <b:widget-setting name='link-22'>/search/label/Music</b:widget-setting>
-                                <b:widget-setting name='text-35'>Tragedy</b:widget-setting>
-                                <b:widget-setting name='link-21'>/search/label/Military</b:widget-setting>
-                                <b:widget-setting name='text-36'>Vampire</b:widget-setting>
+                                <b:widget-setting name='link-18'>/search/label/Manhua</b:widget-setting>
+                                <b:widget-setting name='link-1'>/search/label/Askeri</b:widget-setting>
+                                <b:widget-setting name='link-13'>/search/label/Isekai</b:widget-setting>
+                                <b:widget-setting name='link-2'>search/label/Bilim Kurgu</b:widget-setting>
+                                <b:widget-setting name='link-12'>search/label/Hayattan Kesitler</b:widget-setting>
+                                <b:widget-setting name='link-15'>/search/label/Komedi</b:widget-setting>
+                                <b:widget-setting name='link-0'>/search/label/Aksiyon</b:widget-setting>
+                                <b:widget-setting name='link-14'>/search/label/Josei</b:widget-setting>
+                                <b:widget-setting name='link-11'>/search/label/Harem</b:widget-setting>
+                                <b:widget-setting name='link-10'>/search/label/Gizem</b:widget-setting>
+                                <b:widget-setting name='link-9'>search/label/Gerilim</b:widget-setting>
+                                <b:widget-setting name='link-7'>/search/label/Ecchi</b:widget-setting>
+                                <b:widget-setting name='link-8'>/search/label/Fantastik</b:widget-setting>
+                                <b:widget-setting name='link-5'>/search/label/Martial Arts</b:widget-setting>
+                                <b:widget-setting name='link-6'>/search/label/Drama</b:widget-setting>
+                                <b:widget-setting name='link-3'>/search/label/Büyü</b:widget-setting>
+                                <b:widget-setting name='link-4'>search/label/Doğaüstü</b:widget-setting>
+                                <b:widget-setting name='link-28'>search/label/Romance</b:widget-setting>
+                                <b:widget-setting name='link-27'>search/label/Psikolojik</b:widget-setting>
+                                <b:widget-setting name='link-29'>search/label/Seinen</b:widget-setting>
+                                <b:widget-setting name='link-24'>/search/label/Olgun</b:widget-setting>
+                                <b:widget-setting name='text-37'>Vampir</b:widget-setting>
+                                <b:widget-setting name='link-23'>search/label/Okul Hayatı</b:widget-setting>
+                                <b:widget-setting name='text-38'>Vampir</b:widget-setting>
+                                <b:widget-setting name='link-26'>/search/label/Pişirme</b:widget-setting>
+                                <b:widget-setting name='link-25'>/search/label/Oyun</b:widget-setting>
+                                <b:widget-setting name='link-20'>/search/label/Meka</b:widget-setting>
+                                <b:widget-setting name='text-33'>Tarihi</b:widget-setting>
+                                <b:widget-setting name='text-34'>Tıbbi</b:widget-setting>
+                                <b:widget-setting name='link-22'>/search/label/Müzik</b:widget-setting>
+                                <b:widget-setting name='text-35'>Trajedi</b:widget-setting>
+                                <b:widget-setting name='link-21'>/search/label/Meka</b:widget-setting>
+                                <b:widget-setting name='text-36'>Vampir</b:widget-setting>
                               </b:widget-settings>
                               <b:includable id='main'>
                               <h3 class='title flex aic'><svg aria-hidden='true' height='1em' preserveAspectRatio='xMidYMid meet' role='img' viewBox='0 0 256 256' width='1em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><circle cx='67.99' cy='68' fill='currentColor' opacity='.2' r='28'/><path d='M187.993 104a36.048 36.048 0 0 0-35.772 32h-21.748a39.896 39.896 0 0 1-30.73-14.393L82.512 100.93a35.994 35.994 0 1 0-22.522 2.163v49.814a36 36 0 1 0 16 0v-34.81l11.462 13.753a55.85 55.85 0 0 0 43.02 20.15h23.586a35.998 35.998 0 1 0 33.935-48zM47.99 68a20 20 0 1 1 20 20a20.022 20.022 0 0 1-20-20zm40 120a20 20 0 1 1-20-20a20.022 20.022 0 0 1 20 20zm100.003-28a20 20 0 1 1 20-20a20.022 20.022 0 0 1-20 20z' fill='currentColor'/></svg>
@@ -5825,10 +5818,10 @@ Genre
     </b:with>
     <footer class='bc-22'>
       <b:section id='footer' maxwidgets='3' showaddelement='true'>
-        <b:widget id='PageList2' locked='true' title='Pages' type='PageList' version='2' visible='true'>
+        <b:widget id='PageList2' locked='true' title='Sayfalar' type='PageList' version='2' visible='true'>
           <b:widget-settings>
-            <b:widget-setting name='pageListJson'><![CDATA[{"link1":{"href":"https://zeistmanga-bt.blogspot.com/search/label/Blog","position":2,"title":"Blog"},"link0":{"href":"https://zeistmanga-bt.blogspot.com/search/label/A-Z","position":1,"title":"A-Z"},"4081167486351598216":{"href":"https://zeistmanga-bt.blogspot.com/p/privacy-policy.html","position":0,"title":"Privacy Policy"}}]]></b:widget-setting>
-            <b:widget-setting name='homeTitle'>Beranda</b:widget-setting>
+            <b:widget-setting name='pageListJson'><![CDATA[{"link0":{"href":"https://zeistmanga-bt.blogspot.com/search/label/A-Z","position":0,"title":"A-Z"}}]]></b:widget-setting>
+            <b:widget-setting name='homeTitle'>Home</b:widget-setting>
           </b:widget-settings>
           <b:includable id='main'>
             <b:include name='content'/>
@@ -5869,14 +5862,7 @@ Genre
 
           </b:includable>
         </b:widget>
-        <b:widget id='Label2' locked='true' title='A-Z LIST' type='Label' version='2' visible='true'>
-          <b:widget-settings>
-            <b:widget-setting name='sorting'>ALPHA</b:widget-setting>
-            <b:widget-setting name='display'>LIST</b:widget-setting>
-            <b:widget-setting name='selectedLabelsList'>A,C,D,E,F,H,I,K,M,N,O,S,T,U,V,W</b:widget-setting>
-            <b:widget-setting name='showType'>USER_SELECTED</b:widget-setting>
-            <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
-          </b:widget-settings>
+        <b:widget id='Label2' locked='true' title='A-Z Manga Listesi' type='Label' version='2' visible='true'>
           <b:includable id='main' var='this'>
             <article class='max-w mra mla'>
               <div class='flex aic c-cc jcc fdc-375'>
@@ -5921,9 +5907,9 @@ Genre
 
           </b:includable>
         </b:widget>
-        <b:widget id='Text1' locked='true' title='Footer Notice' type='Text' version='2' visible='true'>
+        <b:widget id='Text1' locked='true' title='Alt Duyuru' type='Text' version='2' visible='true'>
           <b:widget-settings>
-            <b:widget-setting name='content'><![CDATA[All the comics on this website are only previews of the original comics,  there may be many language errors, character names, and story lines.  For the original version, please buy the comic if it's available in your  city.]]></b:widget-setting>
+            <b:widget-setting name='content'>Bu web sitesindeki tüm mangalar orijinal mangaların yalnızca önizlemeleridir, birçok dil hatası, karakter adı ve hikaye çizgisi olabilir.  Orijinal versiyon için lütfen şehrinizde mevcutsa mangaları satın alın.</b:widget-setting>
           </b:widget-settings>
           <b:includable id='main'>
             <aside class='max-w mla mra mb-13'>
