@@ -111,7 +111,7 @@
 * Sürüm	: 5.4
 * Mod	: r1
 * Website	: emissionhex.blogspot.com
-* Türkçe Demo : https://zmv5-turkish.blogspot.com
+* Türkçe Demo : https://zmv5-turkish.blogspot.com/
 **************************************************/
 :root {
   --primary-color: $(keycolor);
