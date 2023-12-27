@@ -4107,27 +4107,27 @@ if(autlist==true){function autolist(e){for(var t=0;t<e.feed.entry.length;t++){fo
                   <!-- List Label -->
                   <div class='filter'>
                     <input class='hidden chk' id='Genre' name='genre' type='checkbox'/>
-                    <label class='dropdown-toggle' data-toggle='dropdown' for='Genre'> Genre <span class='value' data-label-placement='true'>All</span> </label>
+                    <label class='dropdown-toggle' data-toggle='dropdown' for='Genre'> Kategori <span class='value' data-label-placement='true'>Hepsi</span> </label>
                     <ul class='dropdown-menu lg c4'>
                       <li>
-                        <input class='genre' id='Action' type='checkbox' value='Action'/>
-                        <label for='Action'>Action</label>
+                        <input class='genre' id='Aksiyon' type='checkbox' value='Aksiyon'/>
+                        <label for='Aksiyon'>Aksiyon</label>
                       </li>
                       <li>
-                        <input class='genre' id='Adventurer' type='checkbox' value='Adventurer'/>
-                        <label for='Adventurer'>Adventurer</label>
+                        <input class='genre' id='Macera' type='checkbox' value='Macera'/>
+                        <label for='Macera'>Macera</label>
                       </li>
                       <li>
-                        <input class='genre' id='Comedy' type='checkbox' value='Comedy'/>
-                        <label for='Comedy'>Comedy</label>
+                        <input class='genre' id='Komedi' type='checkbox' value='Komedi'/>
+                        <label for='Komedi'>Komedi</label>
                       </li>
                       <li>
-                        <input class='genre' id='Dementia' type='checkbox' value='Dementia'/>
-                        <label for='Dementia'>Dementia</label>
+                        <input class='genre' id='Bunama' type='checkbox' value='Bunama'/>
+                        <label for='Bunama'>Bunama</label>
                       </li>
                       <li>
-                        <input class='genre' id='Demons' type='checkbox' value='Demons'/>
-                        <label for='Demons'>Demons</label>
+                        <input class='genre' id='Şeytanlar' type='checkbox' value='Şeytanlar'/>
+                        <label for='Şeytanlar'>Şeytanlar</label>
                       </li>
                       <li>
                         <input class='genre' id='Drama' type='checkbox' value='Drama'/>
@@ -4138,80 +4138,80 @@ if(autlist==true){function autolist(e){for(var t=0;t<e.feed.entry.length;t++){fo
                         <label for='Ecchi'>Ecchi</label>
                       </li>
                       <li>
-                        <input class='genre' id='Fantasy' type='checkbox' value='Fantasy'/>
-                        <label for='Fantasy'>Fantasy</label>
+                        <input class='genre' id='Fantastik' type='checkbox' value='Fantastik'/>
+                        <label for='Fantastik'>Fantastik</label>
                       </li>
                       <li>
-                        <input class='genre' id='Game' type='checkbox' value='Game'/>
-                        <label for='Game'>Game</label>
+                        <input class='genre' id='Oyun' type='checkbox' value='Oyun'/>
+                        <label for='Oyun'>Oyun</label>
                       </li>
                       <li>
                         <input class='genre' id='Harem' type='checkbox' value='Harem'/>
                         <label for='Harem'>Harem</label>
                       </li>
                       <li>
-                        <input class='genre' id='Historical' type='checkbox' value='Historical'/>
-                        <label for='Historical'>Historical</label>
+                        <input class='genre' id='Tarihi' type='checkbox' value='Tarihi'/>
+                        <label for='Tarihi'>Tarihi</label>
                       </li>
                       <li>
-                        <input class='genre' id='Horror' type='checkbox' value='Horror'/>
-                        <label for='Horror'>Horror</label>
+                        <input class='genre' id='Korku' type='checkbox' value='Korku'/>
+                        <label for='Korku'>Korku</label>
                       </li>
                       <li>
                         <input class='genre' id='Josei' type='checkbox' value='Josei'/>
                         <label for='Josei'>Josei</label>
                       </li>
                       <li>
-                        <input class='genre' id='Magic' type='checkbox' value='Magic'/>
-                        <label for='Magic'>Magic</label>
+                        <input class='genre' id='Büyü' type='checkbox' value='Büyü'/>
+                        <label for='Büyü'>Büyü</label>
                       </li>
                       <li>
-                        <input class='genre' id='Martial Arts' type='checkbox' value='Martial Arts'/>
-                        <label for='Martial Arts'>Martial Arts</label>
+                        <input class='genre' id='Dövüş Sanatları' type='checkbox' value='Dövüş Sanatları'/>
+                        <label for='Dövüş Sanatları'>Dövüş Sanatları</label>
                       </li>
                       <li>
-                        <input class='genre' id='Mecha' type='checkbox' value='Mecha'/>
-                        <label for='Mecha'>Mecha</label>
+                        <input class='genre' id='Meka' type='checkbox' value='Meka'/>
+                        <label for='Meka'>Meka</label>
                       </li>
                       <li>
-                        <input class='genre' id='Military' type='checkbox' value='Military'/>
-                        <label for='Military'>Military</label>
+                        <input class='genre' id='Askeri' type='checkbox' value='Askeri'/>
+                        <label for='Askeri'>Askeri</label>
                       </li>
                       <li>
-                        <input class='genre' id='Music' type='checkbox' value='Music'/>
-                        <label for='Music'>Music</label>
+                        <input class='genre' id='Müzik' type='checkbox' value='Müzik'/>
+                        <label for='Müzik'>Müzik</label>
                       </li>
                       <li>
-                        <input class='genre' id='Mystery' type='checkbox' value='Mystery'/>
-                        <label for='Mystery'>Mystery</label>
+                        <input class='genre' id='Gizem' type='checkbox' value='Gizem'/>
+                        <label for='Gizem'>Gizem</label>
                       </li>
                       <li>
-                        <input class='genre' id='Parody' type='checkbox' value='Parody'/>
-                        <label for='Parody'>Parody</label>
+                        <input class='genre' id='Parodi' type='checkbox' value='Parodi'/>
+                        <label for='Parodi'>Parodi</label>
                       </li>
                       <li>
-                        <input class='genre' id='Police' type='checkbox' value='Police'/>
-                        <label for='Police'>Police</label>
+                        <input class='genre' id='Polisiye' type='checkbox' value='Polisiye'/>
+                        <label for='Polisiye'>Polisiye</label>
                       </li>
                       <li>
-                        <input class='genre' id='Psychological' type='checkbox' value='Psychological'/>
-                        <label for='Psychological'>Psychological</label>
+                        <input class='genre' id='Psikolojik' type='checkbox' value='Psikolojik'/>
+                        <label for='Psikolojik'>Psikolojik</label>
                       </li>
                       <li>
-                        <input class='genre' id='Romance' type='checkbox' value='Romance'/>
-                        <label for='Romance'>Romance</label>
+                        <input class='genre' id='Romantizm' type='checkbox' value='Romantizm'/>
+                        <label for='Romantizm'>Romantizm</label>
                       </li>
                       <li>
-                        <input class='genre' id='Samurai' type='checkbox' value='Samurai'/>
-                        <label for='Samurai'>Samurai</label>
+                        <input class='genre' id='Samuray' type='checkbox' value='Samuray'/>
+                        <label for='Samuray'>Samuray</label>
                       </li>
                       <li>
-                        <input class='genre' id='School' type='checkbox' value='School'/>
-                        <label for='School'>School</label>
+                        <input class='genre' id='Okul' type='checkbox' value='Okul'/>
+                        <label for='Okul'>Okul</label>
                       </li>
                       <li>
-                        <input class='genre' id='Sci-Fi' type='checkbox' value='Sci-Fi'/>
-                        <label for='Sci-Fi'>Sci-Fi</label>
+                        <input class='genre' id='Bilim Kurgu' type='checkbox' value='Bilim Kurgu'/>
+                        <label for='Bilim Kurgu'>Bilim Kurgu</label>
                       </li>
                       <li>
                         <input class='genre' id='Seinen' type='checkbox' value='Seinen'/>
@@ -4230,36 +4230,36 @@ if(autlist==true){function autolist(e){for(var t=0;t<e.feed.entry.length;t++){fo
                         <label for='Shounen'>Shounen</label>
                       </li>
                       <li>
-                        <input class='genre' id='Slice of Life' type='checkbox' value='Slice of Life'/>
-                        <label for='Slice of Life'>Slice of Life</label>
+                        <input class='genre' id='Hayattan Kesitler' type='checkbox' value='Hayattan Kesitler'/>
+                        <label for='Hayattan Kesitler'>Hayattan Kesitler</label>
                       </li>
                       <li>
-                        <input class='genre' id='Space' type='checkbox' value='Space'/>
-                        <label for='Space'>Space</label>
+                        <input class='genre' id='Uzay' type='checkbox' value='Uzay'/>
+                        <label for='Uzay'>Uzay</label>
                       </li>
                       <li>
-                        <input class='genre' id='Sports' type='checkbox' value='Sports'/>
-                        <label for='Sports'>Sports</label>
+                        <input class='genre' id='Spor' type='checkbox' value='Spor'/>
+                        <label for='Spor'>Spor</label>
                       </li>
                       <li>
-                        <input class='genre' id='Super Power' type='checkbox' value='Super Power'/>
-                        <label for='Super Power'>Super Power</label>
+                        <input class='genre' id='Süper Güç' type='checkbox' value='Süper Güç'/>
+                        <label for='Süper Güç'>Süper Güç</label>
                       </li>
                       <li>
-                        <input class='genre' id='Supernatural' type='checkbox' value='Supernatural'/>
-                        <label for='Supernatural'>Supernatural</label>
+                        <input class='genre' id='Doğaüstü' type='checkbox' value='Doğaüstü'/>
+                        <label for='Doğaüstü'>Doğaüstü</label>
                       </li>
                       <li>
-                        <input class='genre' id='Thriller' type='checkbox' value='Thriller'/>
-                        <label for='Thriller'>Thriller</label>
+                        <input class='genre' id='Gerilim' type='checkbox' value='Gerilim'/>
+                        <label for='Gerilim'>Gerilim</label>
                       </li>
                       <li>
-                        <input class='genre' id='Vampire' type='checkbox' value='Vampire'/>
-                        <label for='Vampire'>Vampire</label>
+                        <input class='genre' id='Vampir' type='checkbox' value='Vampir'/>
+                        <label for='Vampir'>Vampir</label>
                       </li>
                       <li>
-                        <input class='genre' id='Work Life' type='checkbox' value='Work Life'/>
-                        <label for='Work Life'>Work Life</label>
+                        <input class='genre' id='İş Hayatı' type='checkbox' value='İş Hayatı'/>
+                        <label for='İş Hayatı'>İş Hayatı</label>
                       </li>
                       <li>
                         <input class='genre' id='Yuri' type='checkbox' value='Yuri'/>
@@ -4269,29 +4269,29 @@ if(autlist==true){function autolist(e){for(var t=0;t<e.feed.entry.length;t++){fo
                   </div>
                   <div class='filter'>
                     <input class='hidden chk' id='Status' name='status' type='checkbox'/>
-                    <label class='dropdown-toggle' data-toggle='dropdown' for='Status'> Status <span class='value' data-label-placement='true'>All</span> </label>
+                    <label class='dropdown-toggle' data-toggle='dropdown' for='Status'> Durum <span class='value' data-label-placement='true'>Hepsi</span> </label>
                     <ul class='dropdown-menu lg c1'>
                       <li>
-                        <input class='genre' id='Ongoing' type='checkbox' value='Ongoing'/>
-                        <label for='Ongoing'>Ongoing</label>
+                        <input class='genre' id='Devam Ediyor' type='checkbox' value='Devam Ediyor'/>
+                        <label for='Devam Ediyor'>Devam Ediyor</label>
                       </li>
                       <li>
-                        <input class='genre' id='Completed' type='checkbox' value='Completed'/>
-                        <label for='Completed'>Completed</label>
+                        <input class='genre' id='Tamamlandı' type='checkbox' value='Tamamlandı'/>
+                        <label for='Tamamlandı'>Tamamlandı</label>
                       </li>
                       <li>
-                        <input class='genre' id='Dropped' type='checkbox' value='Dropped'/>
-                        <label for='Dropped'>Dropped</label>
+                        <input class='genre' id='Terk Edildi' type='checkbox' value='Terk Edildi'/>
+                        <label for='Terk Edildi'>Terk Edildi</label>
                       </li>
                       <li>
-                        <input class='genre' id='Upcoming' type='checkbox' value='Upcoming'/>
-                        <label for='Upcoming'>Upcoming</label>
+                        <input class='genre' id='Yakında' type='checkbox' value='Yakında'/>
+                        <label for='Yakında'>Yakında</label>
                       </li>
                     </ul>
                   </div>
                   <div class='filter'>
                     <input class='hidden chk' id='Type' name='type' type='checkbox'/>
-                    <label class='dropdown-toggle' data-toggle='dropdown' for='Type'> Type <span class='value' data-label-placement='true'>All</span> </label>
+                    <label class='dropdown-toggle' data-toggle='dropdown' for='Type'> Tür <span class='value' data-label-placement='true'>Hepsi</span> </label>
                     <ul class='dropdown-menu lg c1'>
                       <li>
                         <input class='genre' id='Manga' type='checkbox' value='Manga'/>
@@ -4313,22 +4313,22 @@ if(autlist==true){function autolist(e){for(var t=0;t<e.feed.entry.length;t++){fo
                   </div>
                   <div class='filter'>
                     <input class='hidden chk' id='Lang' name='lang' type='checkbox'/>
-                    <label class='dropdown-toggle' data-toggle='dropdown' for='Lang'> Language <span class='value' data-label-placement='true'>All</span> </label>
+                    <label class='dropdown-toggle' data-toggle='dropdown' for='Lang'> Dil <span class='value' data-label-placement='true'>Hepsi</span> </label>
                     <ul class='dropdown-menu lg c1'>
                       <li>
-                        <input class='genre' id='Indonesian' type='checkbox' value='Indonesian'/>
-                        <label for='Indonesian'>Indonesian</label>
+                        <input class='genre' id='Türkçe' type='checkbox' value='Türkçe'/>
+                        <label for='Türkçe'>Türkçe</label>
                       </li>
                       <li>
-                        <input class='genre' id='English' type='checkbox' value='English'/>
-                        <label for='English'>English</label>
+                        <input class='genre' id='İngilizce' type='checkbox' value='İngilizce'/>
+                        <label for='İngilizce'>İngilizce</label>
                       </li>
                     </ul>
                   </div>
                 </div>
 
                 <div class='p-15'>
-                <button class='submit' type='submit'><svg aria-hidden='true' height='1em' preserveAspectRatio='xMidYMid meet' role='img' style='vertical-align: -0.125em;' viewBox='0 0 20 20' width='1em' xmlns='http://www.w3.org/2000/svg'><path d='M8.5 3a5.5 5.5 0 0 1 4.383 8.823l4.147 4.147a.75.75 0 0 1-.976 1.133l-.084-.073l-4.147-4.147A5.5 5.5 0 1 1 8.5 3Zm0 1.5a4 4 0 1 0 0 8a4 4 0 0 0 0-8Z' fill='currentColor'/></svg>Filter  <span class='count'> </span></button>
+                <button class='submit' type='submit'><svg aria-hidden='true' height='1em' preserveAspectRatio='xMidYMid meet' role='img' style='vertical-align: -0.125em;' viewBox='0 0 20 20' width='1em' xmlns='http://www.w3.org/2000/svg'><path d='M8.5 3a5.5 5.5 0 0 1 4.383 8.823l4.147 4.147a.75.75 0 0 1-.976 1.133l-.084-.073l-4.147-4.147A5.5 5.5 0 1 1 8.5 3Zm0 1.5a4 4 0 1 0 0 8a4 4 0 0 0 0-8Z' fill='currentColor'/></svg>Filtrele  <span class='count'> </span></button>
                 </div>
                 <!-- Hasil -->
                 <div id='result'/>
@@ -4369,11 +4369,11 @@ window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.j
                           <b:tag class='s1 bc-fff r2 mb-20' cond='data:view.isMultipleItems and !data:view.isLabelSearch' name='div'>
 <b:if cond='data:view.isMultipleItems and !data:view.isLabelSearch'>
 <h3 class='title flex aic'>
-<svg aria-hidden='true' height='1em' preserveAspectRatio='xMidYMid meet' role='img' viewBox='0 0 24 24' width='1em' xmlns='http://www.w3.org/2000/svg'><path d='M21 7a.78.78 0 0 0 0-.21a.64.64 0 0 0-.05-.17a1.1 1.1 0 0 0-.09-.14a.75.75 0 0 0-.14-.17l-.12-.07a.69.69 0 0 0-.19-.1h-.2A.7.7 0 0 0 20 6h-5a1 1 0 0 0 0 2h2.83l-4 4.71l-4.32-2.57a1 1 0 0 0-1.28.22l-5 6a1 1 0 0 0 .13 1.41A1 1 0 0 0 4 18a1 1 0 0 0 .77-.36l4.45-5.34l4.27 2.56a1 1 0 0 0 1.27-.21L19 9.7V12a1 1 0 0 0 2 0V7Z' fill='currentColor'/></svg>Trending</h3>
+<svg aria-hidden='true' height='1em' preserveAspectRatio='xMidYMid meet' role='img' viewBox='0 0 24 24' width='1em' xmlns='http://www.w3.org/2000/svg'><path d='M21 7a.78.78 0 0 0 0-.21a.64.64 0 0 0-.05-.17a1.1 1.1 0 0 0-.09-.14a.75.75 0 0 0-.14-.17l-.12-.07a.69.69 0 0 0-.19-.1h-.2A.7.7 0 0 0 20 6h-5a1 1 0 0 0 0 2h2.83l-4 4.71l-4.32-2.57a1 1 0 0 0-1.28.22l-5 6a1 1 0 0 0 .13 1.41A1 1 0 0 0 4 18a1 1 0 0 0 .77-.36l4.45-5.34l4.27 2.56a1 1 0 0 0 1.27-.21L19 9.7V12a1 1 0 0 0 2 0V7Z' fill='currentColor'/></svg>Trendler</h3>
 <div class='tabx flex lsn p-6 m-10 tac tab r4'>
-<span class='active f1 r3 cp' data-tab='PopularPosts3'>Mingguan</span>
-<span class='f1 r3 cp' data-tab='PopularPosts4'>Bulanan</span>
-<span class='f1 r3 cp' data-tab='PopularPosts5'>Semua</span>
+<span class='active f1 r3 cp' data-tab='PopularPosts3'>Haftalık</span>
+<span class='f1 r3 cp' data-tab='PopularPosts4'>Aylık</span>
+<span class='f1 r3 cp' data-tab='PopularPosts5'>Tümü</span>
 </div>
   <script>
           $(document).ready(function(){
@@ -4540,7 +4540,7 @@ window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.j
                             </b:includable>
                               <b:includable id='postLabels'>
                               <span class='span-spc fs-13'>
-                                <b>Genres</b>
+                                <b>Kategoriler</b>
                                 <b:loop index='i' values='data:post.labels' var='label'>
                                   <b:if cond='data:label.name in data:Genre or data:label.name in data:Genre2 or data:label.name in data:Demographic'>
                                   <a expr:href='data:label.url' rel='tag'>
@@ -4809,7 +4809,7 @@ window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.j
                             </b:includable>
                               <b:includable id='postLabels'>
                               <span class='span-spc fs-13'>
-                                <b>Genres</b>
+                                <b>Kategoriler</b>
                                 <b:loop index='i' values='data:post.labels' var='label'>
                                   <b:if cond='data:label.name in data:Genre or data:label.name in data:Genre2 or data:label.name in data:Demographic'>
                                   <a expr:href='data:label.url' rel='tag'>
@@ -5078,7 +5078,7 @@ window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.j
                             </b:includable>
                               <b:includable id='postLabels'>
                               <span class='span-spc fs-13'>
-                                <b>Genres</b>
+                                <b>Kategoriler</b>
                                 <b:loop index='i' values='data:post.labels' var='label'>
                                   <b:if cond='data:label.name in data:Genre or data:label.name in data:Genre2 or data:label.name in data:Demographic'>
                                   <a expr:href='data:label.url' rel='tag'>
@@ -5254,7 +5254,7 @@ window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.j
                               <article>
                                 <div class='flex aic jcsb p-13'>
                                   <h3 class='m-0 c-theme fs-15 flex aic'><svg aria-hidden='true' height='1em' preserveAspectRatio='xMidYMid meet' role='img' viewBox='0 0 432 488' width='0.89em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><path d='M364 304q2-12 2-20q1-59-24.5-90.5T270 135q10 55-18.5 86.5T179 241q24-39 29-69t-3.5-46.5t-17.5-36T172.5 52T178 2q-44 31-80 104.5T62 242q2 37 7 62q-68 28-68 67q0 37 63 64t152 27t152-27t63-64q0-39-67-67zM134 194q-11 52 12 89.5t56 37.5q63 0 88-100q36 27 39 72q3 49-37 83v1q-12 8-19 12q-1 1-2 1l-8 4l-2 1q-10 4-23 7q-3 0-4 1q-2 0-5 .5t-4 .5q-3 0-4 1h-26q-1 0-4-.5t-4-.5h-1q-8-2-10-2l-1-1l-9-3h-1q-30-12-47.5-39.5T101 293l-1 1q2-48 34-100z' fill='currentColor'/></svg><data:title/></h3>
-                                  <a class='bg-main ttu p-3y6x fs-9 r2 c-fff' href=''>View All</a>
+                                  <a class='bg-main ttu p-3y6x fs-9 r2 c-fff' href=''>Hepsini Gör</a>
                                 </div>
 
                                 <b:include name='snippetedPosts'/>
@@ -5399,7 +5399,7 @@ window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.j
                             </b:includable>
                               <b:includable id='postLabels'>
                               <span class='byline post-labels'>
-                                <span class='byline-label'>Genre: </span>
+                                <span class='byline-label'>Kaategoriler: </span>
                                 <b:loop index='i' values='data:post.labels' var='label'>
                                   <a expr:href='data:label.url' rel='tag'>
                                     <data:label.name/>
@@ -5790,7 +5790,7 @@ window.open(location.protocol+ '//' + location.hostname + '/search/label/' + o.j
                               </b:widget-settings>
                               <b:includable id='main'>
                               <h3 class='title flex aic'><svg aria-hidden='true' height='1em' preserveAspectRatio='xMidYMid meet' role='img' viewBox='0 0 256 256' width='1em' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><circle cx='67.99' cy='68' fill='currentColor' opacity='.2' r='28'/><path d='M187.993 104a36.048 36.048 0 0 0-35.772 32h-21.748a39.896 39.896 0 0 1-30.73-14.393L82.512 100.93a35.994 35.994 0 1 0-22.522 2.163v49.814a36 36 0 1 0 16 0v-34.81l11.462 13.753a55.85 55.85 0 0 0 43.02 20.15h23.586a35.998 35.998 0 1 0 33.935-48zM47.99 68a20 20 0 1 1 20 20a20.022 20.022 0 0 1-20-20zm40 120a20 20 0 1 1-20-20a20.022 20.022 0 0 1 20 20zm100.003-28a20 20 0 1 1 20-20a20.022 20.022 0 0 1-20 20z' fill='currentColor'/></svg>
-Genre
+Kategoriler
 </h3>
                               <b:include name='content'/>
                             </b:includable>
@@ -5868,7 +5868,7 @@ Genre
               <div class='flex aic c-cc jcc fdc-375'>
                 <b:include name='widget-title'/>
                 <div class='ml-20 mr-20'>|</div>
-                <p>Cari manga dari urutan A sampai Z</p>
+                <p>Mangaları A'dan Z'ye sırayla arayın</p>
               </div>
               <b:include name='content'/>
             </article>
@@ -5930,7 +5930,7 @@ Genre
       <div class='bc-22'>
         <div class='max-w mra mla c-cc fs-12 p-13 tac link'>
           &#169; <span><script>document.write(new Date().getFullYear())</script></span> <strong><data:blog.title/>.</strong>
-          All Rights Reserved. Theme by <strong><a class='c-theme' href='https://emissionhex.blogspot.com/'>EmissionHex</a></strong>
+          Tüm Hakları Saklıdır. Tema <strong><a class='c-theme' href='https://emissionhex.blogspot.com/'>EmissionHex</a></strong> tarafından yapılmıştır.
         </div>
       </div>
     </footer>
@@ -6020,7 +6020,7 @@ toggle.addEventListener("click", function() {
     <b:if cond='data:view.isPost'>
       <!--[ Timeago script ]-->
 
-  <script>/*<![CDATA[*/ (function timeAgo(selector) { var templates = {prefix: "", suffix: "", seconds: "second ago", minute: "1 min", minutes: "%d min", hour: "1 hour", hours: "%d hour", day: "1 day", days: "%d days", month: "1 month", months: "%d month", year: "1 year", years: "%d years"}; var template = function(t, n) { return templates[t] && templates[t].replace(/%d/i, Math.abs(Math.round(n))); }; var timer = function(time) { if (!time) return; time = time.replace(/\.\d+/, ""); time = time.replace(/-/, "/").replace(/-/, "/"); time = time.replace(/T/, " ").replace(/Z/, " UTC"); time = time.replace(/([\+\-]\d\d)\:?(\d\d)/, " $1$2"); time = new Date(time * 1000 || time); var now = new Date(); var seconds = ((now.getTime() - time) * .001) >> 0; var minutes = seconds / 60; var hours = minutes / 60; var days = hours / 24; var years = days / 365; return templates.prefix + ( seconds < 45 && template('seconds', seconds) || seconds < 90 && template('minute', 1) || minutes < 45 && template('minutes', minutes) || minutes < 90 && template('hour', 1) || hours < 24 && template('hours', hours) || hours < 42 && template('day', 1) || days < 30 && template('days', days) || days < 45 && template('month', 1) || days < 365 && template('months', days / 30) || years < 1.5 && template('year', 1) || template('years', years) ) + templates.suffix; }; var elements = document.getElementsByClassName('timeago'); for (var i in elements) { var $this = elements[i]; if (typeof $this === 'object') { $this.innerHTML = timer($this.getAttribute('title') || $this.getAttribute('datetime')); } } setTimeout(timeAgo, 60000); })(); /*]]>*/</script>
+  <script>/*<![CDATA[*/ (function timeAgo(selector) { var templates = {prefix: "", suffix: "", seconds: "saniye", minute: "1 dk.", minutes: "%d dk.", hour: "1 saat", hours: "%d saat", day: "1 gün", days: "%d gün", month: "1 ay", months: "%d ay", year: "1 yıl", years: "%d yıl"}; var template = function(t, n) { return templates[t] && templates[t].replace(/%d/i, Math.abs(Math.round(n))); }; var timer = function(time) { if (!time) return; time = time.replace(/\.\d+/, ""); time = time.replace(/-/, "/").replace(/-/, "/"); time = time.replace(/T/, " ").replace(/Z/, " UTC"); time = time.replace(/([\+\-]\d\d)\:?(\d\d)/, " $1$2"); time = new Date(time * 1000 || time); var now = new Date(); var seconds = ((now.getTime() - time) * .001) >> 0; var minutes = seconds / 60; var hours = minutes / 60; var days = hours / 24; var years = days / 365; return templates.prefix + ( seconds < 45 && template('seconds', seconds) || seconds < 90 && template('minute', 1) || minutes < 45 && template('minutes', minutes) || minutes < 90 && template('hour', 1) || hours < 24 && template('hours', hours) || hours < 42 && template('day', 1) || days < 30 && template('days', days) || days < 45 && template('month', 1) || days < 365 && template('months', days / 30) || years < 1.5 && template('year', 1) || template('years', years) ) + templates.suffix; }; var elements = document.getElementsByClassName('timeago'); for (var i in elements) { var $this = elements[i]; if (typeof $this === 'object') { $this.innerHTML = timer($this.getAttribute('title') || $this.getAttribute('datetime')); } } setTimeout(timeAgo, 60000); })(); /*]]>*/</script>
 
       <script>
         //<![CDATA[
